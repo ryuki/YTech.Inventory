@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="MEkspedission" table="M_EKSPEDISSION">
+
+		<id name="EkspedissionId" column="EKSPEDISSION_ID" type="String">
+			<generator class="assigned"/>
+		</id>
+		<property column="EKSPEDISSION_NAME" type="String" name="EkspedissionName" length="50" />
+		<property column="EKSPEDISSION_ADDRESS" type="String" name="EkspedissionAddress" length="100" />
+		<property column="EKSPEDISSION_PHONE" type="String" name="EkspedissionPhone" length="50" />
+		<property column="EKSPEDISSION_FAX" type="String" name="EkspedissionFax" length="50" />
+		<property column="EKSPEDISSION_STATUS" type="String" name="EkspedissionStatus" length="50" />
+		<property column="EKSPEDISSION_NPWP" type="String" name="EkspedissionNpwp" length="50" />
+		<property column="EKSPEDISSION_DISC" type="Decimal" name="EkspedissionDisc" />
+		<property column="EKSPEDISSION_LIMIT" type="Decimal" name="EkspedissionLimit" />
+		<property column="EKSPEDISSION_DESC" type="String" name="EkspedissionDesc" length="50" />
+		<property column="EKSPEDISSION_DESC2" type="String" name="EkspedissionDesc2" length="50" />
+		<property column="SUB_ACCOUNT_ID" type="String" name="SubAccountId" length="50" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

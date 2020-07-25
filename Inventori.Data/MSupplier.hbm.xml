@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="MSupplier" table="M_SUPPLIER">
+
+		<id name="SupplierId" column="SUPPLIER_ID" type="String">
+			<generator class="assigned"/>
+		</id>
+		<property column="SUPPLIER_NAME" type="String" name="SupplierName" length="50" />
+		<property column="SUPPLIER_ADDRESS" type="String" name="SupplierAddress" length="100" />
+		<property column="SUPPLIER_PHONE" type="String" name="SupplierPhone" length="50" />
+		<property column="SUPPLIER_FAX" type="String" name="SupplierFax" length="50" />
+		<property column="SUPPLIER_NPWP" type="String" name="SupplierNpwp" length="50" />
+		<property column="SUPPLIER_CONTACT" type="String" name="SupplierContact" length="50" />
+		<property column="SUPPLIER_CONTACT_PHONE" type="String" name="SupplierContactPhone" length="50" />
+		<property column="SUPPLIER_LIMIT" type="Decimal" name="SupplierLimit" />
+		<property column="SUB_ACCOUNT_ID" type="String" name="SubAccountId" length="50" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventori.Apotek.Forms", "Inventori.Apotek.Forms\Inventori.Apotek.Forms.csproj", "{4685F861-1279-47ED-B796-646A44F9EB41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventori.Apotek.Data", "Inventori.Apotek.Data\Inventori.Apotek.Data.csproj", "{894265FB-CE7A-493D-AF20-6DD89CD7E685}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Apotek Management Software", "Apotek Management Software\Apotek Management Software.vdproj", "{ADA3A645-FB45-481D-8E87-E0DBA2A7F8CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4685F861-1279-47ED-B796-646A44F9EB41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4685F861-1279-47ED-B796-646A44F9EB41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4685F861-1279-47ED-B796-646A44F9EB41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4685F861-1279-47ED-B796-646A44F9EB41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{894265FB-CE7A-493D-AF20-6DD89CD7E685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{894265FB-CE7A-493D-AF20-6DD89CD7E685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{894265FB-CE7A-493D-AF20-6DD89CD7E685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{894265FB-CE7A-493D-AF20-6DD89CD7E685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADA3A645-FB45-481D-8E87-E0DBA2A7F8CA}.Debug|Any CPU.ActiveCfg = Debug
+		{ADA3A645-FB45-481D-8E87-E0DBA2A7F8CA}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

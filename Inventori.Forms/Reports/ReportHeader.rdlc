@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>5c08ec5d-0aad-4f83-ba59-68beab4cfd82</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>1in</BottomMargin>
+  <RightMargin>1in</RightMargin>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ReportItems>
+      <Textbox Name="CompanyName">
+        <Left>0.25in</Left>
+        <Top>0.125in</Top>
+        <rd:DefaultName>CompanyName</rd:DefaultName>
+        <ZIndex>2</ZIndex>
+        <Width>6in</Width>
+        <Style>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Verdana</FontFamily>
+          <FontWeight>700</FontWeight>
+          <FontSize>15pt</FontSize>
+          <Color>Blue</Color>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.375in</Height>
+        <Value>=First(Fields!CompanyName.Value, "Inventori_Data_MSetting")</Value>
+      </Textbox>
+      <Textbox Name="CompanyAddress">
+        <Left>0.25in</Left>
+        <Top>0.5in</Top>
+        <rd:DefaultName>CompanyAddress</rd:DefaultName>
+        <ZIndex>1</ZIndex>
+        <Width>6in</Width>
+        <Style>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>9pt</FontSize>
+          <Color>#0000c0</Color>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!CompanyAddress.Value, "Inventori_Data_MSetting") &amp; " " &amp; First(Fields!CompanyCity.Value, "Inventori_Data_MSetting")</Value>
+      </Textbox>
+      <Textbox Name="textbox4">
+        <Left>0.25in</Left>
+        <Top>0.75in</Top>
+        <Width>6in</Width>
+        <Style>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>9pt</FontSize>
+          <Color>#0000c0</Color>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>= "Telp : " &amp; First(Fields!CompanyTelp.Value, "Inventori_Data_MSetting")</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>1.125in</Height>
+  </Body>
+  <rd:ReportID>a0f700ef-3d3b-4198-a956-d5fbf141b548</rd:ReportID>
+  <LeftMargin>1in</LeftMargin>
+  <DataSets>
+    <DataSet Name="Inventori_Data_MSetting">
+      <rd:DataSetInfo>
+        <rd:DataSetName>Inventori.Data</rd:DataSetName>
+        <rd:ObjectDataSourceType>Inventori.Data.MSetting, Inventori.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>MSetting</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="AutoBackup">
+          <rd:TypeName>System.Boolean</rd:TypeName>
+          <DataField>AutoBackup</DataField>
+        </Field>
+        <Field Name="AutoPrintSales">
+          <rd:TypeName>System.Boolean</rd:TypeName>
+          <DataField>AutoPrintSales</DataField>
+        </Field>
+        <Field Name="BackupDir">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>BackupDir</DataField>
+        </Field>
+        <Field Name="BiliardItem">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>BiliardItem</DataField>
+        </Field>
+        <Field Name="CompanyAddress">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CompanyAddress</DataField>
+        </Field>
+        <Field Name="CompanyCity">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CompanyCity</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="CompanyTelp">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CompanyTelp</DataField>
+        </Field>
+        <Field Name="FacturNoFormat">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>FacturNoFormat</DataField>
+        </Field>
+        <Field Name="FacturNoLength">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>FacturNoLength</DataField>
+        </Field>
+        <Field Name="FullfillPrice">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>FullfillPrice</DataField>
+        </Field>
+        <Field Name="MinimumPlay">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>MinimumPlay</DataField>
+        </Field>
+        <Field Name="QuitTimeout">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>QuitTimeout</DataField>
+        </Field>
+        <Field Name="RefereeItem">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RefereeItem</DataField>
+        </Field>
+        <Field Name="SettingId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SettingId</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>6.5in</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>

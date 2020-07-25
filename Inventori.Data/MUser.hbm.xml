@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="MUser" table="M_USER">
+
+		<id name="UserName" column="USER_NAME" type="String">
+			<generator class="assigned"/>
+		</id>
+		<property column="USER_PASSWORD" type="String" name="UserPassword" length="100" />
+		<property column="USER_STATUS" type="Boolean" name="UserStatus" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

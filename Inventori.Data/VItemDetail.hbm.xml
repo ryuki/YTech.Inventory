@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="VItemDetail" table="V_ITEM_DETAIL">
+
+		<!-- could not find a primary key for this table/view. NHibernate requires an 'id' element, so you'll have to define one manually. -->
+		<composite-id access="field">
+      <key-property name="ItemId" column="ITEM_ID" type="String"/>
+      <key-property name="GudangId" column="GUDANG_ID" type="Int32" />
+    </composite-id>
+
+		<!-- <property column="ITEM_ID" type="String" name="ItemId" not-null="true" length="50" /> -->
+		<property column="ITEM_TYPE_ID" type="Int32" name="ItemTypeId" />
+		<property column="GROUP_ID" type="Int32" name="GroupId" />
+		<property column="ITEM_NAME" type="String" name="ItemName" length="50" />
+		<property column="ITEM_SATUAN" type="String" name="ItemSatuan" length="50" />
+		<property column="ITEM_DESC" type="String" name="ItemDesc" length="2147483647" />
+		<property column="ITEM_COMMISION" type="Decimal" name="ItemCommision" />
+		<property column="DEFAULT_GUDANG_ID" type="Int32" name="DefaultGudangId" />
+		<property column="ITEM_PRICE_MAX_VIP" type="Decimal" name="ItemPriceMaxVip" />
+		<property column="ITEM_PRICE_MIN_VIP" type="Decimal" name="ItemPriceMinVip" />
+		<property column="ITEM_PRICE_MAX" type="Decimal" name="ItemPriceMax" />
+		<property column="ITEM_PRICE_MIN" type="Decimal" name="ItemPriceMin" />
+		<property column="ITEM_PRICE_PURCHASE" type="Decimal" name="ItemPricePurchase" />
+		<property column="ITEM_PRICE_PURCHASE_AVG" type="Decimal" name="ItemPricePurchaseAvg" />
+		<property column="SUPPLIER_ID" type="String" name="SupplierId" length="50" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		<property column="GROUP_NAME" type="String" name="GroupName" not-null="true" length="50" />
+		<property column="ITEM_TYPE_NAME" type="String" name="ItemTypeName" not-null="true" length="50" />
+		<property column="GUDANG_NAME" type="String" name="GudangName" not-null="true" length="50" />
+		<property column="ITEM_STOK" type="Decimal" name="ItemStok" not-null="true" />
+		<property column="ITEM_MIN_STOK" type="Decimal" name="ItemMinStok" not-null="true" />
+		<property column="ITEM_MAX_STOK" type="Decimal" name="ItemMaxStok" not-null="true" />
+		<!-- <property column="GUDANG_ID" type="Int32" name="GudangId" not-null="true" /> -->
+		<property column="ITEM_POSITION" type="String" name="ItemPosition" not-null="true" length="50" />
+		
+	</class>
+</hibernate-mapping>

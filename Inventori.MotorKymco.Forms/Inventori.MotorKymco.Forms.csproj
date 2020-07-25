@@ -1,0 +1,451 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9D0AD145-552B-454F-9AEA-EFDC5E660847}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inventori.MotorKymco.Forms</RootNamespace>
+    <AssemblyName>Inventori.MotorKymco.Forms</AssemblyName>
+    <StartupObject>Inventori.MotorKymco.Forms.FormLoginForKymco</StartupObject>
+    <ApplicationIcon>Resources\kymco logo_ico.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Balloon.NET, Version=1.0.2688.24502, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Balloon.NET\bin\Debug\Balloon.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="DockSample, Version=2.0.2670.8642, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DockSample\bin\Debug\DockSample.exe</HintPath>
+    </Reference>
+    <Reference Include="Inventori.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Inventori.Data\bin\Debug\Inventori.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Inventori.DataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Inventori.DataAccess\bin\Debug\Inventori.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Inventori.Facade, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Inventori.Facade\bin\Debug\Inventori.Facade.dll</HintPath>
+    </Reference>
+    <Reference Include="Inventori.Forms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Inventori.Forms\bin\Debug\Inventori.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Inventori.Module, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Inventori.Module\bin\Debug\Inventori.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NHibernate, Version=1.2.0.3001, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Tutorial And Programming\DotNet\NHibernate\Tutorial\NHibernate-1.2.0.CR1-src\src\NHibernate\bin\Debug-2.0\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.0.2670.8641, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WinFormsUI\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppCode.cs" />
+    <Compile Include="FormAboutKymco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAboutKymco.designer.cs">
+      <DependentUpon>FormAboutKymco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoginForKymco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoginForKymco.Designer.cs">
+      <DependentUpon>FormLoginForKymco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfData\ListOfServiceStatus.cs" />
+    <Compile Include="Master Forms\FormMasterService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterService.Designer.cs">
+      <DependentUpon>FormMasterService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction Forms\FormService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction Forms\FormService.Designer.cs">
+      <DependentUpon>FormService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfData\ListOfCustomerStatus.cs" />
+    <Compile Include="Master Forms\FormMasterCustomerGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterCustomerGroup.designer.cs">
+      <DependentUpon>FormMasterCustomerGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FormPeriodFilterReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormPeriodFilterReport.designer.cs">
+      <DependentUpon>FormPeriodFilterReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FormDateFilterReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormDateFilterReport.designer.cs">
+      <DependentUpon>FormDateFilterReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool Forms\FormTreeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool Forms\FormTreeView.Designer.cs">
+      <DependentUpon>FormTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfData\ListOfCurrency.cs" />
+    <Compile Include="ListOfData\ListOfJournalStatus.cs" />
+    <Compile Include="ListOfData\ListOfPiHutangStatus.cs" />
+    <Compile Include="ListOfData\ListOfPrintStatus.cs" />
+    <Compile Include="ListOfData\ListOfReports.cs" />
+    <Compile Include="Master Forms\FormMasterCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterCustomer.designer.cs">
+      <DependentUpon>FormMasterCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterDepartment.designer.cs">
+      <DependentUpon>FormMasterDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterEmployee.designer.cs">
+      <DependentUpon>FormMasterEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterGroup.designer.cs">
+      <DependentUpon>FormMasterGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterItem.designer.cs">
+      <DependentUpon>FormMasterItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterSupplier.designer.cs">
+      <DependentUpon>FormMasterSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parent Form\FormParentForMotorKymco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parent Form\FormParentForMotorKymco.Designer.cs">
+      <DependentUpon>FormParentForMotorKymco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormLoginForKymco.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLoginForKymco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterService.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMasterService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportTransactionServiceByPIC.rdlc" />
+    <EmbeddedResource Include="Reports\ReportLabaRugi.rdlc" />
+    <EmbeddedResource Include="Reports\ReportHistoryServiceCustomer.rdlc" />
+    <EmbeddedResource Include="Reports\ReportSPKFactur.rdlc" />
+    <EmbeddedResource Include="Transaction Forms\FormService.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterCustomerGroup.resx">
+      <DependentUpon>FormMasterCustomerGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportStokCard.rdlc" />
+    <EmbeddedResource Include="Reports\FormPeriodFilterReport.resx">
+      <DependentUpon>FormPeriodFilterReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FormDateFilterReport.resx">
+      <DependentUpon>FormDateFilterReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportMItemList.rdlc" />
+    <EmbeddedResource Include="Reports\ReportPajakHeader.rdlc" />
+    <EmbeddedResource Include="Reports\ReportPajak.rdlc" />
+    <EmbeddedResource Include="Reports\ReportPiHutangDue.rdlc" />
+    <EmbeddedResource Include="Reports\ReportStokItem.rdlc" />
+    <EmbeddedResource Include="Reports\ReportTransactionInternalByItem.rdlc" />
+    <EmbeddedResource Include="Reports\ReportTransactionByItem.rdlc" />
+    <EmbeddedResource Include="Reports\ReportTransactionInternalByPIC.rdlc" />
+    <EmbeddedResource Include="temp\ReportLabaRugi1.rdlc" />
+    <EmbeddedResource Include="Reports\ReportSalesFactur.rdlc" />
+    <EmbeddedResource Include="Reports\ReportTransactionByPIC.rdlc" />
+    <EmbeddedResource Include="Tool Forms\FormTreeView.resx">
+      <DependentUpon>FormTreeView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterCustomer.resx">
+      <DependentUpon>FormMasterCustomer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterDepartment.resx">
+      <DependentUpon>FormMasterDepartment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterEmployee.resx">
+      <DependentUpon>FormMasterEmployee.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterGroup.resx">
+      <DependentUpon>FormMasterGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterItem.resx">
+      <DependentUpon>FormMasterItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterSupplier.resx">
+      <DependentUpon>FormMasterSupplier.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parent Form\FormParentForMotorKymco.resx">
+      <DependentUpon>FormParentForMotorKymco.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FormViewReport.resx">
+      <DependentUpon>FormViewReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportHeader.rdlc" />
+    <EmbeddedResource Include="Tool Forms\FormClosing.resx">
+      <DependentUpon>FormClosing.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool Forms\FormReminder.resx">
+      <DependentUpon>FormReminder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool Forms\FormSettingForKymco.resx">
+      <DependentUpon>FormSettingForKymco.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction Forms\FormDeleteConfirm.resx">
+      <DependentUpon>FormDeleteConfirm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction Forms\FormPiHutangPayment.resx">
+      <DependentUpon>FormPiHutangPayment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction Forms\FormPrintStatus.resx">
+      <DependentUpon>FormPrintStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction Forms\FormTransaction.resx">
+      <DependentUpon>FormTransaction.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\FormViewReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormViewReport.Designer.cs">
+      <DependentUpon>FormViewReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool Forms\FormClosing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool Forms\FormClosing.designer.cs">
+      <DependentUpon>FormClosing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool Forms\FormReminder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool Forms\FormReminder.Designer.cs">
+      <DependentUpon>FormReminder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool Forms\FormSettingForKymco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool Forms\FormSettingForKymco.Designer.cs">
+      <DependentUpon>FormSettingForKymco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction Forms\FormDeleteConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction Forms\FormDeleteConfirm.designer.cs">
+      <DependentUpon>FormDeleteConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction Forms\FormPiHutangPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction Forms\FormPiHutangPayment.Designer.cs">
+      <DependentUpon>FormPiHutangPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction Forms\FormPrintStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction Forms\FormPrintStatus.designer.cs">
+      <DependentUpon>FormPrintStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction Forms\FormTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction Forms\FormTransaction.Designer.cs">
+      <DependentUpon>FormTransaction.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="030-browse.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="hibernate.cfg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\DataSources\Inventori.Data.ItemGudangStok.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.MAccount.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.MCustomer.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.MCustomerGroup.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.MEmployee.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.MItem.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.MItemType.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.MSetting.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.MSubAccount.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.TPiHutang.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.TRekapSubAccount.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.TStokCard.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.TTransaction.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.TTransactionDetail.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.TTransactionService.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.VItemDetail.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.VStokCard.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.VTotalTransactionDetail.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.VTotalTransactionService.datasource" />
+    <None Include="Properties\DataSources\Inventori.MotorKymco.Data.TMotorSetting.datasource" />
+    <None Include="Resources\add.gif" />
+    <None Include="Resources\browse.png" />
+    <None Include="Resources\cash 37.gif" />
+    <None Include="Resources\cash.gif" />
+    <None Include="Resources\chart_ico.ico" />
+    <None Include="Resources\CloseBook.gif" />
+    <None Include="Resources\computer.gif" />
+    <None Include="Resources\database.gif" />
+    <None Include="Resources\Database_ico.ico" />
+    <None Include="Resources\data-master_ico.ico" />
+    <None Include="Resources\delete.gif" />
+    <None Include="Resources\edit.gif" />
+    <None Include="Resources\folder.gif" />
+    <None Include="Resources\item.gif" />
+    <None Include="Resources\item_ico.ico" />
+    <None Include="Resources\kredit.jpg" />
+    <None Include="Resources\OK.gif" />
+    <None Include="Resources\out.gif" />
+    <None Include="Resources\printer.gif" />
+    <None Include="Resources\Refresh.gif" />
+    <None Include="Resources\report.gif" />
+    <None Include="Resources\report_ico.ico" />
+    <None Include="Resources\sales.gif" />
+    <None Include="Resources\sales_ico.ico" />
+    <None Include="Resources\save.gif" />
+    <None Include="Resources\scanner.gif" />
+    <None Include="Resources\search_ico.ico" />
+    <None Include="Resources\setting.gif" />
+    <None Include="Resources\setting_ico.ico" />
+    <None Include="Resources\task-edit.gif" />
+    <None Include="Resources\users.gif" />
+    <None Include="Resources\users_ico.ico" />
+    <None Include="Resources\warning_ico.ico" />
+    <None Include="Resources\kymco logo.gif" />
+    <None Include="Resources\kymco logo_ico.ico" />
+    <None Include="Resources\Kymco Logo Name.jpg" />
+    <None Include="Resources\reminder_ico.ico" />
+    <Content Include="warning.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Inventori.MotorKymco.Data\Inventori.MotorKymco.Data.csproj">
+      <Project>{715973A9-80E0-4AE7-A8B6-EC0CCF077503}</Project>
+      <Name>Inventori.MotorKymco.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>688ca789-9f4c-4c91-b793-046e81ff1ca1</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>1in</BottomMargin>
+  <RightMargin>1in</RightMargin>
+  <ReportParameters>
+    <ReportParameter Name="Report_Parameter_CurrencyId">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_CurrencyId</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Report_Parameter_GroupBy">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_GroupBy</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ReportItems>
+      <Textbox Name="textbox17">
+        <Left>0.25in</Left>
+        <Top>1.25in</Top>
+        <rd:DefaultName>textbox17</rd:DefaultName>
+        <ZIndex>8</ZIndex>
+        <Width>3.625in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>="Laporan Utang dalam " &amp; Parameters!Report_Parameter_CurrencyId.Value</Value>
+      </Textbox>
+      <Textbox Name="textbox14">
+        <Left>5.625in</Left>
+        <Top>2.5in</Top>
+        <ZIndex>7</ZIndex>
+        <Width>1.625in</Width>
+        <Style>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>600</FontWeight>
+          <Format>N</Format>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>=Sum(Fields!TransactionSisa.Value, "Inventori_Data_TTransaction")-Sum(Fields!GiroAmmount.Value, "Inventori_Data_TGiro")</Value>
+      </Textbox>
+      <Textbox Name="textbox15">
+        <Left>5.625in</Left>
+        <Top>2.25in</Top>
+        <ZIndex>6</ZIndex>
+        <Width>1.625in</Width>
+        <Style>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>600</FontWeight>
+          <Format>N</Format>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>=Sum(Fields!GiroAmmount.Value, "Inventori_Data_TGiro")</Value>
+      </Textbox>
+      <Textbox Name="textbox16">
+        <Left>5.625in</Left>
+        <Top>2in</Top>
+        <ZIndex>5</ZIndex>
+        <Width>1.625in</Width>
+        <Style>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>600</FontWeight>
+          <Format>N</Format>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>=Sum(Fields!TransactionSisa.Value, "Inventori_Data_TTransaction")</Value>
+      </Textbox>
+      <Textbox Name="textbox13">
+        <Left>4.375in</Left>
+        <Top>2.5in</Top>
+        <ZIndex>4</ZIndex>
+        <Width>1.125in</Width>
+        <Style>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>600</FontWeight>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>Sisa :</Value>
+      </Textbox>
+      <Textbox Name="textbox12">
+        <Left>4.375in</Left>
+        <Top>2.25in</Top>
+        <ZIndex>3</ZIndex>
+        <Width>1.125in</Width>
+        <Style>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>600</FontWeight>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>Dibayar :</Value>
+      </Textbox>
+      <Textbox Name="textbox11">
+        <Left>4.375in</Left>
+        <Top>2in</Top>
+        <rd:DefaultName>textbox11</rd:DefaultName>
+        <ZIndex>2</ZIndex>
+        <Width>1.125in</Width>
+        <Style>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>600</FontWeight>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>Total Kredit :</Value>
+      </Textbox>
+      <Matrix Name="matrix1">
+        <MatrixColumns>
+          <MatrixColumn>
+            <Width>1.625in</Width>
+          </MatrixColumn>
+          <MatrixColumn>
+            <Width>1.625in</Width>
+          </MatrixColumn>
+          <MatrixColumn>
+            <Width>1.625in</Width>
+          </MatrixColumn>
+        </MatrixColumns>
+        <Left>0.25in</Left>
+        <RowGroupings>
+          <RowGrouping>
+            <Width>1in</Width>
+            <DynamicRows>
+              <ReportItems>
+                <Textbox Name="textbox3">
+                  <rd:DefaultName>textbox3</rd:DefaultName>
+                  <ZIndex>4</ZIndex>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                      <Right>Solid</Right>
+                    </BorderStyle>
+                    <TextAlign>Left</TextAlign>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <BorderWidth>
+                      <Right>1pt</Right>
+                    </BorderWidth>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <FontWeight>700</FontWeight>
+                    <BorderColor>
+                      <Right>Black</Right>
+                    </BorderColor>
+                    <BackgroundColor>SteelBlue</BackgroundColor>
+                    <Color>White</Color>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value>=MonthName(Month(Fields!TransactionDate.Value),true) &amp; " " &amp; Year(Fields!TransactionDate.Value)</Value>
+                </Textbox>
+              </ReportItems>
+              <Grouping Name="matrix1_RowGroup_Period">
+                <GroupExpressions>
+                  <GroupExpression>=MonthName(Month(Fields!TransactionDate.Value),true) &amp; " " &amp; Year(Fields!TransactionDate.Value)</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+            </DynamicRows>
+          </RowGrouping>
+          <RowGrouping>
+            <Width>1.125in</Width>
+            <DynamicRows>
+              <ReportItems>
+                <Textbox Name="textbox8">
+                  <rd:DefaultName>textbox8</rd:DefaultName>
+                  <ZIndex>3</ZIndex>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <TextAlign>Left</TextAlign>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <FontWeight>700</FontWeight>
+                    <BackgroundColor>SteelBlue</BackgroundColor>
+                    <Color>White</Color>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Day(Fields!TransactionDate.Value).ToString() &amp; "/" &amp; MonthName(Month(Fields!TransactionDate.Value),true) &amp; "/" &amp; Year(Fields!TransactionDate.Value).ToString()</Value>
+                </Textbox>
+              </ReportItems>
+              <Visibility>
+                <ToggleItem>textbox3</ToggleItem>
+                <Hidden>true</Hidden>
+              </Visibility>
+              <Grouping Name="matrix1_RowGroup_Date">
+                <GroupExpressions>
+                  <GroupExpression>=Day(Fields!TransactionDate.Value).ToString() &amp; "/" &amp; MonthName(Month(Fields!TransactionDate.Value),true) &amp; "/" &amp; Year(Fields!TransactionDate.Value).ToString()</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+            </DynamicRows>
+          </RowGrouping>
+        </RowGroupings>
+        <ColumnGroupings>
+          <ColumnGrouping>
+            <Height>0.25in</Height>
+            <StaticColumns>
+              <StaticColumn>
+                <ReportItems>
+                  <Textbox Name="textbox2">
+                    <rd:DefaultName>textbox2</rd:DefaultName>
+                    <ZIndex>7</ZIndex>
+                    <Style>
+                      <BorderStyle>
+                        <Bottom>Solid</Bottom>
+                        <Default>Solid</Default>
+                        <Right>Solid</Right>
+                      </BorderStyle>
+                      <TextAlign>Center</TextAlign>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <BorderWidth>
+                        <Bottom>1pt</Bottom>
+                        <Right>1pt</Right>
+                      </BorderWidth>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <FontWeight>700</FontWeight>
+                      <BorderColor>
+                        <Bottom>Black</Bottom>
+                        <Right>Black</Right>
+                      </BorderColor>
+                      <BackgroundColor>#edf2fb</BackgroundColor>
+                      <Color>#0066cc</Color>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>Total</Value>
+                  </Textbox>
+                </ReportItems>
+              </StaticColumn>
+              <StaticColumn>
+                <ReportItems>
+                  <Textbox Name="textbox5">
+                    <rd:DefaultName>textbox5</rd:DefaultName>
+                    <ZIndex>6</ZIndex>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>
+                      <TextAlign>Center</TextAlign>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <FontWeight>700</FontWeight>
+                      <BackgroundColor>#edf2fb</BackgroundColor>
+                      <Color>#0066cc</Color>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>Tunai</Value>
+                  </Textbox>
+                </ReportItems>
+              </StaticColumn>
+              <StaticColumn>
+                <ReportItems>
+                  <Textbox Name="textbox9">
+                    <rd:DefaultName>textbox9</rd:DefaultName>
+                    <ZIndex>5</ZIndex>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>
+                      <TextAlign>Center</TextAlign>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <FontWeight>700</FontWeight>
+                      <BackgroundColor>#edf2fb</BackgroundColor>
+                      <Color>#0066cc</Color>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>Kredit</Value>
+                  </Textbox>
+                </ReportItems>
+              </StaticColumn>
+            </StaticColumns>
+          </ColumnGrouping>
+        </ColumnGroupings>
+        <DataSetName>Inventori_Data_TTransaction</DataSetName>
+        <Top>1.5in</Top>
+        <ZIndex>1</ZIndex>
+        <Width>7in</Width>
+        <Corner>
+          <ReportItems>
+            <Textbox Name="textbox1">
+              <rd:DefaultName>textbox1</rd:DefaultName>
+              <ZIndex>8</ZIndex>
+              <Style>
+                <BorderStyle>
+                  <Bottom>Solid</Bottom>
+                  <Default>Solid</Default>
+                  <Right>Solid</Right>
+                </BorderStyle>
+                <PaddingLeft>2pt</PaddingLeft>
+                <BorderWidth>
+                  <Bottom>1pt</Bottom>
+                  <Right>1pt</Right>
+                </BorderWidth>
+                <PaddingBottom>2pt</PaddingBottom>
+                <BorderColor>
+                  <Bottom>Black</Bottom>
+                  <Right>Black</Right>
+                </BorderColor>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+              </Style>
+              <CanGrow>true</CanGrow>
+              <Value />
+            </Textbox>
+          </ReportItems>
+        </Corner>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <Height>0.5in</Height>
+        <MatrixRows>
+          <MatrixRow>
+            <Height>0.25in</Height>
+            <MatrixCells>
+              <MatrixCell>
+                <ReportItems>
+                  <Textbox Name="textbox4">
+                    <rd:DefaultName>textbox4</rd:DefaultName>
+                    <ZIndex>2</ZIndex>
+                    <Style>
+                      <BorderStyle>
+                        <Bottom>Solid</Bottom>
+                        <Top>Solid</Top>
+                        <Right>Solid</Right>
+                      </BorderStyle>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <BorderWidth>
+                        <Bottom>1pt</Bottom>
+                        <Top>1pt</Top>
+                        <Right>1pt</Right>
+                      </BorderWidth>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <Format>N</Format>
+                      <BorderColor>
+                        <Bottom>Black</Bottom>
+                        <Top>Black</Top>
+                        <Right>Black</Right>
+                      </BorderColor>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>=sum(Fields!TransactionGrandTotal.Value)</Value>
+                  </Textbox>
+                </ReportItems>
+              </MatrixCell>
+              <MatrixCell>
+                <ReportItems>
+                  <Textbox Name="textbox7">
+                    <rd:DefaultName>textbox7</rd:DefaultName>
+                    <ZIndex>1</ZIndex>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <Format>N</Format>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>=sum(Fields!TransactionPaid.Value)</Value>
+                  </Textbox>
+                </ReportItems>
+              </MatrixCell>
+              <MatrixCell>
+                <ReportItems>
+                  <Textbox Name="textbox10">
+                    <rd:DefaultName>textbox10</rd:DefaultName>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <Format>N</Format>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>=sum(Fields!TransactionSisa.Value)</Value>
+                  </Textbox>
+                </ReportItems>
+              </MatrixCell>
+            </MatrixCells>
+          </MatrixRow>
+        </MatrixRows>
+      </Matrix>
+      <Subreport Name="subreport1">
+        <Left>0.25in</Left>
+        <Top>0.25in</Top>
+        <Width>6.00469in</Width>
+        <ReportName>ReportHeader</ReportName>
+        <Height>0.875in</Height>
+      </Subreport>
+    </ReportItems>
+    <Height>3in</Height>
+  </Body>
+  <rd:ReportID>f19a5275-c810-4561-b592-6ff0752c4332</rd:ReportID>
+  <LeftMargin>1in</LeftMargin>
+  <DataSets>
+    <DataSet Name="Inventori_Data_TTransaction">
+      <rd:DataSetInfo>
+        <rd:DataSetName>Inventori.Data</rd:DataSetName>
+        <rd:ObjectDataSourceType>Inventori.Data.TTransaction, Inventori.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>TTransaction</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="EmployeeId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>EmployeeId</DataField>
+        </Field>
+        <Field Name="ModifiedBy">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ModifiedBy</DataField>
+        </Field>
+        <Field Name="ModifiedDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>ModifiedDate</DataField>
+        </Field>
+        <Field Name="TransactionBy">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionBy</DataField>
+        </Field>
+        <Field Name="TransactionDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>TransactionDate</DataField>
+        </Field>
+        <Field Name="TransactionDesk">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionDesk</DataField>
+        </Field>
+        <Field Name="TransactionDisc">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionDisc</DataField>
+        </Field>
+        <Field Name="TransactionFactur">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionFactur</DataField>
+        </Field>
+        <Field Name="TransactionGrandTotal">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionGrandTotal</DataField>
+        </Field>
+        <Field Name="TransactionId">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionId</DataField>
+        </Field>
+        <Field Name="TransactionPaid">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionPaid</DataField>
+        </Field>
+        <Field Name="TransactionPpn">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionPpn</DataField>
+        </Field>
+        <Field Name="TransactionReferenceId">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionReferenceId</DataField>
+        </Field>
+        <Field Name="TransactionSisa">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionSisa</DataField>
+        </Field>
+        <Field Name="TransactionStatus">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionStatus</DataField>
+        </Field>
+        <Field Name="TransactionSubTotal">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionSubTotal</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="Inventori_Data_TGiro">
+      <rd:DataSetInfo>
+        <rd:DataSetName>Inventori.Data</rd:DataSetName>
+        <rd:ObjectDataSourceType>Inventori.Data.TGiro, Inventori.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>TGiro</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Filters>
+        <Filter>
+          <Operator>Equal</Operator>
+          <FilterValues>
+            <FilterValue>="Cair"</FilterValue>
+          </FilterValues>
+          <FilterExpression>=Fields!GiroStatus.Value</FilterExpression>
+        </Filter>
+      </Filters>
+      <Fields>
+        <Field Name="BankId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>BankId</DataField>
+        </Field>
+        <Field Name="GiroAmmount">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>GiroAmmount</DataField>
+        </Field>
+        <Field Name="GiroCairDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>GiroCairDate</DataField>
+        </Field>
+        <Field Name="GiroFrom">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>GiroFrom</DataField>
+        </Field>
+        <Field Name="GiroMaturityDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>GiroMaturityDate</DataField>
+        </Field>
+        <Field Name="GiroNo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>GiroNo</DataField>
+        </Field>
+        <Field Name="GiroOutDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>GiroOutDate</DataField>
+        </Field>
+        <Field Name="GiroStatus">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>GiroStatus</DataField>
+        </Field>
+        <Field Name="GiroTo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>GiroTo</DataField>
+        </Field>
+        <Field Name="ModifiedBy">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ModifiedBy</DataField>
+        </Field>
+        <Field Name="ModifiedDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>ModifiedDate</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>7.375in</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <PageFooter>
+    <ReportItems>
+      <Textbox Name="textbox6">
+        <Left>5in</Left>
+        <rd:DefaultName>textbox6</rd:DefaultName>
+        <Width>0.75001in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>=Globals!PageNumber.ToString() &amp; " dari " &amp; Globals!TotalPages.ToString()</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.375in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+  </PageFooter>
+  <TopMargin>1in</TopMargin>
+</Report>

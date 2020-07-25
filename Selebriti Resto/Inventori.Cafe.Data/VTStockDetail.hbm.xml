@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Cafe.Data" namespace="Inventori.Cafe.Data">
+	<class name="VTStockDetail" table="V_T_STOCK_DETAIL">
+
+		<!-- could not find a primary key for this table/view. NHibernate requires an 'id' element, so you'll have to define one manually. -->
+		<id name="StockId" column="STOCK_ID" type="String">
+			<generator class="assigned"/>
+		</id>
+		<!-- <property column="STOCK_ID" type="String" name="StockId" not-null="true" length="50" /> -->
+		<property column="GUDANG_ID" type="Int32" name="GudangId" />
+		<property column="ITEM_ID" type="String" name="ItemId" not-null="true" length="50" />
+		<property column="LOCATON_ID" type="String" name="LocatonId" length="50" />
+		<property column="STOCK_BARCODE_ID" type="String" name="StockBarcodeId" length="50" />
+		<property column="STOCK_IN_BY" type="String" name="StockInBy" length="50" />
+		<property column="STOCK_DATE_IN" type="DateTime" name="StockDateIn" />
+		<property column="STOCK_PRICE_IN" type="Decimal" name="StockPriceIn" />
+		<property column="STOCK_OUT_BY" type="String" name="StockOutBy" length="50" />
+		<property column="STOCK_DATE_OUT" type="DateTime" name="StockDateOut" />
+		<property column="STOCK_PRICE_OUT" type="Decimal" name="StockPriceOut" />
+		<property column="STOCK_DESC1" type="String" name="StockDesc1" length="50" />
+		<property column="STOCK_DESC2" type="String" name="StockDesc2" length="50" />
+		<property column="STOCK_DESC3" type="String" name="StockDesc3" length="50" />
+		<property column="STOCK_IS_AVAILABLE" type="Boolean" name="StockIsAvailable" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		<property column="GUDANG_NAME" type="String" name="GudangName" not-null="true" length="50" />
+		<property column="CHANNEL_NAME" type="String" name="ChannelName" not-null="true" length="50" />
+		<property column="COLOUR_DESC" type="String" name="ColourDesc" not-null="true" length="100" />
+		<property column="ITEM_NAME" type="String" name="ItemName" not-null="true" length="50" />
+		
+	</class>
+</hibernate-mapping>

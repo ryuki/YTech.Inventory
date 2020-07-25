@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>5c08ec5d-0aad-4f83-ba59-68beab4cfd82</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>1in</BottomMargin>
+  <RightMargin>1in</RightMargin>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ReportItems>
+      <Image Name="image1">
+        <Sizing>Fit</Sizing>
+        <Left>0.125in</Left>
+        <MIMEType>image/jpeg</MIMEType>
+        <Top>0.125in</Top>
+        <ZIndex>4</ZIndex>
+        <Width>1.375in</Width>
+        <Source>Database</Source>
+        <Style />
+        <Value>=First(Fields!CompanyLogo.Value, "Inventori_Data_MSetting")</Value>
+      </Image>
+      <Textbox Name="textbox1">
+        <Left>1.5in</Left>
+        <Top>1.25in</Top>
+        <ZIndex>3</ZIndex>
+        <Width>4in</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Verdana</FontFamily>
+          <FontWeight>700</FontWeight>
+          <FontSize>9pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Value>=First(Fields!CompanyCity.Value, "Inventori_Data_MSetting")</Value>
+      </Textbox>
+      <Textbox Name="CompanyName">
+        <Left>1.5in</Left>
+        <Top>0.125in</Top>
+        <rd:DefaultName>CompanyName</rd:DefaultName>
+        <ZIndex>2</ZIndex>
+        <Width>4in</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>=First(Fields!CompanyNameFont.Value, "Inventori_Contractor_Data_TContractorSetting")</FontFamily>
+          <FontWeight>700</FontWeight>
+          <FontSize>=First(Fields!CompanyNameFontHeight.Value, "Inventori_Contractor_Data_TContractorSetting") &amp; "pt"</FontSize>
+          <Color>=First(Fields!CompanyNameColour.Value, "Inventori_Contractor_Data_TContractorSetting")</Color>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.625in</Height>
+        <Value>=First(Fields!CompanyName.Value, "Inventori_Data_MSetting")</Value>
+      </Textbox>
+      <Textbox Name="CompanyAddress">
+        <Left>1.5in</Left>
+        <Top>0.75in</Top>
+        <rd:DefaultName>CompanyAddress</rd:DefaultName>
+        <ZIndex>1</ZIndex>
+        <Width>4in</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Verdana</FontFamily>
+          <FontWeight>700</FontWeight>
+          <FontSize>9pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!CompanyAddress.Value, "Inventori_Data_MSetting")</Value>
+      </Textbox>
+      <Textbox Name="textbox4">
+        <Left>1.5in</Left>
+        <Top>1in</Top>
+        <Width>4in</Width>
+        <Style>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Verdana</FontFamily>
+          <FontWeight>700</FontWeight>
+          <FontSize>9pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>= "Phone : " &amp; First(Fields!CompanyTelp.Value, "Inventori_Data_MSetting")</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>1.5in</Height>
+  </Body>
+  <rd:ReportID>a0f700ef-3d3b-4198-a956-d5fbf141b548</rd:ReportID>
+  <LeftMargin>1in</LeftMargin>
+  <EmbeddedImages>
+    <EmbeddedImage Name="sjt">
+      <ImageData>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</ImageData>
+      <MIMEType>image/gif</MIMEType>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <DataSets>
+    <DataSet Name="Inventori_Data_MSetting">
+      <rd:DataSetInfo>
+        <rd:DataSetName>Inventori.Data</rd:DataSetName>
+        <rd:ObjectDataSourceType>Inventori.Data.MSetting, Inventori.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>MSetting</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="AutoBackup">
+          <rd:TypeName>System.Boolean</rd:TypeName>
+          <DataField>AutoBackup</DataField>
+        </Field>
+        <Field Name="AutoPrintSales">
+          <rd:TypeName>System.Boolean</rd:TypeName>
+          <DataField>AutoPrintSales</DataField>
+        </Field>
+        <Field Name="BackupDir">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>BackupDir</DataField>
+        </Field>
+        <Field Name="BiliardItem">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>BiliardItem</DataField>
+        </Field>
+        <Field Name="CompanyAddress">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CompanyAddress</DataField>
+        </Field>
+        <Field Name="CompanyCity">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CompanyCity</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="CompanyTelp">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CompanyTelp</DataField>
+        </Field>
+        <Field Name="FacturNoFormat">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>FacturNoFormat</DataField>
+        </Field>
+        <Field Name="FacturNoLength">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>FacturNoLength</DataField>
+        </Field>
+        <Field Name="FullfillPrice">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>FullfillPrice</DataField>
+        </Field>
+        <Field Name="MinimumPlay">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>MinimumPlay</DataField>
+        </Field>
+        <Field Name="QuitTimeout">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>QuitTimeout</DataField>
+        </Field>
+        <Field Name="RefereeItem">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RefereeItem</DataField>
+        </Field>
+        <Field Name="SettingId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SettingId</DataField>
+        </Field>
+        <Field Name="ModifiedBy">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ModifiedBy</DataField>
+        </Field>
+        <Field Name="ModifiedDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>ModifiedDate</DataField>
+        </Field>
+        <Field Name="CompanyAddress2">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CompanyAddress2</DataField>
+        </Field>
+        <Field Name="CompanyFax">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CompanyFax</DataField>
+        </Field>
+        <Field Name="CompanyLogo">
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+          <DataField>CompanyLogo</DataField>
+        </Field>
+        <Field Name="CompanyNpwp">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CompanyNpwp</DataField>
+        </Field>
+        <Field Name="CompanyPkpDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>CompanyPkpDate</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="Inventori_Contractor_Data_TContractorSetting">
+      <rd:DataSetInfo>
+        <rd:DataSetName>Inventori.Contractor.Data</rd:DataSetName>
+        <rd:ObjectDataSourceType>Inventori.Contractor.Data.TContractorSetting, Inventori.Contractor.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>TContractorSetting</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="GiroDeletePin">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>GiroDeletePin</DataField>
+        </Field>
+        <Field Name="LogoImage">
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+          <DataField>LogoImage</DataField>
+        </Field>
+        <Field Name="PoDeletePin">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PoDeletePin</DataField>
+        </Field>
+        <Field Name="SettingId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SettingId</DataField>
+        </Field>
+        <Field Name="CompanyNameColour">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CompanyNameColour</DataField>
+        </Field>
+        <Field Name="CompanyNameFont">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CompanyNameFont</DataField>
+        </Field>
+        <Field Name="CompanyNameFontHeight">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>CompanyNameFontHeight</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>7.04167in</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>

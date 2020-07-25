@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Cafe.Data" namespace="Inventori.Cafe.Data">
+	<class name="MLocation" table="M_LOCATION">
+
+		<id name="LocationId" column="LOCATION_ID" type="Int32" unsaved-value="0">
+			<generator class="assigned"/>
+		</id>
+		<property column="LOCATION_PARENT_ID" type="Int32" name="LocationParentId" not-null="true" />
+		<property column="LOCATION_NAME" type="String" name="LocationName" length="50" />
+		<property column="LOCATION_SHORT_NAME" type="String" name="LocationShortName" length="50" />
+		<property column="LOCATION_DESC" type="String" name="LocationDesc" length="255" />
+		<property column="LOCATION_IS_CRITICAL" type="Boolean" name="LocationIsCritical" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

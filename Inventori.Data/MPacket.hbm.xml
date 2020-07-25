@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="MPacket" table="M_PACKET">
+
+		<id name="PacketId" column="PACKET_ID" type="String">
+			<generator class="assigned"/>
+		</id>
+		<property column="PACKET_NAME" type="String" name="PacketName" length="50" />
+		<property column="PACKET_DISCOUNT" type="Decimal" name="PacketDiscount" />
+		<property column="PACKET_PRICE" type="Decimal" name="PacketPrice" />
+		<property column="PACKET_DESC" type="String" name="PacketDesc" length="50" />
+		<property column="PACKET_PRICE_AVG" type="Decimal" name="PacketPriceAvg" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

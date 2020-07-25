@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>a0f023e1-2581-447d-941a-95c4a65143b7</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>1in</BottomMargin>
+  <RightMargin>1in</RightMargin>
+  <PageWidth>21cm</PageWidth>
+  <ReportParameters>
+    <ReportParameter Name="Report_Parameter_ItemId">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_ItemId</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <List Name="list1">
+        <Filters>
+          <Filter>
+            <Operator>Equal</Operator>
+            <FilterValues>
+              <FilterValue>=Parameters!Report_Parameter_ItemId.Value</FilterValue>
+            </FilterValues>
+            <FilterExpression>=Fields!ItemId.Value</FilterExpression>
+          </Filter>
+        </Filters>
+        <ReportItems>
+          <Textbox Name="textbox23">
+            <Left>1.92344in</Left>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Format>N</Format>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>=Fields!ItemMaxStok.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox28">
+            <Top>0.5in</Top>
+            <ZIndex>7</ZIndex>
+            <Width>1.67344in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>700</FontWeight>
+              <Color>#0066cc</Color>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Value>Stok</Value>
+          </Textbox>
+          <Textbox Name="textbox29">
+            <Left>1.92344in</Left>
+            <Top>0.5in</Top>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Format>N</Format>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Value>=Fields!ItemStok.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox24">
+            <Left>1.67344in</Left>
+            <Top>0.25in</Top>
+            <ZIndex>5</ZIndex>
+            <Width>0.25in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>700</FontWeight>
+              <Color>#0066cc</Color>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>:</Value>
+          </Textbox>
+          <Textbox Name="textbox25">
+            <Top>0.25in</Top>
+            <ZIndex>4</ZIndex>
+            <Width>1.67344in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>700</FontWeight>
+              <Color>#0066cc</Color>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>Stok Minimum</Value>
+          </Textbox>
+          <Textbox Name="textbox26">
+            <Left>1.92344in</Left>
+            <Top>0.25in</Top>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Format>N</Format>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>=Fields!ItemMinStok.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox21">
+            <Left>1.67344in</Left>
+            <ZIndex>2</ZIndex>
+            <Width>0.25in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>700</FontWeight>
+              <Color>#0066cc</Color>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>:</Value>
+          </Textbox>
+          <Textbox Name="textbox22">
+            <Left>0.00469in</Left>
+            <ZIndex>1</ZIndex>
+            <Width>1.67344in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>700</FontWeight>
+              <Color>#0066cc</Color>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>Stok Maksimum</Value>
+          </Textbox>
+          <Textbox Name="textbox27">
+            <Left>1.67344in</Left>
+            <Top>0.5in</Top>
+            <Width>0.25in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>700</FontWeight>
+              <Color>#0066cc</Color>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Value>:</Value>
+          </Textbox>
+        </ReportItems>
+        <DataSetName>Inventori_Data_ItemGudangStok</DataSetName>
+      </List>
+    </ReportItems>
+    <Height>1.90476cm</Height>
+  </Body>
+  <rd:ReportID>2c41ed27-883f-4897-ab73-dd643dbcc015</rd:ReportID>
+  <LeftMargin>1in</LeftMargin>
+  <DataSets>
+    <DataSet Name="Inventori_Data_ItemGudangStok">
+      <rd:DataSetInfo>
+        <rd:DataSetName>Inventori.Data</rd:DataSetName>
+        <rd:ObjectDataSourceType>Inventori.Data.ItemGudangStok, Inventori.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>ItemGudangStok</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="GudangId">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>GudangId</DataField>
+        </Field>
+        <Field Name="ItemId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemId</DataField>
+        </Field>
+        <Field Name="ItemMaxStok">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemMaxStok</DataField>
+        </Field>
+        <Field Name="ItemMinStok">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemMinStok</DataField>
+        </Field>
+        <Field Name="ItemStok">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemStok</DataField>
+        </Field>
+        <Field Name="ModifiedBy">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ModifiedBy</DataField>
+        </Field>
+        <Field Name="ModifiedDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>ModifiedDate</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>14.09127cm</Width>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

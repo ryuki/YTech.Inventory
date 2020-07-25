@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Cafe.Data" namespace="Inventori.Cafe.Data">
+	<class name="TGiro" table="T_GIRO">
+
+		<id name="GiroId" column="GIRO_ID" type="Decimal" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+		<property column="CURRENCY_ID" type="String" name="CurrencyId" length="50" />
+		<property column="BANK_ID" type="String" name="BankId" length="50" />
+		<property column="GIRO_NO" type="String" name="GiroNo" length="50" />
+		<property column="PI_HUTANG_ID" type="Decimal" name="PiHutangId" />
+		<property column="GIRO_OUT_DATE" type="DateTime" name="GiroOutDate" />
+		<property column="GIRO_MATURITY_DATE" type="DateTime" name="GiroMaturityDate" />
+		<property column="GIRO_STATUS" type="String" name="GiroStatus" length="50" />
+		<property column="GIRO_TO" type="String" name="GiroTo" length="50" />
+		<property column="GIRO_FROM" type="String" name="GiroFrom" length="50" />
+		<property column="GIRO_CAIR_DATE" type="DateTime" name="GiroCairDate" />
+		<property column="GIRO_AMMOUNT" type="Decimal" name="GiroAmmount" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

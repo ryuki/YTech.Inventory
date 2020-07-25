@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Billiard.Data" namespace="Inventori.Billiard.Data">
+	<class name="MDiscount" table="M_DISCOUNT">
+
+		<id name="DiscId" column="DISC_ID" type="Decimal" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+		<property column="DISC" type="Decimal" name="Disc" />
+		<property column="DISC_DAY" type="String" name="DiscDay" length="50" />
+		<property column="DISC_TIME_HOUR_FROM" type="Int32" name="DiscTimeHourFrom" />
+		<property column="DISC_TIME_MIN_FROM" type="Int32" name="DiscTimeMinFrom" />
+		<property column="DISC_TIME_HOUR_TO" type="Int32" name="DiscTimeHourTo" />
+		<property column="DISC_TIME_MIN_TO" type="Int32" name="DiscTimeMinTo" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

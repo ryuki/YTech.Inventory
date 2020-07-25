@@ -1,0 +1,23 @@
+--
+-- Dropping view V_MENU_USER : 
+--
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[V_MENU_USER]') AND OBJECTPROPERTY(id, N'IsView') = 1)
+  DROP VIEW [dbo].[V_MENU_USER]
+
+
+--
+-- Dropping view V_TOTAL_TRANSACTION_BY_ITEM : 
+--
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[V_TOTAL_TRANSACTION_BY_ITEM]') AND OBJECTPROPERTY(id, N'IsView') = 1)
+  DROP VIEW [dbo].[V_TOTAL_TRANSACTION_BY_ITEM]
+
+
+--
+-- Dropping view V_TRANSACTION_DETAIL : 
+--
+
+IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[V_TRANSACTION_DETAIL]') AND OBJECTPROPERTY(id, N'IsView') = 1)
+  DROP VIEW [dbo].[V_TRANSACTION_DETAIL]
+

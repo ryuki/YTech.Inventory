@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>4ed30250-911f-48a1-8122-15f4808eaaba</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>2.5cm</RightMargin>
+  <PageWidth>10in</PageWidth>
+  <ReportParameters>
+    <ReportParameter Name="Report_Parameter_Periode">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_Periode</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ReportItems>
+      <List Name="list3">
+        <Left>0.125in</Left>
+        <ReportItems>
+          <List Name="list1">
+            <ReportItems>
+              <Textbox Name="textbox3">
+                <rd:DefaultName>textbox3</rd:DefaultName>
+                <ZIndex>1</ZIndex>
+                <Width>5.125in</Width>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontWeight>700</FontWeight>
+                  <FontSize>9pt</FontSize>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>=Fields!AccountId.Value &amp; " / " &amp; Fields!AccountName.Value</Value>
+              </Textbox>
+              <Subreport Name="subreport1">
+                <Parameters>
+                  <Parameter Name="Report_Parameter_Account_ID">
+                    <Value>=Fields!AccountId.Value</Value>
+                  </Parameter>
+                  <Parameter Name="Report_Parameter_Status">
+                    <Value>=Fields!AccountStatus.Value</Value>
+                  </Parameter>
+                </Parameters>
+                <Top>0.25in</Top>
+                <ReportName>SubReportSubAccount</ReportName>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </Subreport>
+            </ReportItems>
+            <DataSetName>Inventori_Data_MAccount</DataSetName>
+            <Style>
+              <FontSize>9pt</FontSize>
+            </Style>
+            <Height>0.5in</Height>
+          </List>
+        </ReportItems>
+        <DataSetName>Inventori_Data_MAccount</DataSetName>
+        <Top>2in</Top>
+        <ZIndex>4</ZIndex>
+        <Width>6.875in</Width>
+        <Grouping Name="list3_Details_Group">
+          <GroupExpressions>
+            <GroupExpression>=Fields!AccountId.Value</GroupExpression>
+          </GroupExpressions>
+        </Grouping>
+        <Height>0.625in</Height>
+      </List>
+      <Matrix Name="matrix1">
+        <MatrixColumns>
+          <MatrixColumn>
+            <Width>1.375in</Width>
+          </MatrixColumn>
+        </MatrixColumns>
+        <Left>0.125in</Left>
+        <RowGroupings>
+          <RowGrouping>
+            <Width>1.375in</Width>
+            <DynamicRows>
+              <ReportItems>
+                <Textbox Name="textbox9">
+                  <rd:DefaultName>textbox9</rd:DefaultName>
+                  <ZIndex>1</ZIndex>
+                  <Style>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <FontSize>9pt</FontSize>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value />
+                </Textbox>
+              </ReportItems>
+              <Grouping Name="matrix1_RowGroup1">
+                <GroupExpressions>
+                  <GroupExpression />
+                </GroupExpressions>
+              </Grouping>
+            </DynamicRows>
+          </RowGrouping>
+        </RowGroupings>
+        <ColumnGroupings>
+          <ColumnGrouping>
+            <DynamicColumns>
+              <ReportItems>
+                <Textbox Name="textbox8">
+                  <rd:DefaultName>textbox8</rd:DefaultName>
+                  <ZIndex>2</ZIndex>
+                  <Style>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <FontSize>9pt</FontSize>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value />
+                </Textbox>
+              </ReportItems>
+              <Grouping Name="matrix1_ColumnGroup1">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!AccountStatus.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+            </DynamicColumns>
+            <Height>0.125in</Height>
+          </ColumnGrouping>
+        </ColumnGroupings>
+        <DataSetName>Inventori_Data_MAccount</DataSetName>
+        <Top>2.75in</Top>
+        <ZIndex>3</ZIndex>
+        <Width>2.75in</Width>
+        <Corner>
+          <ReportItems>
+            <Textbox Name="textbox7">
+              <rd:DefaultName>textbox7</rd:DefaultName>
+              <ZIndex>3</ZIndex>
+              <Style>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingBottom>2pt</PaddingBottom>
+                <FontSize>9pt</FontSize>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+              </Style>
+              <CanGrow>true</CanGrow>
+              <Value />
+            </Textbox>
+          </ReportItems>
+        </Corner>
+        <Style>
+          <FontSize>9pt</FontSize>
+        </Style>
+        <Height>0.375in</Height>
+        <MatrixRows>
+          <MatrixRow>
+            <Height>0.25in</Height>
+            <MatrixCells>
+              <MatrixCell>
+                <ReportItems>
+                  <Textbox Name="textbox10">
+                    <rd:DefaultName>textbox10</rd:DefaultName>
+                    <Style>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <FontSize>9pt</FontSize>
+                      <Format>N</Format>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>=sum(Fields!AccountSaldo.Value)</Value>
+                  </Textbox>
+                </ReportItems>
+              </MatrixCell>
+            </MatrixCells>
+          </MatrixRow>
+        </MatrixRows>
+      </Matrix>
+      <Textbox Name="textbox2">
+        <Left>2.0625in</Left>
+        <Top>1.625in</Top>
+        <ZIndex>2</ZIndex>
+        <Width>3.75in</Width>
+        <Style>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <FontSize>9pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>="PERIODE " + Parameters!Report_Parameter_Periode.Value</Value>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <Left>2.0625in</Left>
+        <Top>1.375in</Top>
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <ZIndex>1</ZIndex>
+        <Width>3.75in</Width>
+        <Style>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontWeight>700</FontWeight>
+          <FontSize>9pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>LAPORAN RUGI LABA</Value>
+      </Textbox>
+      <Subreport Name="subreport2">
+        <Left>0.125in</Left>
+        <Top>0.125in</Top>
+        <Width>7.625in</Width>
+        <ReportName>ReportHeader</ReportName>
+        <Style>
+          <FontSize>9pt</FontSize>
+        </Style>
+        <Height>1.25in</Height>
+      </Subreport>
+    </ReportItems>
+    <Height>5.25in</Height>
+  </Body>
+  <rd:ReportID>f32c8e77-ebf5-4e51-a00b-964920b2f6fb</rd:ReportID>
+  <LeftMargin>2.5cm</LeftMargin>
+  <DataSets>
+    <DataSet Name="Inventori_Data_MAccount">
+      <rd:DataSetInfo>
+        <rd:DataSetName>Inventori.Data</rd:DataSetName>
+        <rd:ObjectDataSourceType>Inventori.Data.MAccount, Inventori.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>MAccount</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="AccountDesc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>AccountDesc</DataField>
+        </Field>
+        <Field Name="AccountId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>AccountId</DataField>
+        </Field>
+        <Field Name="AccountName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>AccountName</DataField>
+        </Field>
+        <Field Name="AccountSaldo">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>AccountSaldo</DataField>
+        </Field>
+        <Field Name="AccountStatus">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>AccountStatus</DataField>
+        </Field>
+        <Field Name="ModifiedBy">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ModifiedBy</DataField>
+        </Field>
+        <Field Name="ModifiedDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>ModifiedDate</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>7.875in</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <PageFooter>
+    <ReportItems>
+      <Textbox Name="textbox6">
+        <Left>5.375in</Left>
+        <rd:DefaultName>textbox6</rd:DefaultName>
+        <Width>0.75001in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontSize>9pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>=Globals!PageNumber.ToString() &amp; " dari " &amp; Globals!TotalPages.ToString()</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.375in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+  </PageFooter>
+  <TopMargin>2.5cm</TopMargin>
+</Report>

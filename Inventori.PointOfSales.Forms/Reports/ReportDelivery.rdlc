@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>8276836b-d64b-45a8-a7d7-4892753e71c2</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>2.5cm</RightMargin>
+  <PageWidth>21cm</PageWidth>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Matrix Name="matrix1">
+        <MatrixColumns>
+          <MatrixColumn>
+            <Width>4cm</Width>
+          </MatrixColumn>
+        </MatrixColumns>
+        <Left>1.25cm</Left>
+        <RowGroupings>
+          <RowGrouping>
+            <Width>7cm</Width>
+            <DynamicRows>
+              <ReportItems>
+                <Textbox Name="textbox18">
+                  <rd:DefaultName>textbox18</rd:DefaultName>
+                  <ZIndex>1</ZIndex>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <BackgroundColor>AliceBlue</BackgroundColor>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Fields!EkspedissionName.Value</Value>
+                </Textbox>
+              </ReportItems>
+              <Grouping Name="matrix1_RowGroup1">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!DeliveryExpedission.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+            </DynamicRows>
+          </RowGrouping>
+        </RowGroupings>
+        <ColumnGroupings>
+          <ColumnGrouping>
+            <DynamicColumns>
+              <ReportItems>
+                <Textbox Name="textbox15">
+                  <rd:DefaultName>textbox15</rd:DefaultName>
+                  <ZIndex>2</ZIndex>
+                  <Style>
+                    <BorderStyle>
+                      <Bottom>Solid</Bottom>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <TextAlign>Center</TextAlign>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <BorderWidth>
+                      <Bottom>1pt</Bottom>
+                    </BorderWidth>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <FontWeight>700</FontWeight>
+                    <FontSize>9pt</FontSize>
+                    <BorderColor>
+                      <Bottom>Black</Bottom>
+                    </BorderColor>
+                    <BackgroundColor>SteelBlue</BackgroundColor>
+                    <Color>White</Color>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value>Total Biaya</Value>
+                </Textbox>
+              </ReportItems>
+              <Grouping Name="matrix1_ColumnGroup1">
+                <GroupExpressions>
+                  <GroupExpression />
+                </GroupExpressions>
+              </Grouping>
+            </DynamicColumns>
+            <Height>0.63492cm</Height>
+          </ColumnGrouping>
+        </ColumnGroupings>
+        <DataSetName>Inventori_Data_VTotalTransactionDelivery</DataSetName>
+        <Top>3.25cm</Top>
+        <ZIndex>2</ZIndex>
+        <Visibility>
+          <Hidden>true</Hidden>
+        </Visibility>
+        <Width>11cm</Width>
+        <Corner>
+          <ReportItems>
+            <Textbox Name="textbox14">
+              <rd:DefaultName>textbox14</rd:DefaultName>
+              <ZIndex>3</ZIndex>
+              <Style>
+                <BorderStyle>
+                  <Bottom>Solid</Bottom>
+                  <Default>Solid</Default>
+                </BorderStyle>
+                <TextAlign>Center</TextAlign>
+                <PaddingLeft>2pt</PaddingLeft>
+                <BorderWidth>
+                  <Bottom>1pt</Bottom>
+                </BorderWidth>
+                <PaddingBottom>2pt</PaddingBottom>
+                <FontWeight>700</FontWeight>
+                <FontSize>9pt</FontSize>
+                <BorderColor>
+                  <Bottom>Black</Bottom>
+                </BorderColor>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+              </Style>
+              <CanGrow>true</CanGrow>
+              <Value>Ekspedisi</Value>
+            </Textbox>
+          </ReportItems>
+        </Corner>
+        <Style>
+          <FontSize>9pt</FontSize>
+        </Style>
+        <Height>1.26984cm</Height>
+        <MatrixRows>
+          <MatrixRow>
+            <Height>0.63492cm</Height>
+            <MatrixCells>
+              <MatrixCell>
+                <ReportItems>
+                  <Textbox Name="textbox19">
+                    <rd:DefaultName>textbox19</rd:DefaultName>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <Format>N</Format>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>=sum(Fields!DeliveryCost.Value)</Value>
+                  </Textbox>
+                </ReportItems>
+              </MatrixCell>
+            </MatrixCells>
+          </MatrixRow>
+        </MatrixRows>
+      </Matrix>
+      <List Name="list1">
+        <Left>1cm</Left>
+        <ReportItems>
+          <Textbox Name="textbox12">
+            <Left>2.16562in</Left>
+            <Top>0.09844in</Top>
+            <ZIndex>14</ZIndex>
+            <Width>2.0375in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>9pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>=Fields!EkspedissionName.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox13">
+            <Left>0.25001cm</Left>
+            <Top>0.09844in</Top>
+            <ZIndex>13</ZIndex>
+            <Width>2.0375in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>9pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>Ekspedisi :</Value>
+          </Textbox>
+          <Table Name="table1">
+            <Left>0.25cm</Left>
+            <Top>5.5cm</Top>
+            <ZIndex>12</ZIndex>
+            <Width>13.5cm</Width>
+            <Details>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="DeliveryDetailItemId">
+                          <rd:DefaultName>DeliveryDetailItemId</rd:DefaultName>
+                          <ZIndex>2</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontSize>9pt</FontSize>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!DeliveryDetailItemId.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="ItemName">
+                          <rd:DefaultName>ItemName</rd:DefaultName>
+                          <ZIndex>1</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontSize>9pt</FontSize>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!ItemName.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="DeliveryDetailQuantity">
+                          <rd:DefaultName>DeliveryDetailQuantity</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontSize>9pt</FontSize>
+                            <Format>N</Format>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!DeliveryDetailQuantity.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.63492cm</Height>
+                </TableRow>
+              </TableRows>
+            </Details>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontSize>9pt</FontSize>
+            </Style>
+            <Header>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox9">
+                          <rd:DefaultName>textbox9</rd:DefaultName>
+                          <ZIndex>5</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Bottom>Solid</Bottom>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <BorderWidth>
+                              <Bottom>1pt</Bottom>
+                            </BorderWidth>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>700</FontWeight>
+                            <FontSize>9pt</FontSize>
+                            <BorderColor>
+                              <Bottom>Black</Bottom>
+                            </BorderColor>
+                            <BackgroundColor>SteelBlue</BackgroundColor>
+                            <Color>White</Color>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>Kode Barang</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox10">
+                          <rd:DefaultName>textbox10</rd:DefaultName>
+                          <ZIndex>4</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Bottom>Solid</Bottom>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <BorderWidth>
+                              <Bottom>1pt</Bottom>
+                            </BorderWidth>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>700</FontWeight>
+                            <FontSize>9pt</FontSize>
+                            <BorderColor>
+                              <Bottom>Black</Bottom>
+                            </BorderColor>
+                            <BackgroundColor>SteelBlue</BackgroundColor>
+                            <Color>White</Color>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>Nama Barang</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox11">
+                          <rd:DefaultName>textbox11</rd:DefaultName>
+                          <ZIndex>3</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Bottom>Solid</Bottom>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <BorderWidth>
+                              <Bottom>1pt</Bottom>
+                            </BorderWidth>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>700</FontWeight>
+                            <FontSize>9pt</FontSize>
+                            <BorderColor>
+                              <Bottom>Black</Bottom>
+                            </BorderColor>
+                            <BackgroundColor>SteelBlue</BackgroundColor>
+                            <Color>White</Color>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>Qty</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.63492cm</Height>
+                </TableRow>
+              </TableRows>
+            </Header>
+            <TableColumns>
+              <TableColumn>
+                <Width>4.5cm</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>4.5cm</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>4.5cm</Width>
+              </TableColumn>
+            </TableColumns>
+            <Height>1.26984cm</Height>
+          </Table>
+          <Textbox Name="textbox7">
+            <Left>0.09844in</Left>
+            <Top>4.75cm</Top>
+            <ZIndex>11</ZIndex>
+            <Width>2.0375in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>9pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>Keterangan :</Value>
+          </Textbox>
+          <Textbox Name="textbox8">
+            <Left>5.5cm</Left>
+            <Top>4.75cm</Top>
+            <ZIndex>10</ZIndex>
+            <Width>5.1746cm</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>9pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.63492cm</Height>
+            <Value>=Fields!DeliveryDesc.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox6">
+            <Left>0.09844in</Left>
+            <Top>4cm</Top>
+            <ZIndex>9</ZIndex>
+            <Width>2.0375in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>9pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>Total Biaya :</Value>
+          </Textbox>
+          <Textbox Name="DeliveryCost">
+            <Left>5.5cm</Left>
+            <Top>4cm</Top>
+            <rd:DefaultName>DeliveryCost</rd:DefaultName>
+            <ZIndex>8</ZIndex>
+            <Width>5.1746cm</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>9pt</FontSize>
+              <Format>N</Format>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.63492cm</Height>
+            <Value>=Fields!DeliveryCost.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox4">
+            <Left>2.16562in</Left>
+            <Top>2.5cm</Top>
+            <ZIndex>7</ZIndex>
+            <Width>2.0375in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>9pt</FontSize>
+              <Format>dd/MMM/yyyy</Format>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>=Fields!DeliverySentDate.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox5">
+            <Left>0.09844in</Left>
+            <Top>2.5cm</Top>
+            <ZIndex>6</ZIndex>
+            <Width>2.0375in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>9pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>Tanggal Surat Jalan Ekspedisi :</Value>
+          </Textbox>
+          <Textbox Name="textbox2">
+            <Left>2.16562in</Left>
+            <Top>0.68907in</Top>
+            <ZIndex>5</ZIndex>
+            <Width>2.0375in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>9pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>=Fields!DeliveryNumberExpedission.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox3">
+            <Left>0.25cm</Left>
+            <Top>0.68907in</Top>
+            <ZIndex>4</ZIndex>
+            <Width>2.0375in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>9pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>No Surat Jalan Ekspedisi :</Value>
+          </Textbox>
+          <Textbox Name="textbox47">
+            <Left>2.16562in</Left>
+            <Top>0.39376in</Top>
+            <ZIndex>3</ZIndex>
+            <Width>2.0375in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>9pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>=Fields!DeliveryNumberPic.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox48">
+            <Left>0.25cm</Left>
+            <Top>0.39376in</Top>
+            <ZIndex>2</ZIndex>
+            <Width>2.0375in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>9pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>No Surat Jalan Supplier :</Value>
+          </Textbox>
+          <Textbox Name="textbox17">
+            <Left>2.16562in</Left>
+            <Top>3.25cm</Top>
+            <ZIndex>1</ZIndex>
+            <Width>2.0375in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>9pt</FontSize>
+              <Format>dd/MMM/yyyy</Format>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>=Fields!DeliveryReceiveDate.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox16">
+            <Left>0.09844in</Left>
+            <Top>3.25cm</Top>
+            <Width>2.0375in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontSize>9pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>Tanggal Sampai :</Value>
+          </Textbox>
+        </ReportItems>
+        <DataSetName>Inventori_Data_VTotalTransactionDelivery</DataSetName>
+        <Top>4.75cm</Top>
+        <ZIndex>1</ZIndex>
+        <Width>14cm</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+        </Style>
+        <Grouping Name="list1_Details_Group">
+          <GroupExpressions>
+            <GroupExpression>=Fields!DeliveryId.Value</GroupExpression>
+          </GroupExpressions>
+        </Grouping>
+        <Height>7cm</Height>
+      </List>
+      <Subreport Name="subreport1">
+        <Left>0.4in</Left>
+        <Top>0.09844in</Top>
+        <Width>5.5in</Width>
+        <ReportName>ReportHeader</ReportName>
+        <Style>
+          <FontSize>9pt</FontSize>
+        </Style>
+        <Height>1in</Height>
+      </Subreport>
+    </ReportItems>
+    <Height>12.25cm</Height>
+  </Body>
+  <rd:ReportID>693513c8-bb5b-428f-b5f8-bf72091cfbe1</rd:ReportID>
+  <LeftMargin>2.5cm</LeftMargin>
+  <DataSets>
+    <DataSet Name="Inventori_Data_VTotalTransactionDelivery">
+      <rd:DataSetInfo>
+        <rd:DataSetName>Inventori.Data</rd:DataSetName>
+        <rd:ObjectDataSourceType>Inventori.Data.VTotalTransactionDelivery, Inventori.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>VTotalTransactionDelivery</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="DefaultGudangId">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>DefaultGudangId</DataField>
+        </Field>
+        <Field Name="DeliveryCost">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>DeliveryCost</DataField>
+        </Field>
+        <Field Name="DeliveryDesc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DeliveryDesc</DataField>
+        </Field>
+        <Field Name="DeliveryDetailDesc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DeliveryDetailDesc</DataField>
+        </Field>
+        <Field Name="DeliveryDetailId">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>DeliveryDetailId</DataField>
+        </Field>
+        <Field Name="DeliveryDetailItemId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DeliveryDetailItemId</DataField>
+        </Field>
+        <Field Name="DeliveryDetailQuantity">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>DeliveryDetailQuantity</DataField>
+        </Field>
+        <Field Name="DeliveryExpedission">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DeliveryExpedission</DataField>
+        </Field>
+        <Field Name="DeliveryId">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>DeliveryId</DataField>
+        </Field>
+        <Field Name="DeliveryNumberExpedission">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DeliveryNumberExpedission</DataField>
+        </Field>
+        <Field Name="DeliveryNumberPic">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DeliveryNumberPic</DataField>
+        </Field>
+        <Field Name="DeliveryPic">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>DeliveryPic</DataField>
+        </Field>
+        <Field Name="DeliveryReceiveDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>DeliveryReceiveDate</DataField>
+        </Field>
+        <Field Name="DeliverySentDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>DeliverySentDate</DataField>
+        </Field>
+        <Field Name="GroupId">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>GroupId</DataField>
+        </Field>
+        <Field Name="ItemCommision">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemCommision</DataField>
+        </Field>
+        <Field Name="ItemDesc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemDesc</DataField>
+        </Field>
+        <Field Name="ItemExpiredDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>ItemExpiredDate</DataField>
+        </Field>
+        <Field Name="ItemName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemName</DataField>
+        </Field>
+        <Field Name="ItemPriceMax">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemPriceMax</DataField>
+        </Field>
+        <Field Name="ItemPriceMaxVip">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemPriceMaxVip</DataField>
+        </Field>
+        <Field Name="ItemPriceMin">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemPriceMin</DataField>
+        </Field>
+        <Field Name="ItemPriceMinVip">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemPriceMinVip</DataField>
+        </Field>
+        <Field Name="ItemPricePurchase">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemPricePurchase</DataField>
+        </Field>
+        <Field Name="ItemPricePurchaseAvg">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemPricePurchaseAvg</DataField>
+        </Field>
+        <Field Name="ItemSatuan">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemSatuan</DataField>
+        </Field>
+        <Field Name="ItemTypeId">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>ItemTypeId</DataField>
+        </Field>
+        <Field Name="ModifiedBy">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ModifiedBy</DataField>
+        </Field>
+        <Field Name="ModifiedDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>ModifiedDate</DataField>
+        </Field>
+        <Field Name="SupplierId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SupplierId</DataField>
+        </Field>
+        <Field Name="TransactionId">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionId</DataField>
+        </Field>
+        <Field Name="EkspedissionAddress">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>EkspedissionAddress</DataField>
+        </Field>
+        <Field Name="EkspedissionDesc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>EkspedissionDesc</DataField>
+        </Field>
+        <Field Name="EkspedissionDesc2">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>EkspedissionDesc2</DataField>
+        </Field>
+        <Field Name="EkspedissionDisc">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>EkspedissionDisc</DataField>
+        </Field>
+        <Field Name="EkspedissionFax">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>EkspedissionFax</DataField>
+        </Field>
+        <Field Name="EkspedissionLimit">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>EkspedissionLimit</DataField>
+        </Field>
+        <Field Name="EkspedissionName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>EkspedissionName</DataField>
+        </Field>
+        <Field Name="EkspedissionNpwp">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>EkspedissionNpwp</DataField>
+        </Field>
+        <Field Name="EkspedissionPhone">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>EkspedissionPhone</DataField>
+        </Field>
+        <Field Name="EkspedissionStatus">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>EkspedissionStatus</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>15.75cm</Width>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <Language>en-US</Language>
+  <PageFooter>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <Left>4.13437in</Left>
+        <Top>0.05754cm</Top>
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Width>1.75in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontSize>9pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.63492cm</Height>
+        <Value>="Halaman " &amp; Globals!PageNumber &amp; " dari " &amp; Globals!TotalPages</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.75cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+  </PageFooter>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

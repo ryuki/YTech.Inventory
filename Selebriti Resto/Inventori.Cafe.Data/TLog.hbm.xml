@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Cafe.Data" namespace="Inventori.Cafe.Data">
+	<class name="TLog" table="T_LOG">
+
+		<id name="LogId" column="LOG_ID" type="Decimal" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+		<property column="LOG_DATE" type="DateTime" name="LogDate" />
+		<property column="LOG_USER" type="String" name="LogUser" length="50" />
+		<property column="LOG_COMP_NAME" type="String" name="LogCompName" length="50" />
+		<property column="LOG_IP" type="String" name="LogIp" length="50" />
+		<property column="LOG_ACTION" type="String" name="LogAction" length="50" />
+		<property column="LOG_TABLE" type="String" name="LogTable" length="50" />
+		<property column="LOG_DESC" type="String" name="LogDesc" length="2147483647" />
+		
+	</class>
+</hibernate-mapping>

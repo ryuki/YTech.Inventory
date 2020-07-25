@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Cafe.Data" namespace="Inventori.Cafe.Data">
+	<class name="TTransactionService" table="T_TRANSACTION_SERVICE">
+
+		<id name="TransactionId" column="TRANSACTION_ID" type="Decimal" unsaved-value="0">
+			<generator class="assigned"/>
+		</id>
+		<property column="SERVICE_FIRST_CONDITION" type="String" name="ServiceFirstCondition" length="50" />
+		<property column="SERVICE_REQUEST_DATE" type="DateTime" name="ServiceRequestDate" />
+		<property column="SERVICE_START_WORK" type="DateTime" name="ServiceStartWork" />
+		<property column="SERVICE_END_WORK" type="DateTime" name="ServiceEndWork" />
+		<property column="SERVICE_PIC" type="String" name="ServicePic" length="50" />
+		<property column="SERVICE_TYPE" type="String" name="ServiceType" length="50" />
+		<property column="SERVICE_COMPLAIN" type="String" name="ServiceComplain" length="50" />
+		<property column="SERVICE_DESC" type="String" name="ServiceDesc" length="50" />
+		<property column="SERVICE_CHARGE" type="Decimal" name="ServiceCharge" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

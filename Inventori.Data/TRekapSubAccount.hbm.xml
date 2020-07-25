@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="TRekapSubAccount" table="T_REKAP_SUB_ACCOUNT">
+
+		<id name="RekapSubAccountId" column="REKAP_SUB_ACCOUNT_ID" type="Decimal" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+		<property column="REKAP_SUB_ACCOUNT_PERIODE" type="String" name="RekapSubAccountPeriode" length="50" />
+		<property column="ACCOUNT_ID" type="String" name="AccountId" length="50" />
+		<property column="SUB_ACCOUNT_ID" type="String" name="SubAccountId" length="50" />
+		<property column="REKAP_SUBACCOUNT_SALDO" type="Decimal" name="RekapSubaccountSaldo" />
+		<property column="REKAP_SUBACCOUNT_DESC" type="String" name="RekapSubaccountDesc" length="50" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

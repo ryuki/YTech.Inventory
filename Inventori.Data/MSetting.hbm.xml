@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="MSetting" table="M_SETTING">
+
+		<id name="SettingId" column="SETTING_ID" type="String">
+			<generator class="assigned"/>
+		</id>
+		<property column="COMPANY_NAME" type="String" name="CompanyName" length="50" />
+		<property column="COMPANY_ADDRESS" type="String" name="CompanyAddress" length="50" />
+		<property column="COMPANY_ADDRESS2" type="String" name="CompanyAddress2" length="50" />
+		<property column="COMPANY_CITY" type="String" name="CompanyCity" length="50" />
+		<property column="COMPANY_TELP" type="String" name="CompanyTelp" length="50" />
+		<property column="COMPANY_FAX" type="String" name="CompanyFax" length="50" />
+		<property column="COMPANY_NPWP" type="String" name="CompanyNpwp" length="50" />
+		<property column="COMPANY_PKP_DATE" type="DateTime" name="CompanyPkpDate" />
+		<property column="COMPANY_LOGO" type="BinaryBlob" name="CompanyLogo" />
+		<property column="AUTO_PRINT_SALES" type="Boolean" name="AutoPrintSales" />
+		<property column="AUTO_BACKUP" type="Boolean" name="AutoBackup" />
+		<property column="BACKUP_DIR" type="String" name="BackupDir" length="100" />
+		<property column="FACTUR_NO_FORMAT" type="String" name="FacturNoFormat" length="50" />
+		<property column="FACTUR_NO_LENGTH" type="Int32" name="FacturNoLength" />
+		<property column="FACTUR_NO_NEXT" type="Decimal" name="FacturNoNext" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

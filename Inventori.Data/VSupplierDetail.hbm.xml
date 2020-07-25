@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="VSupplierDetail" table="V_SUPPLIER_DETAIL">
+
+		<!-- could not find a primary key for this table/view. NHibernate requires an 'id' element, so you'll have to define one manually. -->
+		<composite-id access="field">
+      <key-property name="SupplierId" column="SUPPLIER_ID" type="String"/>
+      <key-property column="CURRENCY_ID" type="String" name="CurrencyId" length="50" />
+    </composite-id>
+
+		<!-- <property column="SUPPLIER_ID" type="String" name="SupplierId" not-null="true" length="20" /> -->
+		<property column="SUPPLIER_NAME" type="String" name="SupplierName" length="50" />
+		<property column="SUPPLIER_ADDRESS" type="String" name="SupplierAddress" length="100" />
+		<property column="SUPPLIER_PHONE" type="String" name="SupplierPhone" length="20" />
+		<property column="SUPPLIER_FAX" type="String" name="SupplierFax" length="50" />
+		<property column="SUPPLIER_NPWP" type="String" name="SupplierNpwp" length="50" />
+		<property column="SUPPLIER_CONTACT" type="String" name="SupplierContact" length="50" />
+		<property column="SUPPLIER_CONTACT_PHONE" type="String" name="SupplierContactPhone" length="20" />
+		<property column="SUPPLIER_LIMIT" type="Decimal" name="SupplierLimit" />
+		<property column="SUB_ACCOUNT_ID" type="String" name="SubAccountId" length="50" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		<property column="BANK_ID" type="String" name="BankId" not-null="true" length="50" />
+		<!-- <property column="CURRENCY_ID" type="String" name="CurrencyId" not-null="true" length="50" /> -->
+		<property column="SUPPLIER_ACCOUNT_NO" type="String" name="SupplierAccountNo" not-null="true" length="50" />
+		<property column="SUPPLIER_ACCOUNT_NAME" type="String" name="SupplierAccountName" not-null="true" length="100" />
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Cafe.Data" namespace="Inventori.Cafe.Data">
+	<class name="VRekapSubAccount" table="V_REKAP_SUB_ACCOUNT">
+
+		<!-- could not find a primary key for this table/view. NHibernate requires an 'id' element, so you'll have to define one manually. -->
+		<id name="RekapSubAccountId" column="REKAP_SUB_ACCOUNT_ID" type="Decimal" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+		<!--<property column="REKAP_SUB_ACCOUNT_ID" type="Decimal" name="RekapSubAccountId" not-null="true" /> -->
+		<property column="ACCOUNT_ID" type="String" name="AccountId" length="50" />
+		<property column="ACCOUNT_NAME" type="String" name="AccountName" length="50" />
+		<property column="ACCOUNT_STATUS" type="String" name="AccountStatus" length="50" />
+		<property column="ACCOUNT_SALDO" type="Decimal" name="AccountSaldo" />
+		<property column="ACCOUNT_DESC" type="String" name="AccountDesc" length="50" />
+		<property column="ACCOUNT_POSITION" type="String" name="AccountPosition" length="50" />
+		<property column="REKAP_SUB_ACCOUNT_PERIODE" type="String" name="RekapSubAccountPeriode" length="50" />
+		<property column="SUB_ACCOUNT_ID" type="String" name="SubAccountId" length="50" />
+		<property column="REKAP_SUBACCOUNT_SALDO" type="Decimal" name="RekapSubaccountSaldo" />
+		<property column="REKAP_SUBACCOUNT_DESC" type="String" name="RekapSubaccountDesc" length="50" />
+		<property column="SUB_ACCOUNT_NAME" type="String" name="SubAccountName" length="50" />
+		<property column="SUB_ACCOUNT_DESC" type="String" name="SubAccountDesc" length="2147483647" />
+		
+	</class>
+</hibernate-mapping>

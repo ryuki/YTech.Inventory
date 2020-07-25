@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="TTransactionDeliveryDetail" table="T_TRANSACTION_DELIVERY_DETAIL">
+
+		<id name="DeliveryDetailId" column="DELIVERY_DETAIL_ID" type="Decimal" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+		<property column="DELIVERY_ID" type="Decimal" name="DeliveryId" />
+		<property column="TRANSACTION_DETAIL_ID" type="Decimal" name="TransactionDetailId" />
+		<property column="DELIVERY_DETAIL_ITEM_ID" type="String" name="DeliveryDetailItemId" length="50" />
+		<property column="DELIVERY_DETAIL_QUANTITY" type="Decimal" name="DeliveryDetailQuantity" />
+		<property column="DELIVERY_DETAIL_DESC" type="String" name="DeliveryDetailDesc" length="100" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

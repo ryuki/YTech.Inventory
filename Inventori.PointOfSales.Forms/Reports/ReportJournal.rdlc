@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>2.5cm</RightMargin>
+  <PageWidth>21cm</PageWidth>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Subreport Name="subreport1">
+        <Left>0.4in</Left>
+        <Top>0.09844in</Top>
+        <Width>5.5in</Width>
+        <ReportName>ReportHeader</ReportName>
+        <Style>
+          <FontSize>9pt</FontSize>
+        </Style>
+        <Height>1in</Height>
+      </Subreport>
+    </ReportItems>
+    <Height>5cm</Height>
+  </Body>
+  <rd:ReportID>693513c8-bb5b-428f-b5f8-bf72091cfbe1</rd:ReportID>
+  <LeftMargin>2.5cm</LeftMargin>
+  <Width>16cm</Width>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <Language>en-US</Language>
+  <PageFooter>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <Left>4.13437in</Left>
+        <Top>0.05754cm</Top>
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Width>1.75in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontSize>9pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.63492cm</Height>
+        <Value>="Halaman " &amp; Globals!PageNumber &amp; " dari " &amp; Globals!TotalPages</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.75cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+  </PageFooter>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

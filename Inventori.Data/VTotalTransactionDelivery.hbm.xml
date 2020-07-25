@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="VTotalTransactionDelivery" table="V_TOTAL_TRANSACTION_DELIVERY">
+
+		<!-- could not find a primary key for this table/view. NHibernate requires an 'id' element, so you'll have to define one manually. -->
+		<id name="DeliveryDetailId" column="DELIVERY_DETAIL_ID" type="Decimal" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+		<!-- <property column="DELIVERY_DETAIL_ID" type="Decimal" name="DeliveryDetailId" not-null="true" /> -->
+		<property column="DELIVERY_ID" type="Decimal" name="DeliveryId" />
+		<property column="DELIVERY_DETAIL_ITEM_ID" type="String" name="DeliveryDetailItemId" length="50" />
+		<property column="DELIVERY_DETAIL_QUANTITY" type="Decimal" name="DeliveryDetailQuantity" />
+		<property column="DELIVERY_DETAIL_DESC" type="String" name="DeliveryDetailDesc" length="100" />
+		<property column="GROUP_ID" type="Int32" name="GroupId" />
+		<property column="ITEM_NAME" type="String" name="ItemName" length="50" />
+		<property column="ITEM_SATUAN" type="String" name="ItemSatuan" length="50" />
+		<property column="ITEM_DESC" type="String" name="ItemDesc" length="2147483647" />
+		<property column="ITEM_COMMISION" type="Decimal" name="ItemCommision" />
+		<property column="DEFAULT_GUDANG_ID" type="Int32" name="DefaultGudangId" />
+		<property column="ITEM_PRICE_MAX_VIP" type="Decimal" name="ItemPriceMaxVip" />
+		<property column="ITEM_PRICE_MIN_VIP" type="Decimal" name="ItemPriceMinVip" />
+		<property column="ITEM_PRICE_MAX" type="Decimal" name="ItemPriceMax" />
+		<property column="ITEM_PRICE_MIN" type="Decimal" name="ItemPriceMin" />
+		<property column="ITEM_PRICE_PURCHASE" type="Decimal" name="ItemPricePurchase" />
+		<property column="ITEM_PRICE_PURCHASE_AVG" type="Decimal" name="ItemPricePurchaseAvg" />
+		<property column="ITEM_EXPIRED_DATE" type="DateTime" name="ItemExpiredDate" />
+		<property column="SUPPLIER_ID" type="String" name="SupplierId" length="50" />
+		<property column="ITEM_TYPE_ID" type="Int32" name="ItemTypeId" />
+		<property column="TRANSACTION_ID" type="Decimal" name="TransactionId" />
+		<property column="DELIVERY_NUMBER_EXPEDISSION" type="String" name="DeliveryNumberExpedission" length="50" />
+		<property column="DELIVERY_NUMBER_PIC" type="String" name="DeliveryNumberPic" length="50" />
+		<property column="DELIVERY_EXPEDISSION" type="String" name="DeliveryExpedission" length="50" />
+		<property column="DELIVERY_PIC" type="String" name="DeliveryPic" length="50" />
+		<property column="DELIVERY_SENT_DATE" type="DateTime" name="DeliverySentDate" />
+		<property column="DELIVERY_RECEIVE_DATE" type="DateTime" name="DeliveryReceiveDate" />
+		<property column="DELIVERY_COST" type="Decimal" name="DeliveryCost" />
+		<property column="DELIVERY_DESC" type="String" name="DeliveryDesc" length="100" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		<property column="EKSPEDISSION_NAME" type="String" name="EkspedissionName" length="50" />
+		<property column="EKSPEDISSION_ADDRESS" type="String" name="EkspedissionAddress" length="100" />
+		<property column="EKSPEDISSION_PHONE" type="String" name="EkspedissionPhone" length="50" />
+		<property column="EKSPEDISSION_FAX" type="String" name="EkspedissionFax" length="50" />
+		<property column="EKSPEDISSION_STATUS" type="String" name="EkspedissionStatus" length="50" />
+		<property column="EKSPEDISSION_NPWP" type="String" name="EkspedissionNpwp" length="50" />
+		<property column="EKSPEDISSION_DISC" type="Decimal" name="EkspedissionDisc" />
+		<property column="EKSPEDISSION_LIMIT" type="Decimal" name="EkspedissionLimit" />
+		<property column="EKSPEDISSION_DESC" type="String" name="EkspedissionDesc" length="50" />
+		<property column="EKSPEDISSION_DESC2" type="String" name="EkspedissionDesc2" length="50" />
+		<property column="DELIVERY_PAYMENT" type="String" name="DeliveryPayment" length="50" />
+		<property column="TRANSACTION_DETAIL_ID" type="Decimal" name="TransactionDetailId" />
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Cafe.Data" namespace="Inventori.Cafe.Data">
+	<class name="TTransaction" table="T_TRANSACTION">
+
+		<id name="TransactionId" column="TRANSACTION_ID" type="Decimal" unsaved-value="0">
+			<generator class="assigned"/>
+		</id>
+		<property column="CURRENCY_ID" type="String" name="CurrencyId" length="50" />
+		<property column="GUDANG_ID" type="Int32" name="GudangId" />
+		<property column="GUDANG_ID_TO" type="Int32" name="GudangIdTo" />
+		<property column="LOCATION_ID" type="String" name="LocationId" length="50" />
+		<property column="LOCATION_ID_TO" type="String" name="LocationIdTo" length="50" />
+		<property column="TRANSACTION_REFERENCE_ID" type="Decimal" name="TransactionReferenceId" />
+		<property column="TRANSACTION_FACTUR" type="String" name="TransactionFactur" length="50" />
+		<property column="TRANSACTION_BY" type="String" name="TransactionBy" length="50" />
+		<property column="TRANSACTION_BY_ADDRESS" type="String" name="TransactionByAddress" length="50" />
+		<property column="TRANSACTION_BY_PHONE" type="String" name="TransactionByPhone" length="50" />
+		<property column="TRANSACTION_BY_NAME" type="String" name="TransactionByName" length="50" />
+		<property column="TRANSACTION_DATE" type="DateTime" name="TransactionDate" />
+		<property column="TRANSACTION_SUB_TOTAL" type="Decimal" name="TransactionSubTotal" />
+		<property column="TRANSACTION_DISC" type="Decimal" name="TransactionDisc" />
+		<property column="TRANSACTION_USE_PPN" type="Boolean" name="TransactionUsePpn" />
+		<property column="TRANSACTION_PPN" type="Decimal" name="TransactionPpn" />
+		<property column="TRANSACTION_GRAND_TOTAL" type="Decimal" name="TransactionGrandTotal" />
+		<property column="TRANSACTION_PAID" type="Decimal" name="TransactionPaid" />
+		<property column="TRANSACTION_SISA" type="Decimal" name="TransactionSisa" />
+		<property column="TRANSACTION_STATUS" type="String" name="TransactionStatus" length="50" />
+		<property column="TRANSACTION_DESK" type="String" name="TransactionDesk" length="50" />
+		<property column="TRANSACTION_DESC" type="String" name="TransactionDesc" length="50" />
+		<property column="TRANSACTION_DESC2" type="String" name="TransactionDesc2" length="50" />
+		<property column="EMPLOYEE_ID" type="String" name="EmployeeId" length="50" />
+		<property column="EMPLOYEE_ID2" type="String" name="EmployeeId2" length="50" />
+		<property column="TRANSACTION_PAYMENT" type="String" name="TransactionPayment" length="50" />
+		<property column="TRANSACTION_COMMISION" type="Decimal" name="TransactionCommision" />
+		<property column="TRANSACTION_POTONGAN" type="Decimal" name="TransactionPotongan" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

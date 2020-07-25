@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>d226a99b-cd1e-4bbb-96b2-bf5ab839568a</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>2.5cm</RightMargin>
+  <PageWidth>21cm</PageWidth>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <List Name="list1">
+        <Left>1cm</Left>
+        <ReportItems>
+          <Matrix Name="matrix1">
+            <MatrixColumns>
+              <MatrixColumn>
+                <Width>2.53968cm</Width>
+              </MatrixColumn>
+            </MatrixColumns>
+            <Left>0.25cm</Left>
+            <RowGroupings>
+              <RowGrouping>
+                <Width>3.75cm</Width>
+                <DynamicRows>
+                  <ReportItems>
+                    <Textbox Name="textbox5">
+                      <rd:DefaultName>textbox5</rd:DefaultName>
+                      <ZIndex>2</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>9pt</FontSize>
+                        <BackgroundColor>SteelBlue</BackgroundColor>
+                        <Color>White</Color>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!GroupName.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                  <Grouping Name="matrix1_RowGroup1">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!GroupName.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Grouping>
+                </DynamicRows>
+              </RowGrouping>
+              <RowGrouping>
+                <Width>4cm</Width>
+                <DynamicRows>
+                  <ReportItems>
+                    <Textbox Name="textbox7">
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <ZIndex>1</ZIndex>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <FontWeight>700</FontWeight>
+                        <FontSize>9pt</FontSize>
+                        <BackgroundColor>AliceBlue</BackgroundColor>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ItemName.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                  <Visibility>
+                    <ToggleItem>textbox5</ToggleItem>
+                    <Hidden>true</Hidden>
+                  </Visibility>
+                  <Grouping Name="matrix1_RowGroup2">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!ItemName.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Grouping>
+                </DynamicRows>
+              </RowGrouping>
+            </RowGroupings>
+            <ColumnGroupings>
+              <ColumnGrouping>
+                <Height>0.63492cm</Height>
+                <StaticColumns>
+                  <StaticColumn>
+                    <ReportItems>
+                      <Textbox Name="textbox4">
+                        <rd:DefaultName>textbox4</rd:DefaultName>
+                        <ZIndex>3</ZIndex>
+                        <Style>
+                          <BorderStyle>
+                            <Default>Solid</Default>
+                          </BorderStyle>
+                          <TextAlign>Center</TextAlign>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingBottom>2pt</PaddingBottom>
+                          <FontWeight>700</FontWeight>
+                          <FontSize>9pt</FontSize>
+                          <BackgroundColor>SteelBlue</BackgroundColor>
+                          <Color>White</Color>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                        </Style>
+                        <CanGrow>true</CanGrow>
+                        <Value>Stok</Value>
+                      </Textbox>
+                    </ReportItems>
+                  </StaticColumn>
+                </StaticColumns>
+              </ColumnGrouping>
+            </ColumnGroupings>
+            <DataSetName>Inventori_Data_VItemDetail</DataSetName>
+            <Top>0.75cm</Top>
+            <ZIndex>2</ZIndex>
+            <Width>10.28968cm</Width>
+            <Corner>
+              <ReportItems>
+                <Textbox Name="textbox3">
+                  <rd:DefaultName>textbox3</rd:DefaultName>
+                  <ZIndex>4</ZIndex>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <TextAlign>Center</TextAlign>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <FontWeight>700</FontWeight>
+                    <FontSize>9pt</FontSize>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value>Golongan Obat / Obat</Value>
+                </Textbox>
+              </ReportItems>
+            </Corner>
+            <Style>
+              <FontSize>9pt</FontSize>
+            </Style>
+            <Height>1.26984cm</Height>
+            <MatrixRows>
+              <MatrixRow>
+                <Height>0.63492cm</Height>
+                <MatrixCells>
+                  <MatrixCell>
+                    <ReportItems>
+                      <Textbox Name="textbox6">
+                        <rd:DefaultName>textbox6</rd:DefaultName>
+                        <Style>
+                          <BorderStyle>
+                            <Default>Solid</Default>
+                          </BorderStyle>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingBottom>2pt</PaddingBottom>
+                          <FontSize>9pt</FontSize>
+                          <Format>N0</Format>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                        </Style>
+                        <CanGrow>true</CanGrow>
+                        <Value>=sum(Fields!ItemStok.Value)</Value>
+                      </Textbox>
+                    </ReportItems>
+                  </MatrixCell>
+                </MatrixCells>
+              </MatrixRow>
+            </MatrixRows>
+          </Matrix>
+          <Textbox Name="textbox2">
+            <rd:DefaultName>textbox2</rd:DefaultName>
+            <ZIndex>1</ZIndex>
+            <Width>3cm</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>700</FontWeight>
+              <FontSize>9pt</FontSize>
+              <Color>RoyalBlue</Color>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.63492cm</Height>
+            <Value>Lokasi Obat :</Value>
+          </Textbox>
+          <Textbox Name="GudangName">
+            <Left>3cm</Left>
+            <rd:DefaultName>GudangName</rd:DefaultName>
+            <Width>9.5cm</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>700</FontWeight>
+              <FontSize>9pt</FontSize>
+              <Color>RoyalBlue</Color>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.63492cm</Height>
+            <Value>=First(Fields!GudangName.Value)</Value>
+          </Textbox>
+        </ReportItems>
+        <DataSetName>Inventori_Data_VItemDetail</DataSetName>
+        <Top>3cm</Top>
+        <ZIndex>1</ZIndex>
+        <Width>13.75cm</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+        </Style>
+        <Grouping Name="list1_Details_Group">
+          <GroupExpressions>
+            <GroupExpression>=Fields!GudangId.Value</GroupExpression>
+          </GroupExpressions>
+        </Grouping>
+        <Height>2.25cm</Height>
+      </List>
+      <Subreport Name="subreport1">
+        <Left>0.4in</Left>
+        <Top>0.09844in</Top>
+        <Width>5.5in</Width>
+        <ReportName>ReportHeader</ReportName>
+        <Style>
+          <FontSize>9pt</FontSize>
+        </Style>
+        <Height>1in</Height>
+      </Subreport>
+    </ReportItems>
+    <Height>5.5cm</Height>
+  </Body>
+  <rd:ReportID>6816fb36-b8c3-4cfb-b0fd-63f0884aeae7</rd:ReportID>
+  <LeftMargin>2.5cm</LeftMargin>
+  <DataSets>
+    <DataSet Name="Inventori_Data_VItemDetail">
+      <rd:DataSetInfo>
+        <rd:DataSetName>Inventori.Data</rd:DataSetName>
+        <rd:ObjectDataSourceType>Inventori.Data.VItemDetail, Inventori.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>VItemDetail</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="DefaultGudangId">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>DefaultGudangId</DataField>
+        </Field>
+        <Field Name="GroupId">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>GroupId</DataField>
+        </Field>
+        <Field Name="GroupName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>GroupName</DataField>
+        </Field>
+        <Field Name="GudangId">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>GudangId</DataField>
+        </Field>
+        <Field Name="GudangName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>GudangName</DataField>
+        </Field>
+        <Field Name="ItemCommision">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemCommision</DataField>
+        </Field>
+        <Field Name="ItemDesc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemDesc</DataField>
+        </Field>
+        <Field Name="ItemId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemId</DataField>
+        </Field>
+        <Field Name="ItemMaxStok">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemMaxStok</DataField>
+        </Field>
+        <Field Name="ItemMinStok">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemMinStok</DataField>
+        </Field>
+        <Field Name="ItemName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemName</DataField>
+        </Field>
+        <Field Name="ItemPosition">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemPosition</DataField>
+        </Field>
+        <Field Name="ItemPriceMax">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemPriceMax</DataField>
+        </Field>
+        <Field Name="ItemPriceMaxVip">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemPriceMaxVip</DataField>
+        </Field>
+        <Field Name="ItemPriceMin">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemPriceMin</DataField>
+        </Field>
+        <Field Name="ItemPriceMinVip">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemPriceMinVip</DataField>
+        </Field>
+        <Field Name="ItemPricePurchase">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemPricePurchase</DataField>
+        </Field>
+        <Field Name="ItemPricePurchaseAvg">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemPricePurchaseAvg</DataField>
+        </Field>
+        <Field Name="ItemSatuan">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemSatuan</DataField>
+        </Field>
+        <Field Name="ItemStok">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemStok</DataField>
+        </Field>
+        <Field Name="ItemTypeId">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>ItemTypeId</DataField>
+        </Field>
+        <Field Name="ItemTypeName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemTypeName</DataField>
+        </Field>
+        <Field Name="ModifiedBy">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ModifiedBy</DataField>
+        </Field>
+        <Field Name="ModifiedDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>ModifiedDate</DataField>
+        </Field>
+        <Field Name="SupplierId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SupplierId</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>16cm</Width>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <Language>en-US</Language>
+  <PageFooter>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <Left>4.13437in</Left>
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Width>1.75in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontSize>9pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.63492cm</Height>
+        <Value>="Halaman " &amp; Globals!PageNumber &amp; " dari " &amp; Globals!TotalPages</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.88492cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+  </PageFooter>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

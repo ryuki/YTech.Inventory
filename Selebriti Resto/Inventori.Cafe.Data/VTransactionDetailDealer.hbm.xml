@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Cafe.Data" namespace="Inventori.Cafe.Data">
+	<class name="VTransactionDetailDealer" table="V_TRANSACTION_DETAIL_DEALER">
+
+		<!-- could not find a primary key for this table/view. NHibernate requires an 'id' element, so you'll have to define one manually. -->
+		<id name="TransactionDetailId" column="TRANSACTION_DETAIL_ID" type="Decimal">
+			<generator class="assigned"/>
+		</id>
+		<!-- <property column="TRANSACTION_DETAIL_ID" type="Decimal" name="TransactionDetailId" not-null="true" /> -->
+		<property column="TRANSACTION_ID" type="Decimal" name="TransactionId" />
+		<property column="ITEM_ID" type="String" name="ItemId" length="50" />
+		<property column="QUANTITY" type="Decimal" name="Quantity" />
+		<property column="PRICE" type="Decimal" name="Price" />
+		<property column="JUMLAH" type="Decimal" name="Jumlah" />
+		<property column="DISC" type="Decimal" name="Disc" />
+		<property column="PPN" type="Decimal" name="Ppn" />
+		<property column="TOTAL" type="Decimal" name="Total" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		<property column="DESCRIPTION" type="String" name="Description" length="100" />
+		<property column="EXPIRED_DATE" type="DateTime" name="ExpiredDate" />
+		<property column="COMMISSION" type="Decimal" name="Commission" />
+		<property column="COST_PRICE" type="Decimal" name="CostPrice" />
+		<property column="IS_PACKET" type="Boolean" name="IsPacket" />
+		<property column="STOCK_ID" type="String" name="StockId" length="50" />
+		<property column="ITEM_NAME" type="String" name="ItemName" length="50" />
+		<property column="GROUP_NAME" type="String" name="GroupName" not-null="true" length="50" />
+		<property column="GUDANG_ID" type="Int32" name="GudangId" not-null="true" />
+		<property column="LOCATION_ID" type="String" name="LocationId" not-null="true" length="50" />
+		<property column="STOCK_BARCODE_ID" type="String" name="StockBarcodeId" not-null="true" length="50" />
+		<property column="STOCK_IN_BY" type="String" name="StockInBy" not-null="true" length="50" />
+		<property column="STOCK_DATE_IN" type="DateTime" name="StockDateIn" not-null="true" />
+		<property column="STOCK_PRICE_IN" type="Decimal" name="StockPriceIn" not-null="true" />
+		<property column="STOCK_OUT_BY" type="String" name="StockOutBy" not-null="true" length="50" />
+		<property column="STOCK_DATE_OUT" type="DateTime" name="StockDateOut" not-null="true" />
+		<property column="STOCK_PRICE_OUT" type="Decimal" name="StockPriceOut" not-null="true" />
+		<property column="STOCK_DESC1" type="String" name="StockDesc1" not-null="true" length="50" />
+		<property column="STOCK_DESC2" type="String" name="StockDesc2" not-null="true" length="50" />
+		<property column="STOCK_DESC3" type="String" name="StockDesc3" not-null="true" length="50" />
+		<property column="STOCK_IS_AVAILABLE" type="Boolean" name="StockIsAvailable" not-null="true" />
+		<property column="GUDANG_NAME" type="String" name="GudangName" not-null="true" length="50" />
+		<property column="CHANNEL_NAME" type="String" name="ChannelName" not-null="true" length="50" />
+		<property column="COLOUR_DESC" type="String" name="ColourDesc" not-null="true" length="100" />
+		
+	</class>
+</hibernate-mapping>

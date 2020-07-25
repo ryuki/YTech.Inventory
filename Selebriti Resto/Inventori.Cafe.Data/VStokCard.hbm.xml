@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Cafe.Data" namespace="Inventori.Cafe.Data">
+	<class name="VStokCard" table="V_STOK_CARD">
+
+		<!-- could not find a primary key for this table/view. NHibernate requires an 'id' element, so you'll have to define one manually. -->
+		<id name="StokCardId" column="STOK_CARD_ID" type="Decimal" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+		<property column="ITEM_ID" type="String" name="ItemId" length="50" />
+		<property column="GUDANG_ID" type="Int32" name="GudangId" />
+		<property column="STOK_CARD_DATE" type="DateTime" name="StokCardDate" />
+		<property column="TRANSACTION_ID" type="Decimal" name="TransactionId" />
+		<property column="STOK_CARD_STATUS" type="Boolean" name="StokCardStatus" />
+		<property column="STOK_CARD_QUANTITY" type="Decimal" name="StokCardQuantity" />
+		<property column="STOK_CARD_SALDO" type="Decimal" name="StokCardSaldo" />
+		<property column="STOK_CARD_PIC" type="String" name="StokCardPic" length="50" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		<property column="ITEM_NAME" type="String" name="ItemName" length="50" />
+		<property column="TRANSACTION_FACTUR" type="String" name="TransactionFactur" not-null="true" length="50" />
+		<property column="GUDANG_NAME" type="String" name="GudangName" not-null="true" length="50" />
+		
+	</class>
+</hibernate-mapping>

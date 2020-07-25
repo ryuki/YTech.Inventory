@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Cafe.Data" namespace="Inventori.Cafe.Data" auto-import="false">
+	<class name="MGroup" table="M_GROUP" lazy="false">
+
+		<id name="GroupId" column="GROUP_ID" type="Int32" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+		<property column="GROUP_NAME" type="String" name="GroupName" length="50" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+    <property column="PRINT_ORDER" type="Boolean" name="PrintOrder" />
+    <property column="PRINTER_NAME" type="String" name="PrinterName" length="50" />
+		
+	</class>
+</hibernate-mapping>

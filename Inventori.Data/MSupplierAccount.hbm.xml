@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="MSupplierAccount" table="M_SUPPLIER_ACCOUNT">
+
+		<!-- composite primary key support is touchy. View the documentation for syntax. -->
+		<composite-id access="field">
+      <key-property name="SupplierId" column="SUPPLIER_ID" type="String"/>
+      <key-property column="CURRENCY_ID" type="String" name="CurrencyId" length="50" />
+    </composite-id>
+		<property column="BANK_ID" type="String" name="BankId" length="50" />
+		<property column="SUPPLIER_ACCOUNT_NO" type="String" name="SupplierAccountNo" length="50" />
+		<property column="SUPPLIER_ACCOUNT_NAME" type="String" name="SupplierAccountName" length="100" />
+		
+	</class>
+</hibernate-mapping>

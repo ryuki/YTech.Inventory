@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="ItemGudangStok" table="ITEM_GUDANG_STOK">
+
+		<!-- composite primary key support is touchy. View the documentation for syntax. -->
+		 <composite-id access="field">
+      <key-property name="ItemId" column="ITEM_ID" type="String"/>
+      <key-property name="GudangId" column="GUDANG_ID" type="Int32" />
+    </composite-id>
+		<property column="ITEM_STOK" type="Decimal" name="ItemStok" />
+		<property column="ITEM_MIN_STOK" type="Decimal" name="ItemMinStok" />
+		<property column="ITEM_MAX_STOK" type="Decimal" name="ItemMaxStok" />
+		<property column="ITEM_POSITION" type="String" name="ItemPosition" length="50" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

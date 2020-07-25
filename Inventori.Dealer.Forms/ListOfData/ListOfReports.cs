@@ -1,0 +1,19 @@
+public enum ListOfReports
+{
+    ReportTransactionDetail,
+    ReportRecapStockByUnit,
+    ReportRecapStockByLocation,
+    ReportMasterCustomer,
+    ReportMasterSupplier,
+    ReportMasterChannel,
+    ReportMasterFinance,
+    ReportMasterEmployee,
+    ReportTransactionDetailByFinance,
+    ReportTransactionRecap,
+    ReportRecapSisaStock,
+    ReportTransactionRecapByFinance,
+    ReportPurchaseRecap,
+    ReportPurchaseRecapByItem,
+    ReportTransactionRecapBySalesman,
+    ReportTransactionRecapByChannel
+}

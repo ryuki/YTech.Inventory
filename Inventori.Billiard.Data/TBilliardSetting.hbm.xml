@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Billiard.Data" namespace="Inventori.Billiard.Data">
+	<class name="TBilliardSetting" table="T_BILLIARD_SETTING">
+
+		<id name="SettingId" column="SETTING_ID" type="String">
+			<generator class="assigned"/>
+		</id>
+		<property column="BILIARD_ITEM_HOUR_FROM1" type="Int32" name="BiliardItemHourFrom1" />
+		<property column="BILIARD_ITEM_HOUR_TO1" type="Int32" name="BiliardItemHourTo1" />
+		<property column="BILIARD_ITEM_PRICE" type="Decimal" name="BiliardItemPrice" />
+		<property column="BILIARD_ITEM_PRICE_VIP" type="Decimal" name="BiliardItemPriceVip" />
+		<property column="BILIARD_ITEM_PRICE_MINI" type="Decimal" name="BiliardItemPriceMini" />
+		<property column="BILIARD_ITEM_HOUR_FROM2" type="Int32" name="BiliardItemHourFrom2" />
+		<property column="BILIARD_ITEM_HOUR_TO2" type="Int32" name="BiliardItemHourTo2" />
+		<property column="BILIARD_ITEM_PRICE2" type="Decimal" name="BiliardItemPrice2" />
+		<property column="BILIARD_ITEM_PRICE_VIP2" type="Decimal" name="BiliardItemPriceVip2" />
+		<property column="BILIARD_ITEM_PRICE_MINI2" type="Decimal" name="BiliardItemPriceMini2" />
+		<property column="BILIARD_ITEM_HOUR_FROM3" type="Int32" name="BiliardItemHourFrom3" />
+		<property column="BILIARD_ITEM_HOUR_TO3" type="Int32" name="BiliardItemHourTo3" />
+		<property column="BILIARD_ITEM_PRICE3" type="Decimal" name="BiliardItemPrice3" />
+		<property column="BILIARD_ITEM_PRICE_VIP3" type="Decimal" name="BiliardItemPriceVip3" />
+		<property column="BILIARD_ITEM_PRICE_MINI3" type="Decimal" name="BiliardItemPriceMini3" />
+		<property column="USE_REFEREE" type="Boolean" name="UseReferee" />
+		<property column="CALCULATE_TIME" type="Decimal" name="CalculateTime" />
+		<property column="TOLERANCE_TIME" type="Decimal" name="ToleranceTime" />
+		<property column="QUIT_TIMEOUT" type="Decimal" name="QuitTimeout" />
+		<property column="MINIMUM_PLAY" type="Decimal" name="MinimumPlay" />
+		<property column="FULLFILL_PRICE" type="Decimal" name="FullfillPrice" />
+		<property column="REFEREE_BONUS" type="Decimal" name="RefereeBonus" />
+		<property column="BACK_COLOR" type="Int32" name="BackColor" />
+		<property column="DESK_BACK_COLOR" type="Int32" name="DeskBackColor" />
+		<property column="DESK_FONT_NAME" type="String" name="DeskFontName" length="50" />
+		<property column="DESK_FONT_SIZE" type="Decimal" name="DeskFontSize" />
+		<property column="DESK_FONT_BOLD" type="Boolean" name="DeskFontBold" />
+		<property column="DESK_FONT_ITALIC" type="Boolean" name="DeskFontItalic" />
+		<property column="DESK_FONT_UNDERLINE" type="Boolean" name="DeskFontUnderline" />
+		<property column="DESK_FONT_COLOR" type="Int32" name="DeskFontColor" />
+		<property column="DESK_WIDTH" type="Int32" name="DeskWidth" />
+		<property column="DESK_HEIGHT" type="Int32" name="DeskHeight" />
+		<property column="DESK_BACK_COLOR1" type="Int32" name="DeskBackColor1" />
+		<property column="DESK_FONT_NAME1" type="String" name="DeskFontName1" length="50" />
+		<property column="DESK_FONT_SIZE1" type="Decimal" name="DeskFontSize1" />
+		<property column="DESK_FONT_BOLD1" type="Boolean" name="DeskFontBold1" />
+		<property column="DESK_FONT_ITALIC1" type="Boolean" name="DeskFontItalic1" />
+		<property column="DESK_FONT_UNDERLINE1" type="Boolean" name="DeskFontUnderline1" />
+		<property column="DESK_FONT_COLOR1" type="Int32" name="DeskFontColor1" />
+		<property column="DESK_WIDTH1" type="Int32" name="DeskWidth1" />
+		<property column="DESK_HEIGHT1" type="Int32" name="DeskHeight1" />
+		<property column="DESK_BACK_COLOR2" type="Int32" name="DeskBackColor2" />
+		<property column="DESK_FONT_NAME2" type="String" name="DeskFontName2" length="50" />
+		<property column="DESK_FONT_SIZE2" type="Decimal" name="DeskFontSize2" />
+		<property column="DESK_FONT_BOLD2" type="Boolean" name="DeskFontBold2" />
+		<property column="DESK_FONT_ITALIC2" type="Boolean" name="DeskFontItalic2" />
+		<property column="DESK_FONT_UNDERLINE2" type="Boolean" name="DeskFontUnderline2" />
+		<property column="DESK_FONT_COLOR2" type="Int32" name="DeskFontColor2" />
+		<property column="DESK_WIDTH2" type="Int32" name="DeskWidth2" />
+		<property column="DESK_HEIGHT2" type="Int32" name="DeskHeight2" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

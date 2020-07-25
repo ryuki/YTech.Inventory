@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Cafe.Data" namespace="Inventori.Cafe.Data">
+	<class name="VSupplierAccount" table="V_SUPPLIER_ACCOUNT">
+
+		<!-- could not find a primary key for this table/view. NHibernate requires an 'id' element, so you'll have to define one manually. -->
+		<id name="SupplierId" column="SUPPLIER_ID" type="String">
+			<generator class="assigned"/>
+		</id>
+
+		<!-- <property column="SUPPLIER_ID" type="String" name="SupplierId" not-null="true" length="20" /> -->
+		<property column="SUPPLIER_NAME" type="String" name="SupplierName" length="50" />
+		<property column="SUPPLIER_ADDRESS" type="String" name="SupplierAddress" length="100" />
+		<property column="SUPPLIER_PHONE" type="String" name="SupplierPhone" length="20" />
+		<property column="SUPPLIER_FAX" type="String" name="SupplierFax" length="50" />
+		<property column="SUPPLIER_NPWP" type="String" name="SupplierNpwp" length="50" />
+		<property column="SUPPLIER_CONTACT" type="String" name="SupplierContact" length="50" />
+		<property column="SUPPLIER_CONTACT_PHONE" type="String" name="SupplierContactPhone" length="20" />
+		<property column="SUPPLIER_LIMIT" type="Decimal" name="SupplierLimit" />
+		<property column="SUB_ACCOUNT_ID" type="String" name="SubAccountId" length="50" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		<property column="BANK_ID_RUPIAH" type="String" name="BankIdRupiah" length="50" />
+		<property column="SUPPLIER_ACCOUNT_NO_RUPIAH" type="String" name="SupplierAccountNoRupiah" length="50" />
+		<property column="SUPPLIER_ACCOUNT_NAME_RUPIAH" type="String" name="SupplierAccountNameRupiah" length="100" />
+		<property column="BANK_ID_DOLLAR" type="String" name="BankIdDollar" length="50" />
+		<property column="SUPPLIER_ACCOUNT_NO_DOLLAR" type="String" name="SupplierAccountNoDollar" length="50" />
+		<property column="SUPPLIER_ACCOUNT_NAME_DOLLAR" type="String" name="SupplierAccountNameDollar" length="100" />
+		
+	</class>
+</hibernate-mapping>

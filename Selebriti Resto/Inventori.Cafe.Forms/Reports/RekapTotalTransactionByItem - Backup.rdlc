@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>d0bbcbff-05dd-4e6d-bdd3-643c2f7809b5</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>1in</BottomMargin>
+  <RightMargin>1in</RightMargin>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ReportItems>
+      <Textbox Name="textbox7">
+        <Left>3.375in</Left>
+        <Top>1.875in</Top>
+        <rd:DefaultName>textbox7</rd:DefaultName>
+        <ZIndex>2</ZIndex>
+        <Width>1.25in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>=Sum(Fields!Total.Value, "Inventori_Data_VTransactionDetail")</Value>
+      </Textbox>
+      <Matrix Name="matrix1">
+        <MatrixColumns>
+          <MatrixColumn>
+            <Width>1.25in</Width>
+          </MatrixColumn>
+        </MatrixColumns>
+        <Left>0.375in</Left>
+        <KeepTogether>true</KeepTogether>
+        <RowGroupings>
+          <RowGrouping>
+            <Width>1.125in</Width>
+            <DynamicRows>
+              <ReportItems>
+                <Textbox Name="textbox3">
+                  <rd:DefaultName>textbox3</rd:DefaultName>
+                  <ZIndex>2</ZIndex>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <BackgroundColor>SteelBlue</BackgroundColor>
+                    <Color>White</Color>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Fields!GroupName.Value</Value>
+                </Textbox>
+              </ReportItems>
+              <Grouping Name="matrix1_RowGroupName">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!GroupName.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+            </DynamicRows>
+          </RowGrouping>
+          <RowGrouping>
+            <Width>1.875in</Width>
+            <DynamicRows>
+              <ReportItems>
+                <Textbox Name="textbox5">
+                  <rd:DefaultName>textbox5</rd:DefaultName>
+                  <ZIndex>1</ZIndex>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <BackgroundColor>SteelBlue</BackgroundColor>
+                    <Color>White</Color>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Fields!ItemName.Value</Value>
+                </Textbox>
+              </ReportItems>
+              <Visibility>
+                <ToggleItem>textbox3</ToggleItem>
+                <Hidden>true</Hidden>
+              </Visibility>
+              <Grouping Name="matrix1_RowGroupItem">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!ItemName.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+            </DynamicRows>
+          </RowGrouping>
+        </RowGroupings>
+        <ColumnGroupings>
+          <ColumnGrouping>
+            <DynamicColumns>
+              <ReportItems>
+                <Textbox Name="textbox2">
+                  <rd:DefaultName>textbox2</rd:DefaultName>
+                  <ZIndex>3</ZIndex>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <TextAlign>Center</TextAlign>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <FontWeight>700</FontWeight>
+                    <BackgroundColor>SteelBlue</BackgroundColor>
+                    <Color>White</Color>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value>=iif (Fields!TransactionStatus.Value.Equals("Sales"),"Penjualan",
+iif(Fields!TransactionStatus.Value.Equals("SalesVIP"),"Penjualan VIP",
+iif(Fields!TransactionStatus.Value.Equals("ReturSales"),"Retur Penjualan",
+iif(Fields!TransactionStatus.Value.Equals("ReturSalesVIP"),"Retur Penjualan VIP",
+iif(Fields!TransactionStatus.Value.Equals("Purchase"),"Pembelian",
+iif(Fields!TransactionStatus.Value.Equals("ReturPurchase"),"Retur Pembelian",
+iif(Fields!TransactionStatus.Value.Equals("Correction"),"Penyesuain","")))))))</Value>
+                </Textbox>
+              </ReportItems>
+              <Grouping Name="matrix1_ColumnGroup1">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!TransactionStatus.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+            </DynamicColumns>
+            <Height>0.25in</Height>
+          </ColumnGrouping>
+        </ColumnGroupings>
+        <DataSetName>Inventori_Data_VTransactionDetail</DataSetName>
+        <Top>1.375in</Top>
+        <ZIndex>1</ZIndex>
+        <Width>4.25in</Width>
+        <Corner>
+          <ReportItems>
+            <Textbox Name="textbox1">
+              <rd:DefaultName>textbox1</rd:DefaultName>
+              <ZIndex>4</ZIndex>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingBottom>2pt</PaddingBottom>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+              </Style>
+              <CanGrow>true</CanGrow>
+              <Value />
+            </Textbox>
+          </ReportItems>
+        </Corner>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <Height>0.5in</Height>
+        <MatrixRows>
+          <MatrixRow>
+            <Height>0.25in</Height>
+            <MatrixCells>
+              <MatrixCell>
+                <ReportItems>
+                  <Textbox Name="textbox4">
+                    <rd:DefaultName>textbox4</rd:DefaultName>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>
+                      <TextAlign>Right</TextAlign>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <Format>N2</Format>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>=Sum(CDbl(Fields!Total.Value))</Value>
+                  </Textbox>
+                </ReportItems>
+              </MatrixCell>
+            </MatrixCells>
+          </MatrixRow>
+        </MatrixRows>
+      </Matrix>
+      <Subreport Name="subreport1">
+        <Left>0.375in</Left>
+        <Top>0.25in</Top>
+        <ReportName>ReportHeader</ReportName>
+        <Height>0.875in</Height>
+      </Subreport>
+    </ReportItems>
+    <Height>3.25in</Height>
+  </Body>
+  <rd:ReportID>4cdc5628-d918-44e8-8239-415b31639942</rd:ReportID>
+  <LeftMargin>1in</LeftMargin>
+  <DataSets>
+    <DataSet Name="Inventori_Data_VTransactionDetail">
+      <rd:DataSetInfo>
+        <rd:DataSetName>Inventori.Data</rd:DataSetName>
+        <rd:ObjectDataSourceType>Inventori.Data.VTransactionDetail, Inventori.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>VTransactionDetail</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="Disc">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Disc</DataField>
+        </Field>
+        <Field Name="EmployeeId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>EmployeeId</DataField>
+        </Field>
+        <Field Name="GroupName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>GroupName</DataField>
+        </Field>
+        <Field Name="ItemId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemId</DataField>
+        </Field>
+        <Field Name="ItemName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemName</DataField>
+        </Field>
+        <Field Name="Jumlah">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Jumlah</DataField>
+        </Field>
+        <Field Name="Ppn">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Ppn</DataField>
+        </Field>
+        <Field Name="Price">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Price</DataField>
+        </Field>
+        <Field Name="Quantity">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Quantity</DataField>
+        </Field>
+        <Field Name="Total">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Total</DataField>
+        </Field>
+        <Field Name="TransactionBy">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionBy</DataField>
+        </Field>
+        <Field Name="TransactionDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>TransactionDate</DataField>
+        </Field>
+        <Field Name="TransactionDesk">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionDesk</DataField>
+        </Field>
+        <Field Name="TransactionDetailId">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionDetailId</DataField>
+        </Field>
+        <Field Name="TransactionDisc">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionDisc</DataField>
+        </Field>
+        <Field Name="TransactionFactur">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionFactur</DataField>
+        </Field>
+        <Field Name="TransactionGrandTotal">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionGrandTotal</DataField>
+        </Field>
+        <Field Name="TransactionId">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionId</DataField>
+        </Field>
+        <Field Name="TransactionPaid">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionPaid</DataField>
+        </Field>
+        <Field Name="TransactionPpn">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionPpn</DataField>
+        </Field>
+        <Field Name="TransactionSisa">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionSisa</DataField>
+        </Field>
+        <Field Name="TransactionStatus">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionStatus</DataField>
+        </Field>
+        <Field Name="TransactionSubTotal">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionSubTotal</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>8.25in</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <PageFooter>
+    <ReportItems>
+      <Textbox Name="textbox6">
+        <Left>7.25in</Left>
+        <rd:DefaultName>textbox6</rd:DefaultName>
+        <Width>0.75001in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>=Globals!PageNumber.ToString() &amp; " dari " &amp; Globals!TotalPages.ToString()</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.375in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+  </PageFooter>
+  <TopMargin>1in</TopMargin>
+</Report>

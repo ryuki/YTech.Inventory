@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="TDefaultAccount" table="T_DEFAULT_ACCOUNT">
+
+		<id name="DefaultAccountId" column="DEFAULT_ACCOUNT_ID" type="Int32" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+		<property column="TRANSACTION_TYPE" type="String" name="TransactionType" length="50" />
+		<property column="TRANSACTION_PAYMENT" type="String" name="TransactionPayment" length="50" />
+		<property column="DEBET_SUB_ACCOUNT_ID" type="String" name="DebetSubAccountId" length="50" />
+		<property column="KREDIT_SUB_ACCOUNT_ID" type="String" name="KreditSubAccountId" length="50" />
+		<property column="DESCRIPTION" type="String" name="Description" length="2147483647" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

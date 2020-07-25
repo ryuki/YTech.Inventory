@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>983c0d4b-4841-4908-8f05-69906c238a7e</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>2.5cm</RightMargin>
+  <PageWidth>21cm</PageWidth>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <List Name="list1">
+        <ReportItems>
+          <Image Name="image1">
+            <Sizing>Fit</Sizing>
+            <MIMEType>image/jpeg</MIMEType>
+            <Source>Database</Source>
+            <Style />
+            <Value>=Fields!CompanyLogo.Value</Value>
+          </Image>
+        </ReportItems>
+        <DataSetName>Inventori_Data_MSetting</DataSetName>
+      </List>
+    </ReportItems>
+    <Height>3cm</Height>
+  </Body>
+  <rd:ReportID>301e8c2f-780d-42ca-8da1-f59460bf78bb</rd:ReportID>
+  <LeftMargin>2.5cm</LeftMargin>
+  <DataSets>
+    <DataSet Name="Inventori_Data_MSetting">
+      <rd:DataSetInfo>
+        <rd:DataSetName>Inventori.Data</rd:DataSetName>
+        <rd:ObjectDataSourceType>Inventori.Data.MSetting, Inventori.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>MSetting</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="AutoBackup">
+          <rd:TypeName>System.Boolean</rd:TypeName>
+          <DataField>AutoBackup</DataField>
+        </Field>
+        <Field Name="AutoPrintSales">
+          <rd:TypeName>System.Boolean</rd:TypeName>
+          <DataField>AutoPrintSales</DataField>
+        </Field>
+        <Field Name="BackupDir">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>BackupDir</DataField>
+        </Field>
+        <Field Name="CompanyAddress">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CompanyAddress</DataField>
+        </Field>
+        <Field Name="CompanyAddress2">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CompanyAddress2</DataField>
+        </Field>
+        <Field Name="CompanyCity">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CompanyCity</DataField>
+        </Field>
+        <Field Name="CompanyFax">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CompanyFax</DataField>
+        </Field>
+        <Field Name="CompanyLogo">
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+          <DataField>CompanyLogo</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="CompanyNpwp">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CompanyNpwp</DataField>
+        </Field>
+        <Field Name="CompanyPkpDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>CompanyPkpDate</DataField>
+        </Field>
+        <Field Name="CompanyTelp">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CompanyTelp</DataField>
+        </Field>
+        <Field Name="FacturNoFormat">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>FacturNoFormat</DataField>
+        </Field>
+        <Field Name="FacturNoLength">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>FacturNoLength</DataField>
+        </Field>
+        <Field Name="ModifiedBy">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ModifiedBy</DataField>
+        </Field>
+        <Field Name="ModifiedDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>ModifiedDate</DataField>
+        </Field>
+        <Field Name="SettingId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SettingId</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>3.5cm</Width>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

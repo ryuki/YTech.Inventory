@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="MGudang" table="M_GUDANG">
+
+		<id name="GudangId" column="GUDANG_ID" type="Int32" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+		<property column="LOCATION_ID" type="Int32" name="LocationId" />
+		<property column="GUDANG_NAME" type="String" name="GudangName" length="50" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

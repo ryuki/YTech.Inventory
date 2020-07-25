@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventori.MotorKymco.Forms", "Inventori.MotorKymco.Forms\Inventori.MotorKymco.Forms.csproj", "{9D0AD145-552B-454F-9AEA-EFDC5E660847}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventori.MotorKymco.Data", "Inventori.MotorKymco.Data\Inventori.MotorKymco.Data.csproj", "{715973A9-80E0-4AE7-A8B6-EC0CCF077503}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Kymco Management Software", "Kymco Management Software\Kymco Management Software.vdproj", "{9F618FF7-58AB-43C5-8E90-3CD6CD154DD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D0AD145-552B-454F-9AEA-EFDC5E660847}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D0AD145-552B-454F-9AEA-EFDC5E660847}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D0AD145-552B-454F-9AEA-EFDC5E660847}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D0AD145-552B-454F-9AEA-EFDC5E660847}.Release|Any CPU.Build.0 = Release|Any CPU
+		{715973A9-80E0-4AE7-A8B6-EC0CCF077503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{715973A9-80E0-4AE7-A8B6-EC0CCF077503}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{715973A9-80E0-4AE7-A8B6-EC0CCF077503}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{715973A9-80E0-4AE7-A8B6-EC0CCF077503}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F618FF7-58AB-43C5-8E90-3CD6CD154DD3}.Debug|Any CPU.ActiveCfg = Debug
+		{9F618FF7-58AB-43C5-8E90-3CD6CD154DD3}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="MEmployee" table="M_EMPLOYEE">
+
+		<id name="EmployeeId" column="EMPLOYEE_ID" type="String">
+			<generator class="assigned"/>
+		</id>
+		<property column="EMPLOYEE_NAME" type="String" name="EmployeeName" length="50" />
+		<property column="DEP_ID" type="String" name="DepId" length="50" />
+		<property column="EMPLOYEE_GENDER" type="String" name="EmployeeGender" length="20" />
+		<property column="EMPLOYEE_ID_CARD" type="String" name="EmployeeIdCard" length="50" />
+		<property column="EMPLOYEE_ADDRESS" type="String" name="EmployeeAddress" length="100" />
+		<property column="EMPLOYEE_PHONE" type="String" name="EmployeePhone" length="50" />
+		<property column="EMPLOYEE_BIRTH_PLACE" type="String" name="EmployeeBirthPlace" length="50" />
+		<property column="EMPLOYEE_BIRTH_DATE" type="DateTime" name="EmployeeBirthDate" />
+		<property column="EMPLOYEE_MARITAL_STATUS" type="String" name="EmployeeMaritalStatus" length="50" />
+		<property column="EMPLOYEE_START_WORK" type="DateTime" name="EmployeeStartWork" />
+		<property column="EMPLOYEE_STATUS" type="String" name="EmployeeStatus" length="50" />
+		<property column="EMPLOYEE_DESC" type="String" name="EmployeeDesc" length="50" />
+		<property column="EMPLOYEE_DESC2" type="String" name="EmployeeDesc2" length="50" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,599 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4685F861-1279-47ED-B796-646A44F9EB41}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inventori.Apotek.Forms</RootNamespace>
+    <AssemblyName>Inventori.Apotek.Forms</AssemblyName>
+    <StartupObject>Inventori.Apotek.Forms.FormLoginForApotek</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Balloon.NET, Version=1.0.2688.24502, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Balloon.NET\bin\Debug\Balloon.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="DockSample, Version=2.0.2670.8642, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DockSample\bin\Debug\DockSample.exe</HintPath>
+    </Reference>
+    <Reference Include="Inventori.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Inventori.Data\bin\Debug\Inventori.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Inventori.DataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Inventori.DataAccess\bin\Debug\Inventori.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Inventori.Facade, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Inventori.Facade\bin\Debug\Inventori.Facade.dll</HintPath>
+    </Reference>
+    <Reference Include="Inventori.Forms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Inventori.Forms\bin\Debug\Inventori.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Inventori.Module, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Inventori.Module\bin\Debug\Inventori.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="NHibernate, Version=1.2.0.3001, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Tutorial And Programming\DotNet\NHibernate\Tutorial\NHibernate-1.2.0.CR1-src\src\NHibernate\bin\Debug-2.0\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.0.2670.8641, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WinFormsUI\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppCode.cs" />
+    <Compile Include="FormAboutApotek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAboutApotek.Designer.cs">
+      <DependentUpon>FormAboutApotek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfData\ListOfAccountPosition.cs" />
+    <Compile Include="Master Forms\FormMasterPacket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterPacket.Designer.cs">
+      <DependentUpon>FormMasterPacket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterCommission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterCommission.Designer.cs">
+      <DependentUpon>FormMasterCommission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfData\ListOfCommissionShare.cs" />
+    <Compile Include="ListOfData\ListOfCommission.cs" />
+    <Compile Include="Reports\FormDateFilterReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormDateFilterReport.designer.cs">
+      <DependentUpon>FormDateFilterReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FormPeriodFilterReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormPeriodFilterReport.designer.cs">
+      <DependentUpon>FormPeriodFilterReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool Forms\FormClosing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool Forms\FormClosing.Designer.cs">
+      <DependentUpon>FormClosing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoginForApotek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoginForApotek.Designer.cs">
+      <DependentUpon>FormLoginForApotek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="temp\FormTreeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="temp\FormTreeView.Designer.cs">
+      <DependentUpon>FormTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction Forms\FormJournal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction Forms\FormJournal.Designer.cs">
+      <DependentUpon>FormJournal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction Forms\FormPiHutangPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction Forms\FormPiHutangPayment.Designer.cs">
+      <DependentUpon>FormPiHutangPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction Forms\FormPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction Forms\FormPayment.Designer.cs">
+      <DependentUpon>FormPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool Forms\FormReminder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool Forms\FormReminder.Designer.cs">
+      <DependentUpon>FormReminder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfData\ListOfReports.cs" />
+    <Compile Include="Reports\FormViewReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FormViewReport.Designer.cs">
+      <DependentUpon>FormViewReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfData\ListOfJournalStatus.cs" />
+    <Compile Include="ListOfData\ListOfPiHutangStatus.cs" />
+    <Compile Include="Transaction Forms\FormTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction Forms\FormTransaction.Designer.cs">
+      <DependentUpon>FormTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool Forms\FormSettingForApotek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tool Forms\FormSettingForApotek.Designer.cs">
+      <DependentUpon>FormSettingForApotek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfData\ListOfPrintStatus.cs" />
+    <Compile Include="Master Forms\FormMasterSubAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterSubAccount.Designer.cs">
+      <DependentUpon>FormMasterSubAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterRoom.Designer.cs">
+      <DependentUpon>FormMasterRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterCustomerGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterCustomerGroup.Designer.cs">
+      <DependentUpon>FormMasterCustomerGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterAccount.Designer.cs">
+      <DependentUpon>FormMasterAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListOfData\ListOfCurrency.cs" />
+    <Compile Include="Master Forms\FormMasterBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterBank.designer.cs">
+      <DependentUpon>FormMasterBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterCustomer.designer.cs">
+      <DependentUpon>FormMasterCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterDepartment.designer.cs">
+      <DependentUpon>FormMasterDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterEmployee.designer.cs">
+      <DependentUpon>FormMasterEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterGroup.designer.cs">
+      <DependentUpon>FormMasterGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterGudang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterGudang.designer.cs">
+      <DependentUpon>FormMasterGudang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterItem.designer.cs">
+      <DependentUpon>FormMasterItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master Forms\FormMasterSupplier.designer.cs">
+      <DependentUpon>FormMasterSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parent Form\FormParentForApotek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parent Form\FormParentForApotek.Designer.cs">
+      <DependentUpon>FormParentForApotek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormLoginForApotek.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormLoginForApotek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterCommission.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMasterCommission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterAccount.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMasterAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterBank.resx">
+      <DependentUpon>FormMasterBank.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterCustomer.resx">
+      <DependentUpon>FormMasterCustomer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterCustomerGroup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMasterCustomerGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterDepartment.resx">
+      <DependentUpon>FormMasterDepartment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterEmployee.resx">
+      <DependentUpon>FormMasterEmployee.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterGroup.resx">
+      <DependentUpon>FormMasterGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterGudang.resx">
+      <DependentUpon>FormMasterGudang.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterItem.resx">
+      <DependentUpon>FormMasterItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterPacket.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMasterPacket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterRoom.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMasterRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterSubAccount.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMasterSubAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master Forms\FormMasterSupplier.resx">
+      <DependentUpon>FormMasterSupplier.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parent Form\FormParentForApotek.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormParentForApotek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FormDateFilterReport.resx">
+      <DependentUpon>FormDateFilterReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FormPeriodFilterReport.resx">
+      <DependentUpon>FormPeriodFilterReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FormViewReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormViewReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportCommission.rdlc" />
+    <EmbeddedResource Include="Reports\ReportHeader.rdlc" />
+    <EmbeddedResource Include="Reports\ReportLabaRugi.rdlc" />
+    <EmbeddedResource Include="Reports\ReportMItemList.rdlc" />
+    <EmbeddedResource Include="Reports\ReportNeraca.rdlc" />
+    <EmbeddedResource Include="Reports\ReportPajak.rdlc" />
+    <EmbeddedResource Include="Reports\ReportPajakHeader.rdlc" />
+    <EmbeddedResource Include="Reports\ReportPiHutangDetail.rdlc" />
+    <EmbeddedResource Include="Reports\ReportPiHutangDue.rdlc" />
+    <EmbeddedResource Include="Reports\ReportSalesFactur.rdlc" />
+    <EmbeddedResource Include="Reports\ReportStokItem.rdlc" />
+    <EmbeddedResource Include="Reports\ReportTJournal.rdlc" />
+    <EmbeddedResource Include="Reports\ReportTransactionByItem.rdlc" />
+    <EmbeddedResource Include="Reports\ReportTransactionByPIC.rdlc" />
+    <EmbeddedResource Include="Reports\ReportTransactionDetail.rdlc" />
+    <EmbeddedResource Include="Reports\ReportTransactionInternalByItem.rdlc" />
+    <EmbeddedResource Include="Reports\ReportTransactionInternalByPIC.rdlc" />
+    <EmbeddedResource Include="Reports\SubReportCustomerName.rdlc" />
+    <EmbeddedResource Include="Reports\SubReportSubAccount.rdlc" />
+    <EmbeddedResource Include="temp\FormTreeView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="temp\ReportNeraca.rdlc" />
+    <EmbeddedResource Include="temp\SubReportSubAccount.rdlc" />
+    <EmbeddedResource Include="Tool Forms\FormClosing.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormClosing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool Forms\FormReminder.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormReminder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tool Forms\FormSettingForApotek.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormSettingForApotek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction Forms\FormJournal.resx">
+      <DependentUpon>FormJournal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction Forms\FormPiHutangPayment.resx">
+      <DependentUpon>FormPiHutangPayment.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction Forms\FormPayment.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction Forms\FormPrintStatus.resx">
+      <DependentUpon>FormPrintStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction Forms\FormTransaction.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Transaction Forms\FormPrintStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction Forms\FormPrintStatus.designer.cs">
+      <DependentUpon>FormPrintStatus.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Inventori.Apotek.Data\Inventori.Apotek.Data.csproj">
+      <Project>{894265FB-CE7A-493D-AF20-6DD89CD7E685}</Project>
+      <Name>Inventori.Apotek.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\browse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseBook.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database_ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data-master_ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item_ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\out.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sales.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sales_ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting_ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\task-edit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users_ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Resources\warning_ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="030-browse.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="hibernate.cfg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\DataSources\Inventori.Apotek.Data.TApotekSetting.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.MAccount.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.MCommission.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.MCommissionShare.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.MCustomer.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.MCustomerGroup.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.MItem.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.MPacket.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.MPacketItem.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.MRoom.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.MSetting.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.MSubAccount.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.MSupplier.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.TCommission.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.TDefaultAccount.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.TJournal.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.TPiHutang.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.TRekapSubAccount.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.TTransaction.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.TTransactionDetail.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.VRekapSubAccount.datasource" />
+    <None Include="Properties\DataSources\Inventori.Data.VTotalTransactionDetail.datasource" />
+    <None Include="Resources\logo_apotek_ico.ico" />
+    <None Include="Resources\logo_apotek.jpg" />
+    <None Include="Resources\printer.gif" />
+    <None Include="Resources\scanner.gif" />
+    <None Include="Resources\computer.gif" />
+    <None Include="Resources\kredit.jpg" />
+    <None Include="Resources\cash 37.gif" />
+    <None Include="Resources\cash.gif" />
+    <None Include="Resources\reminder_ico.ico" />
+    <Content Include="warning.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

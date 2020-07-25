@@ -1,0 +1,1106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>07b9ea33-ca35-46cb-a072-7479f5d0d563</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>1in</BottomMargin>
+  <RightMargin>1in</RightMargin>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ReportItems>
+      <Rectangle Name="rectangle2">
+        <Left>0.125in</Left>
+        <ReportItems>
+          <Subreport Name="subreport1">
+            <Left>0.63492cm</Left>
+            <Top>0.31746cm</Top>
+            <ZIndex>10</ZIndex>
+            <Width>3.80952cm</Width>
+            <ReportName>SubReportLogo</ReportName>
+            <Height>2.85714cm</Height>
+          </Subreport>
+          <Textbox Name="textbox32">
+            <Left>0.375in</Left>
+            <Top>2.75in</Top>
+            <ZIndex>9</ZIndex>
+            <Width>1.875in</Width>
+            <Style>
+              <TextAlign>Center</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.63492cm</Height>
+            <Value>(                           )</Value>
+          </Textbox>
+          <Textbox Name="textbox16">
+            <Left>3.25in</Left>
+            <Top>0.75in</Top>
+            <ZIndex>8</ZIndex>
+            <Width>2.5in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>=First(Fields!SupplierName.Value, "Inventori_Data_MSupplier")</Value>
+          </Textbox>
+          <Textbox Name="textbox17">
+            <Left>3.625in</Left>
+            <Top>0.375in</Top>
+            <ZIndex>7</ZIndex>
+            <Width>1.875in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>=First(Fields!TransactionFactur.Value, "Inventori_Data_VTotalTransactionDetail")</Value>
+          </Textbox>
+          <Textbox Name="textbox18">
+            <Left>0.75in</Left>
+            <Top>2.125in</Top>
+            <ZIndex>6</ZIndex>
+            <Width>1in</Width>
+            <Style>
+              <TextAlign>Center</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>Diketahui :</Value>
+          </Textbox>
+          <Table Name="table2">
+            <Left>0.125in</Left>
+            <DataSetName>Inventori_Data_VTotalTransactionDetail</DataSetName>
+            <Top>1.5in</Top>
+            <ZIndex>5</ZIndex>
+            <Width>7.125in</Width>
+            <Details>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox19">
+                          <ZIndex>3</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <BorderWidth>
+                              <Bottom>1pt</Bottom>
+                              <Top>1pt</Top>
+                              <Left>1pt</Left>
+                              <Right>1pt</Right>
+                            </BorderWidth>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <BorderColor>
+                              <Bottom>Black</Bottom>
+                              <Top>Black</Top>
+                              <Left>Black</Left>
+                              <Right>Black</Right>
+                            </BorderColor>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=RowNumber("Inventori_Data_VTotalTransactionDetail")</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox20">
+                          <ZIndex>2</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <BorderWidth>
+                              <Bottom>1pt</Bottom>
+                              <Top>1pt</Top>
+                              <Left>1pt</Left>
+                              <Right>1pt</Right>
+                            </BorderWidth>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <BorderColor>
+                              <Bottom>Black</Bottom>
+                              <Top>Black</Top>
+                              <Left>Black</Left>
+                              <Right>Black</Right>
+                            </BorderColor>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!ItemName.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox21">
+                          <ZIndex>1</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <BorderWidth>
+                              <Bottom>1pt</Bottom>
+                              <Top>1pt</Top>
+                              <Left>1pt</Left>
+                            </BorderWidth>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <Format>N</Format>
+                            <BorderColor>
+                              <Bottom>Black</Bottom>
+                              <Top>Black</Top>
+                              <Left>Black</Left>
+                            </BorderColor>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!Quantity.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox22">
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <BorderWidth>
+                              <Bottom>1pt</Bottom>
+                              <Top>1pt</Top>
+                              <Right>1pt</Right>
+                            </BorderWidth>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <BorderColor>
+                              <Bottom>Black</Bottom>
+                              <Top>Black</Top>
+                              <Right>Black</Right>
+                            </BorderColor>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!Description.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.25in</Height>
+                </TableRow>
+              </TableRows>
+            </Details>
+            <Header>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox23">
+                          <ZIndex>7</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <BorderWidth>
+                              <Right>1pt</Right>
+                            </BorderWidth>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>600</FontWeight>
+                            <BorderColor>
+                              <Right>Black</Right>
+                            </BorderColor>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>No</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox24">
+                          <ZIndex>6</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <BorderWidth>
+                              <Right>1pt</Right>
+                            </BorderWidth>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>600</FontWeight>
+                            <BorderColor>
+                              <Right>Black</Right>
+                            </BorderColor>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>Nama Barang</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox25">
+                          <ZIndex>5</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>600</FontWeight>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>Jumlah</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox26">
+                          <ZIndex>4</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>600</FontWeight>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>Keterangan</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.25in</Height>
+                </TableRow>
+              </TableRows>
+            </Header>
+            <TableColumns>
+              <TableColumn>
+                <Width>0.375in</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>2.875in</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>1in</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>2.875in</Width>
+              </TableColumn>
+            </TableColumns>
+            <Height>0.5in</Height>
+          </Table>
+          <Textbox Name="textbox27">
+            <Left>2.25in</Left>
+            <Top>1in</Top>
+            <ZIndex>4</ZIndex>
+            <Width>1in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>Tanggal :</Value>
+          </Textbox>
+          <Textbox Name="textbox28">
+            <Left>2.25in</Left>
+            <Top>0.75in</Top>
+            <ZIndex>3</ZIndex>
+            <Width>1in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>Kepada :</Value>
+          </Textbox>
+          <Textbox Name="textbox29">
+            <Left>2.375in</Left>
+            <Top>0.375in</Top>
+            <ZIndex>2</ZIndex>
+            <Width>1.25in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>P.O. Number :</Value>
+          </Textbox>
+          <Textbox Name="textbox30">
+            <Left>2.375in</Left>
+            <Top>0.125in</Top>
+            <ZIndex>1</ZIndex>
+            <Width>2.625in</Width>
+            <Style>
+              <TextAlign>Center</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>700</FontWeight>
+              <FontSize>12pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>PURCHASE ORDER</Value>
+          </Textbox>
+          <Textbox Name="textbox31">
+            <Left>3.25in</Left>
+            <Top>1in</Top>
+            <Width>2.5in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <Format>dd/MMM/yyyy</Format>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>=First(Fields!TransactionDate.Value, "Inventori_Data_VTotalTransactionDetail")</Value>
+          </Textbox>
+        </ReportItems>
+        <Top>0.125in</Top>
+        <ZIndex>1</ZIndex>
+        <Width>7.375in</Width>
+        <Style>
+          <BorderStyle>
+            <Bottom>Dotted</Bottom>
+          </BorderStyle>
+          <BorderWidth>
+            <Bottom>2pt</Bottom>
+          </BorderWidth>
+          <BorderColor>
+            <Bottom>Black</Bottom>
+          </BorderColor>
+        </Style>
+        <Height>3.375in</Height>
+      </Rectangle>
+      <Rectangle Name="rectangle1">
+        <Left>0.125in</Left>
+        <ReportItems>
+          <Textbox Name="textbox33">
+            <Left>0.375in</Left>
+            <Top>2.75in</Top>
+            <ZIndex>10</ZIndex>
+            <Width>1.875in</Width>
+            <Style>
+              <TextAlign>Center</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Value>(                           )</Value>
+          </Textbox>
+          <Textbox Name="textbox13">
+            <Left>3.25in</Left>
+            <Top>0.75in</Top>
+            <ZIndex>9</ZIndex>
+            <Width>2.5in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>=First(Fields!SupplierName.Value, "Inventori_Data_MSupplier")</Value>
+          </Textbox>
+          <Textbox Name="textbox12">
+            <Left>3.625in</Left>
+            <Top>0.375in</Top>
+            <ZIndex>8</ZIndex>
+            <Width>1.875in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>=First(Fields!TransactionFactur.Value, "Inventori_Data_VTotalTransactionDetail")</Value>
+          </Textbox>
+          <Textbox Name="textbox11">
+            <Left>0.75in</Left>
+            <Top>2.125in</Top>
+            <ZIndex>7</ZIndex>
+            <Width>1in</Width>
+            <Style>
+              <TextAlign>Center</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>Diketahui :</Value>
+          </Textbox>
+          <Table Name="table1">
+            <Left>0.125in</Left>
+            <DataSetName>Inventori_Data_VTotalTransactionDetail</DataSetName>
+            <Top>1.5in</Top>
+            <ZIndex>6</ZIndex>
+            <Width>7.125in</Width>
+            <Details>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox9">
+                          <rd:DefaultName>textbox9</rd:DefaultName>
+                          <ZIndex>3</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <BorderWidth>
+                              <Bottom>1pt</Bottom>
+                              <Top>1pt</Top>
+                              <Left>1pt</Left>
+                              <Right>1pt</Right>
+                            </BorderWidth>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <BorderColor>
+                              <Bottom>Black</Bottom>
+                              <Top>Black</Top>
+                              <Left>Black</Left>
+                              <Right>Black</Right>
+                            </BorderColor>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=RowNumber("Inventori_Data_VTotalTransactionDetail")</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="ItemName">
+                          <rd:DefaultName>ItemName</rd:DefaultName>
+                          <ZIndex>2</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <BorderWidth>
+                              <Bottom>1pt</Bottom>
+                              <Top>1pt</Top>
+                              <Left>1pt</Left>
+                              <Right>1pt</Right>
+                            </BorderWidth>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <BorderColor>
+                              <Bottom>Black</Bottom>
+                              <Top>Black</Top>
+                              <Left>Black</Left>
+                              <Right>Black</Right>
+                            </BorderColor>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!ItemName.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Quantity">
+                          <rd:DefaultName>Quantity</rd:DefaultName>
+                          <ZIndex>1</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <BorderWidth>
+                              <Bottom>1pt</Bottom>
+                              <Top>1pt</Top>
+                              <Left>1pt</Left>
+                            </BorderWidth>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <Format>N</Format>
+                            <BorderColor>
+                              <Bottom>Black</Bottom>
+                              <Top>Black</Top>
+                              <Left>Black</Left>
+                            </BorderColor>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!Quantity.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="Description">
+                          <rd:DefaultName>Description</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <BorderWidth>
+                              <Bottom>1pt</Bottom>
+                              <Top>1pt</Top>
+                              <Right>1pt</Right>
+                            </BorderWidth>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <BorderColor>
+                              <Bottom>Black</Bottom>
+                              <Top>Black</Top>
+                              <Right>Black</Right>
+                            </BorderColor>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!Description.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.25in</Height>
+                </TableRow>
+              </TableRows>
+            </Details>
+            <Header>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox6">
+                          <rd:DefaultName>textbox6</rd:DefaultName>
+                          <ZIndex>7</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <BorderWidth>
+                              <Right>1pt</Right>
+                            </BorderWidth>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>600</FontWeight>
+                            <BorderColor>
+                              <Right>Black</Right>
+                            </BorderColor>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>No</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox7">
+                          <rd:DefaultName>textbox7</rd:DefaultName>
+                          <ZIndex>6</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <BorderWidth>
+                              <Right>1pt</Right>
+                            </BorderWidth>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>600</FontWeight>
+                            <BorderColor>
+                              <Right>Black</Right>
+                            </BorderColor>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>Nama Barang</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox8">
+                          <rd:DefaultName>textbox8</rd:DefaultName>
+                          <ZIndex>5</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>600</FontWeight>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>Jumlah</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox10">
+                          <rd:DefaultName>textbox10</rd:DefaultName>
+                          <ZIndex>4</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>600</FontWeight>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>Keterangan</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.25in</Height>
+                </TableRow>
+              </TableRows>
+            </Header>
+            <TableColumns>
+              <TableColumn>
+                <Width>0.375in</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>2.875in</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>1in</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>2.875in</Width>
+              </TableColumn>
+            </TableColumns>
+            <Height>0.5in</Height>
+          </Table>
+          <Textbox Name="textbox5">
+            <Left>2.25in</Left>
+            <Top>1in</Top>
+            <ZIndex>5</ZIndex>
+            <Width>1in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>Tanggal :</Value>
+          </Textbox>
+          <Textbox Name="textbox4">
+            <Left>2.25in</Left>
+            <Top>0.75in</Top>
+            <ZIndex>4</ZIndex>
+            <Width>1in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>Kepada :</Value>
+          </Textbox>
+          <Textbox Name="textbox3">
+            <Left>2.375in</Left>
+            <Top>0.375in</Top>
+            <rd:DefaultName>textbox3</rd:DefaultName>
+            <ZIndex>3</ZIndex>
+            <Width>1.25in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>P.O. Number :</Value>
+          </Textbox>
+          <Textbox Name="textbox2">
+            <Left>2.375in</Left>
+            <Top>0.125in</Top>
+            <rd:DefaultName>textbox2</rd:DefaultName>
+            <ZIndex>2</ZIndex>
+            <Width>2.625in</Width>
+            <Style>
+              <TextAlign>Center</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>700</FontWeight>
+              <FontSize>12pt</FontSize>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>PURCHASE ORDER</Value>
+          </Textbox>
+          <Textbox Name="textbox14">
+            <Left>3.25in</Left>
+            <Top>1in</Top>
+            <ZIndex>1</ZIndex>
+            <Width>2.5in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>600</FontWeight>
+              <Format>dd/MMM/yyyy</Format>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>=First(Fields!TransactionDate.Value, "Inventori_Data_VTotalTransactionDetail")</Value>
+          </Textbox>
+          <Subreport Name="subreport2">
+            <Left>0.63492cm</Left>
+            <Top>0.31746cm</Top>
+            <Width>3.80952cm</Width>
+            <ReportName>SubReportLogo</ReportName>
+            <Height>2.85714cm</Height>
+          </Subreport>
+        </ReportItems>
+        <Top>3.625in</Top>
+        <Width>7.375in</Width>
+        <Style>
+          <BackgroundImage>
+            <Value>copy</Value>
+            <Source>Embedded</Source>
+          </BackgroundImage>
+        </Style>
+        <Height>3in</Height>
+      </Rectangle>
+    </ReportItems>
+    <Height>6.75in</Height>
+  </Body>
+  <rd:ReportID>0bf2e305-7c53-4552-b39a-371635b9fad6</rd:ReportID>
+  <LeftMargin>1in</LeftMargin>
+  <EmbeddedImages>
+    <EmbeddedImage Name="worker">
+      <ImageData>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</ImageData>
+      <MIMEType>image/gif</MIMEType>
+    </EmbeddedImage>
+    <EmbeddedImage Name="copy">
+      <ImageData>R0lGODlhlgCWAJEAAAAAAP///6Oiov///yH5BAEAAAMALAAAAACWAJYAAAL/nI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKpfMpvMJjUqn1Kr1is1qt9yu9wsOi8csARknMJ9r6TW77Zal4fGXml6PqfN6vtyvtwcoIpiAN/hRaKiIuMFo2Ogx93hAGTkxeQh5mZHpqaDJGeFJShcqWlH6iSqpykq4+hqSKQs7V4tQmjqJO6BquUD7emtAunt7yhcqTMEcmcxrQXw5HVwtkax8vZjNAFwXC9odLHoXbd3bfJ47ns6+3e7+jhcvP29ufxGef/xda+xgnbxfp5z1ugZQ3LZhlPZVEsiqm8NiEMuNMvhw4TN/xBQ10uLoBqSvih3rrTE50qPGQShTNhQZEmZJb7JWNqgoM2ZOm4gY8fTWMqbCnTlPHiL5IOiYhDN3laMH9ecmao+i1lP65SpGmlT7jcPaJejEh5yUMiXbtRNBsF7YuhzLsig/tHMxYJULSGpda3j56d3LbefcrUnrEr5pGCm6xHrdxv3p+DHSv7jOKva7FnBAV5ohUO4MOrTo0aRLmz6NOrXq1axbu34NO7bs2bRr276NO7fu3bx7+/4NPLjw4cSLGz8uowAAOw==</ImageData>
+      <MIMEType>image/gif</MIMEType>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <DataSets>
+    <DataSet Name="Inventori_Data_VTotalTransactionDetail">
+      <rd:DataSetInfo>
+        <rd:DataSetName>Inventori.Data</rd:DataSetName>
+        <rd:ObjectDataSourceType>Inventori.Data.VTotalTransactionDetail, Inventori.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>VTotalTransactionDetail</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="Description">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="Disc">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Disc</DataField>
+        </Field>
+        <Field Name="EmployeeId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>EmployeeId</DataField>
+        </Field>
+        <Field Name="GroupName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>GroupName</DataField>
+        </Field>
+        <Field Name="ItemId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemId</DataField>
+        </Field>
+        <Field Name="ItemName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemName</DataField>
+        </Field>
+        <Field Name="Jumlah">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Jumlah</DataField>
+        </Field>
+        <Field Name="ModifiedBy">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ModifiedBy</DataField>
+        </Field>
+        <Field Name="ModifiedDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>ModifiedDate</DataField>
+        </Field>
+        <Field Name="Ppn">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Ppn</DataField>
+        </Field>
+        <Field Name="Price">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Price</DataField>
+        </Field>
+        <Field Name="Quantity">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Quantity</DataField>
+        </Field>
+        <Field Name="Total">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Total</DataField>
+        </Field>
+        <Field Name="TransactionBy">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionBy</DataField>
+        </Field>
+        <Field Name="TransactionDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>TransactionDate</DataField>
+        </Field>
+        <Field Name="TransactionDesk">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionDesk</DataField>
+        </Field>
+        <Field Name="TransactionDetailId">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionDetailId</DataField>
+        </Field>
+        <Field Name="TransactionDisc">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionDisc</DataField>
+        </Field>
+        <Field Name="TransactionFactur">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionFactur</DataField>
+        </Field>
+        <Field Name="TransactionGrandTotal">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionGrandTotal</DataField>
+        </Field>
+        <Field Name="TransactionId">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionId</DataField>
+        </Field>
+        <Field Name="TransactionPaid">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionPaid</DataField>
+        </Field>
+        <Field Name="TransactionPpn">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionPpn</DataField>
+        </Field>
+        <Field Name="TransactionReferenceId">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionReferenceId</DataField>
+        </Field>
+        <Field Name="TransactionSisa">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionSisa</DataField>
+        </Field>
+        <Field Name="TransactionStatus">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionStatus</DataField>
+        </Field>
+        <Field Name="TransactionSubTotal">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionSubTotal</DataField>
+        </Field>
+        <Field Name="CurrencyId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CurrencyId</DataField>
+        </Field>
+        <Field Name="GudangId">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>GudangId</DataField>
+        </Field>
+        <Field Name="TransactionByName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionByName</DataField>
+        </Field>
+        <Field Name="TransactionDesc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionDesc</DataField>
+        </Field>
+        <Field Name="TransactionUsePpn">
+          <rd:TypeName>System.Boolean</rd:TypeName>
+          <DataField>TransactionUsePpn</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="Inventori_Data_MSupplier">
+      <rd:DataSetInfo>
+        <rd:DataSetName>Inventori.Data</rd:DataSetName>
+        <rd:ObjectDataSourceType>Inventori.Data.MSupplier, Inventori.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>MSupplier</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="ModifiedBy">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ModifiedBy</DataField>
+        </Field>
+        <Field Name="ModifiedDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>ModifiedDate</DataField>
+        </Field>
+        <Field Name="SubAccountId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SubAccountId</DataField>
+        </Field>
+        <Field Name="SupplierAddress">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SupplierAddress</DataField>
+        </Field>
+        <Field Name="SupplierContact">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SupplierContact</DataField>
+        </Field>
+        <Field Name="SupplierContactPhone">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SupplierContactPhone</DataField>
+        </Field>
+        <Field Name="SupplierFax">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SupplierFax</DataField>
+        </Field>
+        <Field Name="SupplierId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SupplierId</DataField>
+        </Field>
+        <Field Name="SupplierLimit">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>SupplierLimit</DataField>
+        </Field>
+        <Field Name="SupplierName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SupplierName</DataField>
+        </Field>
+        <Field Name="SupplierNpwp">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SupplierNpwp</DataField>
+        </Field>
+        <Field Name="SupplierPhone">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SupplierPhone</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>7.625in</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>

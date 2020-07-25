@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Cafe.Data" namespace="Inventori.Cafe.Data">
+	<class name="MCommission" table="M_COMMISSION">
+
+		<id name="CommissionId" column="COMMISSION_ID" type="Decimal" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+		<property column="COMMISSION_STATUS" type="String" name="CommissionStatus" length="50" />
+		<property column="COMMISSION_VALUE" type="Decimal" name="CommissionValue" />
+		<property column="COMMISSION_DESC" type="String" name="CommissionDesc" length="50" />
+		
+	</class>
+</hibernate-mapping>

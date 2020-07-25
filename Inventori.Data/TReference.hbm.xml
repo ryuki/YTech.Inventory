@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="TReference" table="T_REFERENCE">
+
+		<id name="ReferenceId" column="REFERENCE_ID" type="Decimal" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+		<property column="REFERENCE_TYPE" type="String" name="ReferenceType" length="50" />
+		<property column="NEXT_ID" type="String" name="NextId" length="50" />
+		<property column="REFERENCE_DESC" type="String" name="ReferenceDesc" length="50" />
+		
+	</class>
+</hibernate-mapping>

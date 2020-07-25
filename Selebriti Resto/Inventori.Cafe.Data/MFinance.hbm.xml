@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Cafe.Data" namespace="Inventori.Cafe.Data">
+	<class name="MFinance" table="M_FINANCE">
+
+		<id name="FinanceId" column="FINANCE_ID" type="String">
+			<generator class="assigned"/>
+		</id>
+		<property column="FINANCE_NAME" type="String" name="FinanceName" length="50" />
+		<property column="FINANCE_ADDRESS" type="String" name="FinanceAddress" length="100" />
+		<property column="FINANCE_PHONE" type="String" name="FinancePhone" length="50" />
+		<property column="FINANCE_FAX" type="String" name="FinanceFax" length="50" />
+		<property column="FINANCE_STATUS" type="String" name="FinanceStatus" length="50" />
+		<property column="FINANCE_NPWP" type="String" name="FinanceNpwp" length="50" />
+		<property column="FINANCE_DESC" type="String" name="FinanceDesc" length="50" />
+		<property column="FINANCE_DESC2" type="String" name="FinanceDesc2" length="50" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>68d90fb7-451a-43d5-9c52-50e7f27dc7e3</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>2.5cm</RightMargin>
+  <PageWidth>21cm</PageWidth>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Matrix Name="matrix2">
+        <MatrixColumns>
+          <MatrixColumn>
+            <Width>3.25cm</Width>
+          </MatrixColumn>
+        </MatrixColumns>
+        <Left>0.5cm</Left>
+        <RowGroupings>
+          <RowGrouping>
+            <Width>9.25cm</Width>
+            <DynamicRows>
+              <ReportItems>
+                <Textbox Name="textbox9">
+                  <ZIndex>1</ZIndex>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <TextAlign>Right</TextAlign>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <BorderWidth>
+                      <Default>1.5pt</Default>
+                    </BorderWidth>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <FontWeight>700</FontWeight>
+                    <FontSize>9pt</FontSize>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value>Laba / Rugi</Value>
+                </Textbox>
+              </ReportItems>
+              <Grouping Name="matrix2_RowGroup1">
+                <GroupExpressions>
+                  <GroupExpression>&lt;blank&gt;</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+            </DynamicRows>
+          </RowGrouping>
+        </RowGroupings>
+        <ColumnGroupings>
+          <ColumnGrouping>
+            <Height>0.25cm</Height>
+            <StaticColumns>
+              <StaticColumn>
+                <ReportItems>
+                  <Textbox Name="textbox12">
+                    <ZIndex>2</ZIndex>
+                    <Style>
+                      <BorderStyle>
+                        <Bottom>Solid</Bottom>
+                      </BorderStyle>
+                      <TextAlign>Center</TextAlign>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <BorderWidth>
+                        <Bottom>1.5pt</Bottom>
+                      </BorderWidth>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <FontWeight>700</FontWeight>
+                      <FontSize>9pt</FontSize>
+                      <BorderColor>
+                        <Bottom>Black</Bottom>
+                      </BorderColor>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value />
+                  </Textbox>
+                </ReportItems>
+              </StaticColumn>
+            </StaticColumns>
+          </ColumnGrouping>
+        </ColumnGroupings>
+        <DataSetName>Inventori_Data_VRekapSubAccount</DataSetName>
+        <Top>4.25cm</Top>
+        <ZIndex>2</ZIndex>
+        <Width>12.5cm</Width>
+        <Corner>
+          <ReportItems>
+            <Textbox Name="textbox10">
+              <rd:DefaultName>textbox10</rd:DefaultName>
+              <ZIndex>3</ZIndex>
+              <Style>
+                <BorderStyle>
+                  <Bottom>Solid</Bottom>
+                </BorderStyle>
+                <PaddingLeft>2pt</PaddingLeft>
+                <BorderWidth>
+                  <Bottom>1.5pt</Bottom>
+                </BorderWidth>
+                <PaddingBottom>2pt</PaddingBottom>
+                <BorderColor>
+                  <Bottom>Black</Bottom>
+                </BorderColor>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+              </Style>
+              <CanGrow>true</CanGrow>
+              <Value />
+            </Textbox>
+          </ReportItems>
+        </Corner>
+        <Height>0.88492cm</Height>
+        <MatrixRows>
+          <MatrixRow>
+            <Height>0.63492cm</Height>
+            <MatrixCells>
+              <MatrixCell>
+                <ReportItems>
+                  <Textbox Name="textbox15">
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <BorderWidth>
+                        <Default>1.5pt</Default>
+                      </BorderWidth>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <FontSize>9pt</FontSize>
+                      <Format>N</Format>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>=sum(Fields!RekapSubaccountSaldo.Value)</Value>
+                  </Textbox>
+                </ReportItems>
+              </MatrixCell>
+            </MatrixCells>
+          </MatrixRow>
+        </MatrixRows>
+      </Matrix>
+      <Matrix Name="matrix1">
+        <MatrixColumns>
+          <MatrixColumn>
+            <Width>3.25cm</Width>
+          </MatrixColumn>
+        </MatrixColumns>
+        <Left>0.5cm</Left>
+        <RowGroupings>
+          <RowGrouping>
+            <Width>4.75cm</Width>
+            <DynamicRows>
+              <ReportItems>
+                <Textbox Name="textbox4">
+                  <rd:DefaultName>textbox4</rd:DefaultName>
+                  <ZIndex>2</ZIndex>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <TextAlign>Left</TextAlign>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <FontSize>9pt</FontSize>
+                    <BackgroundColor>SteelBlue</BackgroundColor>
+                    <Color>White</Color>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Fields!AccountId.Value &amp; " / " &amp; Fields!AccountName.Value</Value>
+                </Textbox>
+              </ReportItems>
+              <Grouping Name="matrix1_RowGroup1">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!AccountId.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+            </DynamicRows>
+          </RowGrouping>
+          <RowGrouping>
+            <Width>4.5cm</Width>
+            <DynamicRows>
+              <ReportItems>
+                <Textbox Name="textbox6">
+                  <rd:DefaultName>textbox6</rd:DefaultName>
+                  <ZIndex>1</ZIndex>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                    <TextAlign>Left</TextAlign>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <FontSize>9pt</FontSize>
+                    <BackgroundColor>AliceBlue</BackgroundColor>
+                    <PaddingRight>2pt</PaddingRight>
+                    <PaddingTop>2pt</PaddingTop>
+                  </Style>
+                  <CanGrow>true</CanGrow>
+                  <Value>=Fields!SubAccountId.Value &amp; " / " &amp; Fields!SubAccountName.Value</Value>
+                </Textbox>
+              </ReportItems>
+              <Visibility>
+                <ToggleItem>textbox4</ToggleItem>
+                <Hidden>true</Hidden>
+              </Visibility>
+              <Grouping Name="matrix1_RowGroup2">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!SubAccountId.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+            </DynamicRows>
+          </RowGrouping>
+        </RowGroupings>
+        <ColumnGroupings>
+          <ColumnGrouping>
+            <Height>0.625cm</Height>
+            <StaticColumns>
+              <StaticColumn>
+                <ReportItems>
+                  <Textbox Name="textbox7">
+                    <rd:DefaultName>textbox7</rd:DefaultName>
+                    <ZIndex>3</ZIndex>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>
+                      <TextAlign>Center</TextAlign>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <FontWeight>700</FontWeight>
+                      <FontSize>9pt</FontSize>
+                      <BackgroundColor>AliceBlue</BackgroundColor>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>Total</Value>
+                  </Textbox>
+                </ReportItems>
+              </StaticColumn>
+            </StaticColumns>
+          </ColumnGrouping>
+        </ColumnGroupings>
+        <DataSetName>Inventori_Data_VRekapSubAccount</DataSetName>
+        <Top>3cm</Top>
+        <ZIndex>1</ZIndex>
+        <Width>12.5cm</Width>
+        <Corner>
+          <ReportItems>
+            <Textbox Name="textbox2">
+              <rd:DefaultName>textbox2</rd:DefaultName>
+              <ZIndex>4</ZIndex>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+                <TextAlign>Center</TextAlign>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingBottom>2pt</PaddingBottom>
+                <FontWeight>700</FontWeight>
+                <FontSize>9pt</FontSize>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+              </Style>
+              <CanGrow>true</CanGrow>
+              <Value>Keterangan</Value>
+            </Textbox>
+          </ReportItems>
+        </Corner>
+        <Height>1.25cm</Height>
+        <MatrixRows>
+          <MatrixRow>
+            <Height>0.625cm</Height>
+            <MatrixCells>
+              <MatrixCell>
+                <ReportItems>
+                  <Textbox Name="textbox8">
+                    <rd:DefaultName>textbox8</rd:DefaultName>
+                    <Style>
+                      <BorderStyle>
+                        <Default>Solid</Default>
+                      </BorderStyle>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <FontSize>9pt</FontSize>
+                      <Format>N</Format>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                    </Style>
+                    <CanGrow>true</CanGrow>
+                    <Value>=sum(Fields!RekapSubaccountSaldo.Value)</Value>
+                  </Textbox>
+                </ReportItems>
+              </MatrixCell>
+            </MatrixCells>
+          </MatrixRow>
+        </MatrixRows>
+      </Matrix>
+      <Subreport Name="subreport1">
+        <Left>0.19688in</Left>
+        <Top>0.09844in</Top>
+        <Width>5.5in</Width>
+        <ReportName>ReportHeader</ReportName>
+        <Style>
+          <FontSize>9pt</FontSize>
+        </Style>
+        <Height>1in</Height>
+      </Subreport>
+    </ReportItems>
+    <Height>9.5cm</Height>
+  </Body>
+  <rd:ReportID>3d020a59-4d32-48e8-97e2-00c08c9ac0d4</rd:ReportID>
+  <LeftMargin>2.5cm</LeftMargin>
+  <DataSets>
+    <DataSet Name="Inventori_Data_VRekapSubAccount">
+      <rd:DataSetInfo>
+        <rd:DataSetName>Inventori.Data</rd:DataSetName>
+        <rd:ObjectDataSourceType>Inventori.Data.VRekapSubAccount, Inventori.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>VRekapSubAccount</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="AccountDesc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>AccountDesc</DataField>
+        </Field>
+        <Field Name="AccountId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>AccountId</DataField>
+        </Field>
+        <Field Name="AccountName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>AccountName</DataField>
+        </Field>
+        <Field Name="AccountPosition">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>AccountPosition</DataField>
+        </Field>
+        <Field Name="AccountSaldo">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>AccountSaldo</DataField>
+        </Field>
+        <Field Name="AccountStatus">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>AccountStatus</DataField>
+        </Field>
+        <Field Name="RekapSubaccountDesc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RekapSubaccountDesc</DataField>
+        </Field>
+        <Field Name="RekapSubAccountId">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>RekapSubAccountId</DataField>
+        </Field>
+        <Field Name="RekapSubAccountPeriode">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>RekapSubAccountPeriode</DataField>
+        </Field>
+        <Field Name="RekapSubaccountSaldo">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>RekapSubaccountSaldo</DataField>
+        </Field>
+        <Field Name="SubAccountDesc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SubAccountDesc</DataField>
+        </Field>
+        <Field Name="SubAccountId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SubAccountId</DataField>
+        </Field>
+        <Field Name="SubAccountName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SubAccountName</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>16.5cm</Width>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <Language>en-US</Language>
+  <PageFooter>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <Left>3.83906in</Left>
+        <Top>0.05754cm</Top>
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Width>1.75in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontSize>9pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.63492cm</Height>
+        <Value>="Halaman " &amp; Globals!PageNumber &amp; " dari " &amp; Globals!TotalPages</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.75cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+  </PageFooter>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

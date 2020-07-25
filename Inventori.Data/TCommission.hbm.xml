@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="TCommission" table="T_COMMISSION">
+
+		<id name="CommissionId" column="COMMISSION_ID" type="Decimal" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+		<property column="TRANSACTION_ID" type="Decimal" name="TransactionId" />
+		<property column="TRANSACTION_FACTUR_NO" type="String" name="TransactionFacturNo" length="50" />
+		<property column="SHARE_TO" type="String" name="ShareTo" length="50" />
+		<property column="COMMISSION_PIC" type="String" name="CommissionPic" length="50" />
+		<property column="COMMISSION_VALUE" type="Decimal" name="CommissionValue" />
+		<property column="COMMISSION_DATE" type="DateTime" name="CommissionDate" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

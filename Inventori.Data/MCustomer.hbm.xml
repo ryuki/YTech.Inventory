@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="MCustomer" table="M_CUSTOMER">
+
+		<id name="CustomerId" column="CUSTOMER_ID" type="String">
+			<generator class="assigned"/>
+		</id>
+		<property column="CUSTOMER_NAME" type="String" name="CustomerName" length="50" />
+		<property column="CUSTOMER_ADDRESS" type="String" name="CustomerAddress" length="100" />
+		<property column="CUSTOMER_PHONE" type="String" name="CustomerPhone" length="50" />
+		<property column="CUSTOMER_FAX" type="String" name="CustomerFax" length="50" />
+		<property column="CUSTOMER_STATUS" type="String" name="CustomerStatus" length="50" />
+		<property column="CUSTOMER_NPWP" type="String" name="CustomerNpwp" length="50" />
+		<property column="CUSTOMER_DISC" type="Decimal" name="CustomerDisc" />
+		<property column="CUSTOMER_LIMIT" type="Decimal" name="CustomerLimit" />
+		<property column="CUSTOMER_DESC" type="String" name="CustomerDesc" length="50" />
+		<property column="CUSTOMER_DESC2" type="String" name="CustomerDesc2" length="50" />
+		<property column="SUB_ACCOUNT_ID" type="String" name="SubAccountId" length="50" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

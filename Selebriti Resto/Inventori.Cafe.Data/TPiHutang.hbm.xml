@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Cafe.Data" namespace="Inventori.Cafe.Data">
+	<class name="TPiHutang" table="T_PI_HUTANG">
+
+		<id name="PiHutangId" column="PI_HUTANG_ID" type="Decimal" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+		<property column="PI_HUTANG_STATUS" type="String" name="PiHutangStatus" length="50" />
+		<property column="TRANSACTION_ID" type="Decimal" name="TransactionId" />
+		<property column="SUB_ACCOUNT_ID" type="String" name="SubAccountId" length="50" />
+		<property column="PI_HUTANG_PIC" type="String" name="PiHutangPic" length="50" />
+		<property column="PI_HUTANG_DATE" type="DateTime" name="PiHutangDate" />
+		<property column="PI_HUTANG_JATUH_TEMPO" type="DateTime" name="PiHutangJatuhTempo" />
+		<property column="PI_HUTANG_JUMLAH" type="Decimal" name="PiHutangJumlah" />
+		<property column="PI_HUTANG_DIBAYAR" type="Decimal" name="PiHutangDibayar" />
+		<property column="PI_HUTANG_RETUR" type="Decimal" name="PiHutangRetur" />
+		<property column="PI_HUTANG_SISA" type="Decimal" name="PiHutangSisa" />
+		<property column="PI_HUTANG_LUNAS_DATE" type="DateTime" name="PiHutangLunasDate" />
+		<property column="PI_HUTANG_CREDIT_LONG" type="Decimal" name="PiHutangCreditLong" />
+		<property column="PI_HUTANG_DESC" type="String" name="PiHutangDesc" length="2147483647" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.MotorKymco.Data" namespace="Inventori.MotorKymco.Data">
+	<class name="TMotorSetting" table="T_MOTOR_SETTING">
+
+		<id name="SettingId" column="SETTING_ID" type="String">
+			<generator class="assigned"/>
+		</id>
+		<property column="DEFAULT_PIUTANG_CREDIT_LONG" type="Int32" name="DefaultPiutangCreditLong" />
+		<property column="DISCOUNT_PIN" type="String" name="DiscountPin" length="50" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

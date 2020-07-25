@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>678089d8-d4f4-443c-81d8-9e63b90b8784</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>2.5cm</RightMargin>
+  <PageWidth>21cm</PageWidth>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <List Name="list1">
+        <Left>0.09844in</Left>
+        <ReportItems>
+          <List Name="list2">
+            <Left>0.09844in</Left>
+            <ReportItems>
+              <Textbox Name="textbox49">
+                <Left>1.375in</Left>
+                <Top>0.75in</Top>
+                <ZIndex>16</ZIndex>
+                <Width>1.75in</Width>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>9pt</FontSize>
+                  <Format>N</Format>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>=Fields!TransactionPotongan.Value</Value>
+              </Textbox>
+              <Textbox Name="textbox50">
+                <Left>0.31746cm</Left>
+                <Top>0.75in</Top>
+                <ZIndex>15</ZIndex>
+                <Width>1.25in</Width>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>9pt</FontSize>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>=iif (Fields!TransactionStatus.Value.Equals("ReturPurchase"),"Potongan Retur :",
+iif(Fields!TransactionStatus.Value.Equals("ReturSales"),"Potongan Retur :",""))</Value>
+              </Textbox>
+              <Textbox Name="textbox47">
+                <Left>1.375in</Left>
+                <Top>0.5in</Top>
+                <ZIndex>14</ZIndex>
+                <Width>1.75in</Width>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>9pt</FontSize>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>=Fields!TransactionPayment.Value</Value>
+              </Textbox>
+              <Textbox Name="textbox48">
+                <Left>0.31746cm</Left>
+                <Top>0.5in</Top>
+                <ZIndex>13</ZIndex>
+                <Width>1.25in</Width>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>9pt</FontSize>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>Cara Bayar :</Value>
+              </Textbox>
+              <Textbox Name="textbox28">
+                <Left>6.00469in</Left>
+                <Top>2.08281in</Top>
+                <ZIndex>12</ZIndex>
+                <Width>2.85714cm</Width>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontWeight>700</FontWeight>
+                  <FontSize>9pt</FontSize>
+                  <Format>N</Format>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.63492cm</Height>
+                <Value>=Fields!TransactionGrandTotal.Value</Value>
+              </Textbox>
+              <Textbox Name="textbox25">
+                <Left>6.00469in</Left>
+                <Top>1.83281in</Top>
+                <ZIndex>11</ZIndex>
+                <Width>2.85714cm</Width>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>9pt</FontSize>
+                  <Format>N</Format>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>=Fields!TransactionPpn.Value</Value>
+              </Textbox>
+              <Textbox Name="textbox24">
+                <Left>6.00469in</Left>
+                <Top>4.01984cm</Top>
+                <ZIndex>10</ZIndex>
+                <Width>2.85714cm</Width>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>9pt</FontSize>
+                  <Format>N</Format>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>=Fields!TransactionSubTotal.Value</Value>
+              </Textbox>
+              <Textbox Name="textbox23">
+                <Left>5.00469in</Left>
+                <Top>2.08281in</Top>
+                <ZIndex>9</ZIndex>
+                <Width>1in</Width>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontWeight>700</FontWeight>
+                  <FontSize>9pt</FontSize>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.63492cm</Height>
+                <Value>Grand Total :</Value>
+              </Textbox>
+              <Textbox Name="textbox26">
+                <Left>5.00469in</Left>
+                <Top>1.83281in</Top>
+                <ZIndex>8</ZIndex>
+                <Width>1in</Width>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>9pt</FontSize>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>Ppn (%)</Value>
+              </Textbox>
+              <Textbox Name="textbox22">
+                <Left>5.00469in</Left>
+                <Top>4.01984cm</Top>
+                <rd:DefaultName>textbox22</rd:DefaultName>
+                <ZIndex>7</ZIndex>
+                <Width>1in</Width>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>9pt</FontSize>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>Sub Total :</Value>
+              </Textbox>
+              <Textbox Name="textbox31">
+                <Left>4.625in</Left>
+                <ZIndex>6</ZIndex>
+                <Width>2.375in</Width>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>9pt</FontSize>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>=iif (Fields!TransactionStatus.Value.Equals("Sales"),Fields!CustomerName.Value,
+iif(Fields!TransactionStatus.Value.Equals("ReturSales"),Fields!CustomerName.Value,
+iif(Fields!TransactionStatus.Value.Equals("Purchase"),Fields!SupplierName.Value,
+iif(Fields!TransactionStatus.Value.Equals("ReturPurchase"),Fields!SupplierName.Value,""))))</Value>
+              </Textbox>
+              <Textbox Name="textbox30">
+                <Left>8.25397cm</Left>
+                <ZIndex>5</ZIndex>
+                <Width>1.375in</Width>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>9pt</FontSize>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>=iif (Fields!TransactionStatus.Value.Equals("Sales"),"Pelanggan : ",
+iif(Fields!TransactionStatus.Value.Equals("ReturSales"),"Pelanggan",
+iif(Fields!TransactionStatus.Value.Equals("Purchase"),"Supplier :",
+iif(Fields!TransactionStatus.Value.Equals("ReturPurchase"),"Supplier :",""))))</Value>
+              </Textbox>
+              <Textbox Name="textbox17">
+                <Left>1.375in</Left>
+                <ZIndex>4</ZIndex>
+                <Width>1.75in</Width>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>9pt</FontSize>
+                  <Format>dd/MMM/yyyy</Format>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>=Fields!TransactionDate.Value</Value>
+              </Textbox>
+              <Textbox Name="textbox16">
+                <Left>0.125in</Left>
+                <ZIndex>3</ZIndex>
+                <Width>1.25in</Width>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>9pt</FontSize>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>Tanggal :</Value>
+              </Textbox>
+              <Textbox Name="textbox15">
+                <Left>1.375in</Left>
+                <Top>0.25in</Top>
+                <ZIndex>2</ZIndex>
+                <Width>1.75in</Width>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>9pt</FontSize>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>=Fields!TransactionFactur.Value</Value>
+              </Textbox>
+              <Textbox Name="textbox13">
+                <Left>0.31746cm</Left>
+                <Top>0.25in</Top>
+                <rd:DefaultName>textbox13</rd:DefaultName>
+                <ZIndex>1</ZIndex>
+                <Width>1.25in</Width>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontSize>9pt</FontSize>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                </Style>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>No Faktur :</Value>
+              </Textbox>
+              <Table Name="table1">
+                <KeepTogether>true</KeepTogether>
+                <Top>2.75cm</Top>
+                <Width>18.09524cm</Width>
+                <Details>
+                  <TableRows>
+                    <TableRow>
+                      <TableCells>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox20">
+                              <rd:DefaultName>textbox20</rd:DefaultName>
+                              <ZIndex>6</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Top>Dotted</Top>
+                                  <Default>Solid</Default>
+                                  <Right>Dotted</Right>
+                                </BorderStyle>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontSize>9pt</FontSize>
+                                <BackgroundColor>=iif(rownumber("table1") mod 2 = 0, "AliceBlue","")</BackgroundColor>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>=rownumber("table1")</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="ItemId">
+                              <rd:DefaultName>ItemId</rd:DefaultName>
+                              <ZIndex>5</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Top>Dotted</Top>
+                                  <Default>Solid</Default>
+                                  <Left>Dotted</Left>
+                                  <Right>Dotted</Right>
+                                </BorderStyle>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontSize>9pt</FontSize>
+                                <BackgroundColor>=iif(rownumber("table1") mod 2 = 0, "AliceBlue","")</BackgroundColor>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>=Fields!ItemId.Value</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="ItemName">
+                              <rd:DefaultName>ItemName</rd:DefaultName>
+                              <ZIndex>4</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Top>Dotted</Top>
+                                  <Default>Solid</Default>
+                                  <Left>Dotted</Left>
+                                  <Right>Dotted</Right>
+                                </BorderStyle>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontSize>9pt</FontSize>
+                                <BackgroundColor>=iif(rownumber("table1") mod 2 = 0, "AliceBlue","")</BackgroundColor>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>=Fields!ItemName.Value</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="Quantity">
+                              <rd:DefaultName>Quantity</rd:DefaultName>
+                              <ZIndex>3</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Top>Dotted</Top>
+                                  <Default>Solid</Default>
+                                  <Left>Dotted</Left>
+                                  <Right>Dotted</Right>
+                                </BorderStyle>
+                                <TextAlign>Right</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontSize>9pt</FontSize>
+                                <Format>N</Format>
+                                <BackgroundColor>=iif(rownumber("table1") mod 2 = 0, "AliceBlue","")</BackgroundColor>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>=Fields!Quantity.Value</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="Price">
+                              <rd:DefaultName>Price</rd:DefaultName>
+                              <ZIndex>2</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Top>Dotted</Top>
+                                  <Default>Solid</Default>
+                                  <Left>Dotted</Left>
+                                  <Right>Dotted</Right>
+                                </BorderStyle>
+                                <TextAlign>Right</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontSize>9pt</FontSize>
+                                <Format>N</Format>
+                                <BackgroundColor>=iif(rownumber("table1") mod 2 = 0, "AliceBlue","")</BackgroundColor>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>=Fields!Price.Value</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox2">
+                              <rd:DefaultName>textbox2</rd:DefaultName>
+                              <ZIndex>1</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Top>Dotted</Top>
+                                  <Default>Solid</Default>
+                                  <Left>Dotted</Left>
+                                  <Right>Dotted</Right>
+                                </BorderStyle>
+                                <TextAlign>Right</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontSize>9pt</FontSize>
+                                <Format>N</Format>
+                                <BackgroundColor>=iif(rownumber("table1") mod 2 = 0, "AliceBlue","")</BackgroundColor>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>=Fields!Disc.Value</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="Total">
+                              <rd:DefaultName>Total</rd:DefaultName>
+                              <Style>
+                                <BorderStyle>
+                                  <Top>Dotted</Top>
+                                  <Default>Solid</Default>
+                                  <Left>Dotted</Left>
+                                  <Right>Dotted</Right>
+                                </BorderStyle>
+                                <TextAlign>Right</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontSize>9pt</FontSize>
+                                <Format>N</Format>
+                                <BackgroundColor>=iif(rownumber("table1") mod 2 = 0, "AliceBlue","")</BackgroundColor>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>=Fields!Total.Value</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                      </TableCells>
+                      <Height>0.25in</Height>
+                    </TableRow>
+                  </TableRows>
+                </Details>
+                <Style>
+                  <BorderStyle>
+                    <Default>Solid</Default>
+                  </BorderStyle>
+                  <FontSize>9pt</FontSize>
+                </Style>
+                <Header>
+                  <TableRows>
+                    <TableRow>
+                      <TableCells>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox38">
+                              <ZIndex>13</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Right>Solid</Right>
+                                </BorderStyle>
+                                <TextAlign>Center</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontWeight>700</FontWeight>
+                                <FontSize>9pt</FontSize>
+                                <BackgroundColor>SteelBlue</BackgroundColor>
+                                <Color>White</Color>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>No</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox32">
+                              <ZIndex>12</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Left>Dotted</Left>
+                                  <Right>Dotted</Right>
+                                </BorderStyle>
+                                <TextAlign>Center</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontWeight>700</FontWeight>
+                                <FontSize>9pt</FontSize>
+                                <BackgroundColor>SteelBlue</BackgroundColor>
+                                <Color>White</Color>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>Kode Barang</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox33">
+                              <ZIndex>11</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Left>Dotted</Left>
+                                  <Right>Dotted</Right>
+                                </BorderStyle>
+                                <TextAlign>Center</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontWeight>700</FontWeight>
+                                <FontSize>9pt</FontSize>
+                                <BackgroundColor>SteelBlue</BackgroundColor>
+                                <Color>White</Color>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>Nama Barang</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox34">
+                              <ZIndex>10</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Left>Dotted</Left>
+                                  <Right>Dotted</Right>
+                                </BorderStyle>
+                                <TextAlign>Center</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontWeight>700</FontWeight>
+                                <FontSize>9pt</FontSize>
+                                <BackgroundColor>SteelBlue</BackgroundColor>
+                                <Color>White</Color>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>Qty</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox35">
+                              <ZIndex>9</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Left>Dotted</Left>
+                                  <Right>Dotted</Right>
+                                </BorderStyle>
+                                <TextAlign>Center</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontWeight>700</FontWeight>
+                                <FontSize>9pt</FontSize>
+                                <BackgroundColor>SteelBlue</BackgroundColor>
+                                <Color>White</Color>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>@Harga</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox1">
+                              <rd:DefaultName>textbox1</rd:DefaultName>
+                              <ZIndex>8</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Left>Dotted</Left>
+                                  <Right>Dotted</Right>
+                                </BorderStyle>
+                                <TextAlign>Center</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontWeight>700</FontWeight>
+                                <FontSize>9pt</FontSize>
+                                <BackgroundColor>SteelBlue</BackgroundColor>
+                                <Color>White</Color>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>Diskon (%)</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox36">
+                              <ZIndex>7</ZIndex>
+                              <Style>
+                                <BorderStyle>
+                                  <Left>Dotted</Left>
+                                </BorderStyle>
+                                <TextAlign>Center</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontWeight>700</FontWeight>
+                                <FontSize>9pt</FontSize>
+                                <BackgroundColor>SteelBlue</BackgroundColor>
+                                <Color>White</Color>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                              </Style>
+                              <CanGrow>true</CanGrow>
+                              <Value>Total</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                      </TableCells>
+                      <Height>0.25in</Height>
+                    </TableRow>
+                  </TableRows>
+                </Header>
+                <TableColumns>
+                  <TableColumn>
+                    <Width>0.375in</Width>
+                  </TableColumn>
+                  <TableColumn>
+                    <Width>1.25in</Width>
+                  </TableColumn>
+                  <TableColumn>
+                    <Width>1.75in</Width>
+                  </TableColumn>
+                  <TableColumn>
+                    <Width>0.625in</Width>
+                  </TableColumn>
+                  <TableColumn>
+                    <Width>1in</Width>
+                  </TableColumn>
+                  <TableColumn>
+                    <Width>1in</Width>
+                  </TableColumn>
+                  <TableColumn>
+                    <Width>1.125in</Width>
+                  </TableColumn>
+                </TableColumns>
+                <Height>1.26984cm</Height>
+              </Table>
+            </ReportItems>
+            <DataSetName>Inventori_Data_VTotalTransactionDetail</DataSetName>
+            <Top>0.09844in</Top>
+            <Width>18.4127cm</Width>
+            <Style>
+              <FontSize>9pt</FontSize>
+            </Style>
+            <Grouping Name="list2_Details_Group">
+              <GroupExpressions>
+                <GroupExpression>=Fields!TransactionId.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+            <Height>6.24999cm</Height>
+          </List>
+        </ReportItems>
+        <DataSetName>Inventori_Data_VTotalTransactionDetail</DataSetName>
+        <Top>1.08281in</Top>
+        <ZIndex>1</ZIndex>
+        <Width>18.73016cm</Width>
+        <Style>
+          <FontSize>9pt</FontSize>
+        </Style>
+        <Grouping Name="list1_Details_Group">
+          <GroupExpressions>
+            <GroupExpression>=Fields!TransactionBy.Value</GroupExpression>
+          </GroupExpressions>
+        </Grouping>
+        <Height>6.75001cm</Height>
+      </List>
+      <Subreport Name="subreport1">
+        <Left>0.19688in</Left>
+        <Width>5.5in</Width>
+        <ReportName>ReportHeader</ReportName>
+        <Style>
+          <FontSize>9pt</FontSize>
+        </Style>
+        <Height>1in</Height>
+      </Subreport>
+    </ReportItems>
+    <Height>9.75cm</Height>
+  </Body>
+  <rd:ReportID>0642e5c7-0888-4078-a9dd-edca7e1ba7d5</rd:ReportID>
+  <LeftMargin>2.5cm</LeftMargin>
+  <DataSets>
+    <DataSet Name="Inventori_Data_VTotalTransactionDetail">
+      <rd:DataSetInfo>
+        <rd:DataSetName>Inventori.Data</rd:DataSetName>
+        <rd:ObjectDataSourceType>Inventori.Data.VTotalTransactionDetail, Inventori.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>VTotalTransactionDetail</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="Commission">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Commission</DataField>
+        </Field>
+        <Field Name="CostPrice">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>CostPrice</DataField>
+        </Field>
+        <Field Name="CurrencyId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CurrencyId</DataField>
+        </Field>
+        <Field Name="CustomerGroupName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CustomerGroupName</DataField>
+        </Field>
+        <Field Name="CustomerName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CustomerName</DataField>
+        </Field>
+        <Field Name="Description">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="Disc">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Disc</DataField>
+        </Field>
+        <Field Name="EmployeeId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>EmployeeId</DataField>
+        </Field>
+        <Field Name="EmployeeId2">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>EmployeeId2</DataField>
+        </Field>
+        <Field Name="EmployeeName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>EmployeeName</DataField>
+        </Field>
+        <Field Name="EmployeeName2">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>EmployeeName2</DataField>
+        </Field>
+        <Field Name="ExpiredDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>ExpiredDate</DataField>
+        </Field>
+        <Field Name="GroupName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>GroupName</DataField>
+        </Field>
+        <Field Name="GudangId">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>GudangId</DataField>
+        </Field>
+        <Field Name="GudangName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>GudangName</DataField>
+        </Field>
+        <Field Name="GudangNameTo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>GudangNameTo</DataField>
+        </Field>
+        <Field Name="IsPacket">
+          <rd:TypeName>System.Boolean</rd:TypeName>
+          <DataField>IsPacket</DataField>
+        </Field>
+        <Field Name="ItemId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemId</DataField>
+        </Field>
+        <Field Name="ItemName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemName</DataField>
+        </Field>
+        <Field Name="Jumlah">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Jumlah</DataField>
+        </Field>
+        <Field Name="ModifiedBy">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ModifiedBy</DataField>
+        </Field>
+        <Field Name="ModifiedDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>ModifiedDate</DataField>
+        </Field>
+        <Field Name="PelaporName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PelaporName</DataField>
+        </Field>
+        <Field Name="Ppn">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Ppn</DataField>
+        </Field>
+        <Field Name="Price">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Price</DataField>
+        </Field>
+        <Field Name="Quantity">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Quantity</DataField>
+        </Field>
+        <Field Name="SupplierName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SupplierName</DataField>
+        </Field>
+        <Field Name="Total">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Total</DataField>
+        </Field>
+        <Field Name="TransactionBy">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionBy</DataField>
+        </Field>
+        <Field Name="TransactionByAddress">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionByAddress</DataField>
+        </Field>
+        <Field Name="TransactionByName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionByName</DataField>
+        </Field>
+        <Field Name="TransactionByPhone">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionByPhone</DataField>
+        </Field>
+        <Field Name="TransactionCommision">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionCommision</DataField>
+        </Field>
+        <Field Name="TransactionDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>TransactionDate</DataField>
+        </Field>
+        <Field Name="TransactionDesc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionDesc</DataField>
+        </Field>
+        <Field Name="TransactionDesc2">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionDesc2</DataField>
+        </Field>
+        <Field Name="TransactionDesk">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionDesk</DataField>
+        </Field>
+        <Field Name="TransactionDetailId">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionDetailId</DataField>
+        </Field>
+        <Field Name="TransactionDisc">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionDisc</DataField>
+        </Field>
+        <Field Name="TransactionFactur">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionFactur</DataField>
+        </Field>
+        <Field Name="TransactionGrandTotal">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionGrandTotal</DataField>
+        </Field>
+        <Field Name="TransactionId">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionId</DataField>
+        </Field>
+        <Field Name="TransactionPaid">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionPaid</DataField>
+        </Field>
+        <Field Name="TransactionPayment">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionPayment</DataField>
+        </Field>
+        <Field Name="TransactionPotongan">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionPotongan</DataField>
+        </Field>
+        <Field Name="TransactionPpn">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionPpn</DataField>
+        </Field>
+        <Field Name="TransactionReferenceId">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionReferenceId</DataField>
+        </Field>
+        <Field Name="TransactionSisa">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionSisa</DataField>
+        </Field>
+        <Field Name="TransactionStatus">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionStatus</DataField>
+        </Field>
+        <Field Name="TransactionSubTotal">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionSubTotal</DataField>
+        </Field>
+        <Field Name="TransactionUsePpn">
+          <rd:TypeName>System.Boolean</rd:TypeName>
+          <DataField>TransactionUsePpn</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>19.25cm</Width>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <Language>en-US</Language>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

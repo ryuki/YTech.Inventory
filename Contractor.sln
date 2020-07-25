@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventori.Contractor.Forms", "Inventori.Contractor.Forms\Inventori.Contractor.Forms.csproj", "{624F196F-9B7C-4283-81CE-C911D756200D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventori.Contractor.InstallerDB", "Inventori.Contractor.InstallerDB\Inventori.Contractor.InstallerDB.csproj", "{94172EF7-2EF8-409C-94BF-1B5CFEF8D6A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventori.Contractor.Data", "Inventori.Contractor.Data\Inventori.Contractor.Data.csproj", "{C3EBEDA5-A211-451D-853E-71F1D15CC286}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Contractor Management Software", "Contractor Management Software\Contractor Management Software.vdproj", "{6252C92E-24AF-406B-8AC3-032A2C5A6E31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{624F196F-9B7C-4283-81CE-C911D756200D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{624F196F-9B7C-4283-81CE-C911D756200D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{624F196F-9B7C-4283-81CE-C911D756200D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{624F196F-9B7C-4283-81CE-C911D756200D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94172EF7-2EF8-409C-94BF-1B5CFEF8D6A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94172EF7-2EF8-409C-94BF-1B5CFEF8D6A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94172EF7-2EF8-409C-94BF-1B5CFEF8D6A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94172EF7-2EF8-409C-94BF-1B5CFEF8D6A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3EBEDA5-A211-451D-853E-71F1D15CC286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3EBEDA5-A211-451D-853E-71F1D15CC286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3EBEDA5-A211-451D-853E-71F1D15CC286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3EBEDA5-A211-451D-853E-71F1D15CC286}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6252C92E-24AF-406B-8AC3-032A2C5A6E31}.Debug|Any CPU.ActiveCfg = Debug
+		{6252C92E-24AF-406B-8AC3-032A2C5A6E31}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

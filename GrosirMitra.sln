@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventori.GrosirMitra.Forms", "Inventori.GrosirMitra.Forms\Inventori.GrosirMitra.Forms.csproj", "{8D631071-E338-44EB-9363-F621CFC34376}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventori.GrosirMitra.Data", "Inventori.GrosirMitra.Data\Inventori.GrosirMitra.Data.csproj", "{BC9B388A-F1E7-4E11-BC3B-C9687B228CB8}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Grosir Management Software", "Grosir Management Software\Grosir Management Software.vdproj", "{7A49216B-0BD4-4520-9F23-08A8D8076A8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D631071-E338-44EB-9363-F621CFC34376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D631071-E338-44EB-9363-F621CFC34376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D631071-E338-44EB-9363-F621CFC34376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D631071-E338-44EB-9363-F621CFC34376}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC9B388A-F1E7-4E11-BC3B-C9687B228CB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC9B388A-F1E7-4E11-BC3B-C9687B228CB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC9B388A-F1E7-4E11-BC3B-C9687B228CB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC9B388A-F1E7-4E11-BC3B-C9687B228CB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A49216B-0BD4-4520-9F23-08A8D8076A8F}.Debug|Any CPU.ActiveCfg = Debug
+		{7A49216B-0BD4-4520-9F23-08A8D8076A8F}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

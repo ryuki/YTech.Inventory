@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{40536462-2502-449A-A2CB-601B4649E7D7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Inventori.Data</RootNamespace>
+    <AssemblyName>Inventori.Data</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ItemGudangStok.cs" />
+    <Compile Include="MAccount.cs" />
+    <Compile Include="MBank.cs" />
+    <Compile Include="MChannel.cs" />
+    <Compile Include="MColour.cs" />
+    <Compile Include="MCommission.cs" />
+    <Compile Include="MCommissionShare.cs" />
+    <Compile Include="MCustomer.cs" />
+    <Compile Include="MCustomerGroup.cs" />
+    <Compile Include="MDep.cs" />
+    <Compile Include="MDesk.cs" />
+    <Compile Include="MEkspedission.cs" />
+    <Compile Include="MEmployee.cs" />
+    <Compile Include="MFinance.cs" />
+    <Compile Include="MGroup.cs" />
+    <Compile Include="MGudang.cs" />
+    <Compile Include="MItem.cs" />
+    <Compile Include="MItemType.cs" />
+    <Compile Include="MLocation.cs" />
+    <Compile Include="MMenu.cs" />
+    <Compile Include="MPacket.cs" />
+    <Compile Include="MPacketItem.cs" />
+    <Compile Include="MRoom.cs" />
+    <Compile Include="MSetting.cs" />
+    <Compile Include="MSubAccount.cs" />
+    <Compile Include="MSupplier.cs" />
+    <Compile Include="MSupplierAccount.cs" />
+    <Compile Include="MUser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TBonus.cs" />
+    <Compile Include="TCommission.cs" />
+    <Compile Include="TDefaultAccount.cs" />
+    <Compile Include="TDesk.cs" />
+    <Compile Include="TGiro.cs" />
+    <Compile Include="TJournal.cs" />
+    <Compile Include="TLog.cs" />
+    <Compile Include="TMenuUser.cs" />
+    <Compile Include="TPayment.cs" />
+    <Compile Include="TPiHutang.cs" />
+    <Compile Include="TReference.cs" />
+    <Compile Include="TRekapCommission.cs" />
+    <Compile Include="TRekapSubAccount.cs" />
+    <Compile Include="TRekapTransaction.cs" />
+    <Compile Include="TStock.cs" />
+    <Compile Include="TStokCard.cs" />
+    <Compile Include="TTransaction.cs" />
+    <Compile Include="TTransactionDelivery.cs" />
+    <Compile Include="TTransactionDeliveryDetail.cs" />
+    <Compile Include="TTransactionDetail.cs" />
+    <Compile Include="TTransactionService.cs" />
+    <Compile Include="VItemDetail.cs" />
+    <Compile Include="VRekapSubAccount.cs" />
+    <Compile Include="VStockDetailTransactionDealer.cs" />
+    <Compile Include="VStokCard.cs" />
+    <Compile Include="VSupplierAccount.cs" />
+    <Compile Include="VSupplierDetail.cs" />
+    <Compile Include="VTotalTransactionDealer.cs" />
+    <Compile Include="VTotalTransactionDelivery.cs" />
+    <Compile Include="VTotalTransactionDetail.cs" />
+    <Compile Include="VTotalTransactionDetailWithBankAcc.cs" />
+    <Compile Include="VTotalTransactionService.cs" />
+    <Compile Include="VTransaction.cs" />
+    <Compile Include="VTransactionDealer.cs" />
+    <Compile Include="VTransactionDeliveryDetail.cs" />
+    <Compile Include="VTransactionDetail.cs" />
+    <Compile Include="VTransactionDetailDealer.cs" />
+    <Compile Include="VTransactionService.cs" />
+    <Compile Include="VTransactionWithBankAcc.cs" />
+    <Compile Include="VTStockDetail.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ItemGudangStok.hbm.xml" />
+    <EmbeddedResource Include="MBank.hbm.xml" />
+    <EmbeddedResource Include="MCustomer.hbm.xml" />
+    <EmbeddedResource Include="MDep.hbm.xml" />
+    <EmbeddedResource Include="MDesk.hbm.xml" />
+    <EmbeddedResource Include="MEmployee.hbm.xml" />
+    <EmbeddedResource Include="MGroup.hbm.xml" />
+    <EmbeddedResource Include="MGudang.hbm.xml" />
+    <EmbeddedResource Include="MItem.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MItemType.hbm.xml" />
+    <EmbeddedResource Include="MLocation.hbm.xml" />
+    <EmbeddedResource Include="MMenu.hbm.xml" />
+    <EmbeddedResource Include="MSetting.hbm.xml" />
+    <EmbeddedResource Include="MSupplier.hbm.xml" />
+    <EmbeddedResource Include="MUser.hbm.xml" />
+    <EmbeddedResource Include="TDesk.hbm.xml" />
+    <EmbeddedResource Include="TLog.hbm.xml" />
+    <EmbeddedResource Include="TMenuUser.hbm.xml" />
+    <EmbeddedResource Include="TRekapCommission.hbm.xml" />
+    <EmbeddedResource Include="TRekapTransaction.hbm.xml" />
+    <EmbeddedResource Include="TStokCard.hbm.xml" />
+    <EmbeddedResource Include="TTransaction.hbm.xml" />
+    <EmbeddedResource Include="TTransactionDetail.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VItemDetail.hbm.xml" />
+    <EmbeddedResource Include="VTotalTransactionDetail.hbm.xml" />
+    <EmbeddedResource Include="VTransactionDetail.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TGiro.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MSupplierAccount.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VSupplierDetail.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MAccount.hbm.xml" />
+    <EmbeddedResource Include="MCustomerGroup.hbm.xml" />
+    <EmbeddedResource Include="MSubAccount.hbm.xml" />
+    <EmbeddedResource Include="TDefaultAccount.hbm.xml" />
+    <EmbeddedResource Include="TJournal.hbm.xml" />
+    <EmbeddedResource Include="TPiHutang.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MRoom.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VSupplierAccount.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TReference.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VTransaction.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TRekapSubAccount.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MCommission.hbm.xml" />
+    <EmbeddedResource Include="MCommissionShare.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MPacket.hbm.xml" />
+    <EmbeddedResource Include="MPacketItem.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TCommission.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VStokCard.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TTransactionService.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VTotalTransactionService.hbm.xml" />
+    <EmbeddedResource Include="VTransactionService.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VTransactionWithBankAcc.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VRekapSubAccount.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TTransactionDelivery.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TTransactionDeliveryDetail.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MEkspedission.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VTotalTransactionDelivery.hbm.xml" />
+    <EmbeddedResource Include="VTransactionDeliveryDetail.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VTotalTransactionDetailWithBankAcc.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TBonus.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TStock.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MChannel.hbm.xml" />
+    <EmbeddedResource Include="MColour.hbm.xml" />
+    <EmbeddedResource Include="MFinance.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VTotalTransactionDealer.hbm.xml" />
+    <EmbeddedResource Include="VTransactionDetailDealer.hbm.xml" />
+    <EmbeddedResource Include="VTStockDetail.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VTransactionDealer.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VStockDetailTransactionDealer.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TPayment.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

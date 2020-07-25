@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>29eb06be-c024-462d-9598-215023b0826f</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>2.5cm</RightMargin>
+  <PageWidth>21cm</PageWidth>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Chart Name="chart1">
+        <Legend>
+          <Visible>true</Visible>
+          <Style>
+            <BorderStyle>
+              <Default>Solid</Default>
+            </BorderStyle>
+            <FontSize>8pt</FontSize>
+          </Style>
+          <Position>TopCenter</Position>
+        </Legend>
+        <Subtype>Plain</Subtype>
+        <Title>
+          <Caption>Grafik Rekap Penjualan Per Bulan</Caption>
+        </Title>
+        <CategoryAxis>
+          <Axis>
+            <Title>
+              <Caption>Periode</Caption>
+            </Title>
+            <Style>
+              <FontSize>8pt</FontSize>
+            </Style>
+            <MajorGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MajorGridLines>
+            <MinorGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MinorGridLines>
+            <MajorTickMarks>Outside</MajorTickMarks>
+            <Min>0</Min>
+            <Visible>true</Visible>
+          </Axis>
+        </CategoryAxis>
+        <PointWidth>0</PointWidth>
+        <Left>1cm</Left>
+        <ThreeDProperties>
+          <Enabled>true</Enabled>
+          <ProjectionMode>Orthographic</ProjectionMode>
+          <Rotation>40</Rotation>
+          <Inclination>30</Inclination>
+          <Perspective>11</Perspective>
+          <Shading>Real</Shading>
+          <WallThickness>31</WallThickness>
+          <DrawingStyle>Cylinder</DrawingStyle>
+        </ThreeDProperties>
+        <DataSetName>Inventori_Data_VTotalTransactionDetail</DataSetName>
+        <SeriesGroupings>
+          <SeriesGrouping>
+            <DynamicSeries>
+              <Grouping Name="chart1_SeriesGroup1">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!TransactionBy.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <Label>=Fields!CustomerName.Value</Label>
+            </DynamicSeries>
+          </SeriesGrouping>
+          <SeriesGrouping>
+            <StaticSeries>
+              <StaticMember>
+                <Label>Value1</Label>
+              </StaticMember>
+            </StaticSeries>
+          </SeriesGrouping>
+        </SeriesGroupings>
+        <Top>3.5cm</Top>
+        <PlotArea>
+          <Style>
+            <BorderStyle>
+              <Default>Solid</Default>
+            </BorderStyle>
+            <BackgroundColor>LightGrey</BackgroundColor>
+          </Style>
+        </PlotArea>
+        <ValueAxis>
+          <Axis>
+            <Title>
+              <Caption>Total</Caption>
+            </Title>
+            <Style>
+              <FontSize>8pt</FontSize>
+              <Format>N</Format>
+            </Style>
+            <MajorGridLines>
+              <ShowGridLines>true</ShowGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MajorGridLines>
+            <MinorGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MinorGridLines>
+            <MajorTickMarks>Outside</MajorTickMarks>
+            <Min>0</Min>
+            <Margin>true</Margin>
+            <Visible>true</Visible>
+            <Scalar>true</Scalar>
+          </Axis>
+        </ValueAxis>
+        <ZIndex>1</ZIndex>
+        <Type>Column</Type>
+        <Width>14.5cm</Width>
+        <CategoryGroupings>
+          <CategoryGrouping>
+            <DynamicCategories>
+              <Grouping Name="chart1_CategoryGroup2">
+                <GroupExpressions>
+                  <GroupExpression>=MonthName(Month(Fields!TransactionDate.Value),true) &amp; " " &amp; Year(Fields!TransactionDate.Value)</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <Label />
+            </DynamicCategories>
+          </CategoryGrouping>
+        </CategoryGroupings>
+        <Palette>Excel</Palette>
+        <ChartData>
+          <ChartSeries>
+            <DataPoints>
+              <DataPoint>
+                <DataValues>
+                  <DataValue>
+                    <Value>=Sum(Fields!TransactionGrandTotal.Value)</Value>
+                  </DataValue>
+                </DataValues>
+                <DataLabel>
+                  <Style>
+                    <FontSize>7pt</FontSize>
+                    <Format>N</Format>
+                  </Style>
+                  <Visible>true</Visible>
+                </DataLabel>
+                <Marker>
+                  <Size>6pt</Size>
+                </Marker>
+              </DataPoint>
+            </DataPoints>
+          </ChartSeries>
+        </ChartData>
+        <Style>
+          <BackgroundColor>White</BackgroundColor>
+        </Style>
+      </Chart>
+      <Subreport Name="subreport1">
+        <Left>0.4in</Left>
+        <Top>0.09844in</Top>
+        <Width>5.5in</Width>
+        <ReportName>ReportHeader</ReportName>
+        <Style>
+          <FontSize>9pt</FontSize>
+        </Style>
+        <Height>1in</Height>
+      </Subreport>
+    </ReportItems>
+    <Height>16cm</Height>
+  </Body>
+  <rd:ReportID>693513c8-bb5b-428f-b5f8-bf72091cfbe1</rd:ReportID>
+  <LeftMargin>2.5cm</LeftMargin>
+  <DataSets>
+    <DataSet Name="Inventori_Data_VTotalTransactionDetail">
+      <rd:DataSetInfo>
+        <rd:DataSetName>Inventori.Data</rd:DataSetName>
+        <rd:ObjectDataSourceType>Inventori.Data.VTotalTransactionDetail, Inventori.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>VTotalTransactionDetail</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="Commission">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Commission</DataField>
+        </Field>
+        <Field Name="CostPrice">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>CostPrice</DataField>
+        </Field>
+        <Field Name="CurrencyId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CurrencyId</DataField>
+        </Field>
+        <Field Name="CustomerGroupName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CustomerGroupName</DataField>
+        </Field>
+        <Field Name="CustomerName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>CustomerName</DataField>
+        </Field>
+        <Field Name="Description">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Description</DataField>
+        </Field>
+        <Field Name="Disc">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Disc</DataField>
+        </Field>
+        <Field Name="EmployeeId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>EmployeeId</DataField>
+        </Field>
+        <Field Name="EmployeeId2">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>EmployeeId2</DataField>
+        </Field>
+        <Field Name="EmployeeName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>EmployeeName</DataField>
+        </Field>
+        <Field Name="EmployeeName2">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>EmployeeName2</DataField>
+        </Field>
+        <Field Name="ExpiredDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>ExpiredDate</DataField>
+        </Field>
+        <Field Name="GroupName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>GroupName</DataField>
+        </Field>
+        <Field Name="GudangId">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>GudangId</DataField>
+        </Field>
+        <Field Name="GudangName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>GudangName</DataField>
+        </Field>
+        <Field Name="GudangNameTo">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>GudangNameTo</DataField>
+        </Field>
+        <Field Name="IsPacket">
+          <rd:TypeName>System.Boolean</rd:TypeName>
+          <DataField>IsPacket</DataField>
+        </Field>
+        <Field Name="ItemId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemId</DataField>
+        </Field>
+        <Field Name="ItemName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemName</DataField>
+        </Field>
+        <Field Name="Jumlah">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Jumlah</DataField>
+        </Field>
+        <Field Name="ModifiedBy">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ModifiedBy</DataField>
+        </Field>
+        <Field Name="ModifiedDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>ModifiedDate</DataField>
+        </Field>
+        <Field Name="PelaporName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>PelaporName</DataField>
+        </Field>
+        <Field Name="Ppn">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Ppn</DataField>
+        </Field>
+        <Field Name="Price">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Price</DataField>
+        </Field>
+        <Field Name="Quantity">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Quantity</DataField>
+        </Field>
+        <Field Name="SupplierName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>SupplierName</DataField>
+        </Field>
+        <Field Name="Total">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>Total</DataField>
+        </Field>
+        <Field Name="TransactionBy">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionBy</DataField>
+        </Field>
+        <Field Name="TransactionByAddress">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionByAddress</DataField>
+        </Field>
+        <Field Name="TransactionByName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionByName</DataField>
+        </Field>
+        <Field Name="TransactionByPhone">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionByPhone</DataField>
+        </Field>
+        <Field Name="TransactionCommision">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionCommision</DataField>
+        </Field>
+        <Field Name="TransactionDate">
+          <rd:TypeName>System.DateTime</rd:TypeName>
+          <DataField>TransactionDate</DataField>
+        </Field>
+        <Field Name="TransactionDesc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionDesc</DataField>
+        </Field>
+        <Field Name="TransactionDesc2">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionDesc2</DataField>
+        </Field>
+        <Field Name="TransactionDesk">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionDesk</DataField>
+        </Field>
+        <Field Name="TransactionDetailId">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionDetailId</DataField>
+        </Field>
+        <Field Name="TransactionDisc">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionDisc</DataField>
+        </Field>
+        <Field Name="TransactionFactur">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionFactur</DataField>
+        </Field>
+        <Field Name="TransactionGrandTotal">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionGrandTotal</DataField>
+        </Field>
+        <Field Name="TransactionId">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionId</DataField>
+        </Field>
+        <Field Name="TransactionPaid">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionPaid</DataField>
+        </Field>
+        <Field Name="TransactionPayment">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionPayment</DataField>
+        </Field>
+        <Field Name="TransactionPotongan">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionPotongan</DataField>
+        </Field>
+        <Field Name="TransactionPpn">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionPpn</DataField>
+        </Field>
+        <Field Name="TransactionReferenceId">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionReferenceId</DataField>
+        </Field>
+        <Field Name="TransactionSisa">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionSisa</DataField>
+        </Field>
+        <Field Name="TransactionStatus">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TransactionStatus</DataField>
+        </Field>
+        <Field Name="TransactionSubTotal">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>TransactionSubTotal</DataField>
+        </Field>
+        <Field Name="TransactionUsePpn">
+          <rd:TypeName>System.Boolean</rd:TypeName>
+          <DataField>TransactionUsePpn</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>16cm</Width>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <Language>en-US</Language>
+  <PageFooter>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <Left>4.13437in</Left>
+        <Top>0.05754cm</Top>
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Width>1.75in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontSize>9pt</FontSize>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.63492cm</Height>
+        <Value>="Halaman " &amp; Globals!PageNumber &amp; " dari " &amp; Globals!TotalPages</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.75cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+  </PageFooter>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

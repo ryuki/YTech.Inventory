@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Cafe.Data" namespace="Inventori.Cafe.Data">
+	<class name="TRekapTransaction" table="T_REKAP_TRANSACTION">
+
+		<id name="RekapDateFrom" column="REKAP_DATE_FROM" type="DateTime">
+			<generator class="assigned"/>
+		</id>
+		<property column="REKAP_DATE_TO" type="DateTime" name="RekapDateTo" />
+		<property column="DESK_ID" type="String" name="DeskId" length="20" />
+		<property column="TOTAL_SALES" type="Decimal" name="TotalSales" />
+		<property column="TOTAL_SALES_VIP" type="Decimal" name="TotalSalesVip" />
+		<property column="TOTAL_PURCHASE" type="Decimal" name="TotalPurchase" />
+		<property column="TOTAL_RETUR_SALES" type="Decimal" name="TotalReturSales" />
+		<property column="TOTAL_RETUR_SALES_VIP" type="Decimal" name="TotalReturSalesVip" />
+		<property column="TOTAL_RETUR_PURCHASE" type="Decimal" name="TotalReturPurchase" />
+		<property column="TOTAL_CORRECTION" type="Decimal" name="TotalCorrection" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

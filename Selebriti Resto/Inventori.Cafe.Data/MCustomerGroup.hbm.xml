@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Cafe.Data" namespace="Inventori.Cafe.Data">
+	<class name="MCustomerGroup" table="M_CUSTOMER_GROUP">
+
+		<id name="CustomerGroupId" column="CUSTOMER_GROUP_ID" type="String">
+			<generator class="assigned"/>
+		</id>
+		<property column="CUSTOMER_GROUP_NAME" type="String" name="CustomerGroupName" length="50" />
+		<property column="CUSTOMER_GROUP_DESC" type="String" name="CustomerGroupDesc" length="2147483647" />
+		<property column="CUSTOMER_GROUP_PERCENTAGE" type="Decimal" name="CustomerGroupPercentage" />
+		<property column="CUSTOMER_GROUP_USE_PERCENTAGE" type="Boolean" name="CustomerGroupUsePercentage" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <ConnectionProperties>
+        <ConnectString />
+        <DataProvider>SQL</DataProvider>
+      </ConnectionProperties>
+      <rd:DataSourceID>2bf154c8-34e9-49e7-84c9-05bc988a8d99</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <BottomMargin>1in</BottomMargin>
+  <RightMargin>1in</RightMargin>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ReportItems>
+      <List Name="list1">
+        <Left>0.25in</Left>
+        <ReportItems>
+          <Textbox Name="textbox4">
+            <rd:DefaultName>textbox4</rd:DefaultName>
+            <ZIndex>1</ZIndex>
+            <Width>4.125in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <FontWeight>700</FontWeight>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>=Fields!GroupId.Value.ToString()</Value>
+          </Textbox>
+          <Table Name="table1">
+            <Left>0.25in</Left>
+            <Top>0.25in</Top>
+            <Visibility>
+              <ToggleItem>textbox4</ToggleItem>
+              <Hidden>true</Hidden>
+            </Visibility>
+            <Width>6.24999in</Width>
+            <Details>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="ItemId">
+                          <rd:DefaultName>ItemId</rd:DefaultName>
+                          <ZIndex>2</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!ItemId.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="ItemName">
+                          <rd:DefaultName>ItemName</rd:DefaultName>
+                          <ZIndex>1</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!ItemName.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="ItemPriceMaxVip">
+                          <rd:DefaultName>ItemPriceMaxVip</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!ItemPriceMaxVip.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.25in</Height>
+                </TableRow>
+              </TableRows>
+            </Details>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+            </Style>
+            <Header>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox1">
+                          <rd:DefaultName>textbox1</rd:DefaultName>
+                          <ZIndex>5</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>700</FontWeight>
+                            <BackgroundColor>SteelBlue</BackgroundColor>
+                            <Color>White</Color>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <UserSort>
+                            <SortExpression>=Fields!ItemId.Value</SortExpression>
+                          </UserSort>
+                          <Value>Kode Item</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox2">
+                          <rd:DefaultName>textbox2</rd:DefaultName>
+                          <ZIndex>4</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>700</FontWeight>
+                            <BackgroundColor>SteelBlue</BackgroundColor>
+                            <Color>White</Color>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <UserSort>
+                            <SortExpression>=Fields!ItemName.Value</SortExpression>
+                          </UserSort>
+                          <Value>Keterangan</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox3">
+                          <rd:DefaultName>textbox3</rd:DefaultName>
+                          <ZIndex>3</ZIndex>
+                          <Style>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <TextAlign>Center</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingBottom>2pt</PaddingBottom>
+                            <FontWeight>700</FontWeight>
+                            <BackgroundColor>SteelBlue</BackgroundColor>
+                            <Color>White</Color>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <UserSort>
+                            <SortExpression>=Fields!ItemPriceMaxVip.Value</SortExpression>
+                          </UserSort>
+                          <Value>Harga Jual VIP</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.25in</Height>
+                </TableRow>
+              </TableRows>
+            </Header>
+            <TableColumns>
+              <TableColumn>
+                <Width>2.08333in</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>2.08333in</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>2.08333in</Width>
+              </TableColumn>
+            </TableColumns>
+            <Height>0.5in</Height>
+          </Table>
+        </ReportItems>
+        <DataSetName>Inventori_Data_MItem</DataSetName>
+        <Top>1.25in</Top>
+        <ZIndex>1</ZIndex>
+        <Width>8in</Width>
+        <Grouping Name="list1_Details_Group">
+          <Label>=Fields!GroupId.Value</Label>
+          <GroupExpressions>
+            <GroupExpression>=Fields!GroupId.Value</GroupExpression>
+          </GroupExpressions>
+        </Grouping>
+        <Height>0.875in</Height>
+      </List>
+      <Subreport Name="subreport1">
+        <Left>0.375in</Left>
+        <Top>0.25in</Top>
+        <Width>7.875in</Width>
+        <ReportName>ReportHeader</ReportName>
+        <Height>0.875in</Height>
+      </Subreport>
+    </ReportItems>
+    <Height>2.25in</Height>
+  </Body>
+  <rd:ReportID>96c231bb-a5e2-4036-9fd9-93c6cdf6e107</rd:ReportID>
+  <LeftMargin>1in</LeftMargin>
+  <EmbeddedImages>
+    <EmbeddedImage Name="art_blank">
+      <ImageData>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</ImageData>
+      <MIMEType>image/gif</MIMEType>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <DataSets>
+    <DataSet Name="Inventori_Data_MItem">
+      <rd:DataSetInfo>
+        <rd:DataSetName>Inventori.Data</rd:DataSetName>
+        <rd:ObjectDataSourceType>Inventori.Data.MItem, Inventori.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>MItem</rd:TableName>
+      </rd:DataSetInfo>
+      <Query>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <CommandText />
+        <DataSourceName>DummyDataSource</DataSourceName>
+      </Query>
+      <Fields>
+        <Field Name="DefaultGudangId">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>DefaultGudangId</DataField>
+        </Field>
+        <Field Name="GroupId">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>GroupId</DataField>
+        </Field>
+        <Field Name="ItemCommision">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemCommision</DataField>
+        </Field>
+        <Field Name="ItemDesc">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemDesc</DataField>
+        </Field>
+        <Field Name="ItemId">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemId</DataField>
+        </Field>
+        <Field Name="ItemName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemName</DataField>
+        </Field>
+        <Field Name="ItemPriceMax">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemPriceMax</DataField>
+        </Field>
+        <Field Name="ItemPriceMaxVip">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemPriceMaxVip</DataField>
+        </Field>
+        <Field Name="ItemPriceMin">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemPriceMin</DataField>
+        </Field>
+        <Field Name="ItemPriceMinVip">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemPriceMinVip</DataField>
+        </Field>
+        <Field Name="ItemPricePurchase">
+          <rd:TypeName>System.Decimal</rd:TypeName>
+          <DataField>ItemPricePurchase</DataField>
+        </Field>
+        <Field Name="ItemSatuan">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>ItemSatuan</DataField>
+        </Field>
+        <Field Name="ItemTypeId">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>ItemTypeId</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <Width>8.625in</Width>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <Language>en-US</Language>
+  <PageFooter>
+    <ReportItems>
+      <Textbox Name="textbox6">
+        <Left>7.5in</Left>
+        <rd:DefaultName>textbox6</rd:DefaultName>
+        <Width>0.75001in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>=Globals!PageNumber.ToString() &amp; " dari " &amp; Globals!TotalPages.ToString()</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.375in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+  </PageFooter>
+  <TopMargin>1in</TopMargin>
+</Report>

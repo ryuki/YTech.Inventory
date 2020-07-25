@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="TTransactionDelivery" table="T_TRANSACTION_DELIVERY">
+
+		<id name="DeliveryId" column="DELIVERY_ID" type="Decimal" unsaved-value="0">
+			<generator class="assigned"/>
+		</id>
+		<property column="TRANSACTION_ID" type="Decimal" name="TransactionId" />
+		<property column="DELIVERY_NUMBER_EXPEDISSION" type="String" name="DeliveryNumberExpedission" length="50" />
+		<property column="DELIVERY_NUMBER_PIC" type="String" name="DeliveryNumberPic" length="50" />
+		<property column="DELIVERY_EXPEDISSION" type="String" name="DeliveryExpedission" length="50" />
+		<property column="DELIVERY_PIC" type="String" name="DeliveryPic" length="50" />
+		<property column="DELIVERY_SENT_DATE" type="DateTime" name="DeliverySentDate" />
+		<property column="DELIVERY_RECEIVE_DATE" type="DateTime" name="DeliveryReceiveDate" />
+		<property column="DELIVERY_PAYMENT" type="String" name="DeliveryPayment" length="50" />
+		<property column="DELIVERY_COST" type="Decimal" name="DeliveryCost" />
+		<property column="DELIVERY_DESC" type="String" name="DeliveryDesc" length="100" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

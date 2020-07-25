@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Cafe.Data" namespace="Inventori.Cafe.Data">
+	<class name="VTransactionDetail" table="V_TRANSACTION_DETAIL">
+
+		<!-- could not find a primary key for this table/view. NHibernate requires an 'id' element, so you'll have to define one manually. -->
+		<id name="TransactionDetailId" column="TRANSACTION_DETAIL_ID" type="Decimal" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+		<!-- <property column="TRANSACTION_DETAIL_ID" type="Decimal" name="TransactionDetailId" not-null="true" /> -->
+		<property column="TRANSACTION_ID" type="Decimal" name="TransactionId" />
+		<property column="ITEM_ID" type="String" name="ItemId" length="50" />
+		<property column="QUANTITY" type="Decimal" name="Quantity" />
+		<property column="PRICE" type="Decimal" name="Price" />
+		<property column="JUMLAH" type="Decimal" name="Jumlah" />
+		<property column="DISC" type="Decimal" name="Disc" />
+		<property column="PPN" type="Decimal" name="Ppn" />
+		<property column="TOTAL" type="Decimal" name="Total" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		<property column="DESCRIPTION" type="String" name="Description" length="100" />
+		<property column="EXPIRED_DATE" type="DateTime" name="ExpiredDate" />
+		<property column="COMMISSION" type="Decimal" name="Commission" />
+		<property column="COST_PRICE" type="Decimal" name="CostPrice" />
+		<property column="ITEM_NAME" type="String" name="ItemName" not-null="true" length="50" />
+		<property column="GROUP_NAME" type="String" name="GroupName" not-null="true" length="50" />
+		<property column="IS_PACKET" type="Boolean" name="IsPacket" />
+		
+	</class>
+</hibernate-mapping>

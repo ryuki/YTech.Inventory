@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="VTotalTransactionService" table="V_TOTAL_TRANSACTION_SERVICE">
+
+		<!-- could not find a primary key for this table/view. NHibernate requires an 'id' element, so you'll have to define one manually. -->
+			<id name="TransactionDetailId" column="TRANSACTION_DETAIL_ID" type="Decimal" unsaved-value="0">
+      <generator class="native"/>
+    </id>
+		<property column="TRANSACTION_ID" type="Decimal" name="TransactionId" />
+		<property column="CURRENCY_ID" type="String" name="CurrencyId" length="50" />
+		<property column="GUDANG_ID" type="Int32" name="GudangId" />
+		<property column="TRANSACTION_FACTUR" type="String" name="TransactionFactur" length="50" />
+		<property column="TRANSACTION_BY" type="String" name="TransactionBy" length="50" />
+		<property column="TRANSACTION_BY_NAME" type="String" name="TransactionByName" length="50" />
+		<property column="TRANSACTION_DATE" type="DateTime" name="TransactionDate" />
+		<property column="TRANSACTION_SUB_TOTAL" type="Decimal" name="TransactionSubTotal" />
+		<property column="TRANSACTION_DISC" type="Decimal" name="TransactionDisc" />
+		<property column="TRANSACTION_USE_PPN" type="Boolean" name="TransactionUsePpn" />
+		<property column="TRANSACTION_PPN" type="Decimal" name="TransactionPpn" />
+		<property column="TRANSACTION_GRAND_TOTAL" type="Decimal" name="TransactionGrandTotal" />
+		<property column="TRANSACTION_PAID" type="Decimal" name="TransactionPaid" />
+		<property column="TRANSACTION_SISA" type="Decimal" name="TransactionSisa" />
+		<property column="TRANSACTION_STATUS" type="String" name="TransactionStatus" length="50" />
+		<property column="TRANSACTION_DESK" type="String" name="TransactionDesk" length="50" />
+		<property column="TRANSACTION_DESC" type="String" name="TransactionDesc" length="50" />
+		<property column="EMPLOYEE_ID" type="String" name="EmployeeId" length="50" />
+		<property column="TRANSACTION_PAYMENT" type="String" name="TransactionPayment" length="50" />
+		<property column="TRANSACTION_COMMISION" type="Decimal" name="TransactionCommision" />
+		<property column="CUSTOMER_NAME" type="String" name="CustomerName" length="50" />
+		<property column="SUPPLIER_NAME" type="String" name="SupplierName" length="50" />
+		<property column="PELAPOR_NAME" type="String" name="PelaporName" length="50" />
+		<property column="EMPLOYEE_NAME2" type="String" name="EmployeeName2" length="50" />
+		<property column="EMPLOYEE_NAME" type="String" name="EmployeeName" length="50" />
+		<property column="CUSTOMER_GROUP_NAME" type="String" name="CustomerGroupName" length="50" />
+		<property column="GUDANG_NAME" type="String" name="GudangName" length="50" />
+		<property column="GUDANG_NAME_TO" type="String" name="GudangNameTo" length="50" />
+		<property column="TRANSACTION_BY_ADDRESS" type="String" name="TransactionByAddress" length="50" />
+		<property column="TRANSACTION_BY_PHONE" type="String" name="TransactionByPhone" length="50" />
+		<property column="TRANSACTION_DESC2" type="String" name="TransactionDesc2" length="50" />
+		<property column="EMPLOYEE_ID2" type="String" name="EmployeeId2" length="50" />
+		<property column="TRANSACTION_POTONGAN" type="Decimal" name="TransactionPotongan" />
+		<property column="TRANSACTION_REFERENCE_ID" type="Decimal" name="TransactionReferenceId" />
+		<property column="SERVICE_FIRST_CONDITION" type="String" name="ServiceFirstCondition" length="50" />
+		<property column="SERVICE_REQUEST_DATE" type="DateTime" name="ServiceRequestDate" />
+		<property column="SERVICE_START_WORK" type="DateTime" name="ServiceStartWork" />
+		<property column="SERVICE_END_WORK" type="DateTime" name="ServiceEndWork" />
+		<property column="SERVICE_PIC" type="String" name="ServicePic" length="50" />
+		<property column="SERVICE_TYPE" type="String" name="ServiceType" length="50" />
+		<property column="SERVICE_COMPLAIN" type="String" name="ServiceComplain" length="50" />
+		<property column="SERVICE_DESC" type="String" name="ServiceDesc" length="50" />
+		<property column="SERVICE_CHARGE" type="Decimal" name="ServiceCharge" />
+		<property column="SERVICE_PIC_NAME" type="String" name="ServicePicName" length="50" />
+		<!-- <property column="TRANSACTION_DETAIL_ID" type="Decimal" name="TransactionDetailId" /> -->
+		<property column="ITEM_ID" type="String" name="ItemId" length="50" />
+		<property column="QUANTITY" type="Decimal" name="Quantity" />
+		<property column="PRICE" type="Decimal" name="Price" />
+		<property column="JUMLAH" type="Decimal" name="Jumlah" />
+		<property column="DISC" type="Decimal" name="Disc" />
+		<property column="PPN" type="Decimal" name="Ppn" />
+		<property column="TOTAL" type="Decimal" name="Total" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		<property column="DESCRIPTION" type="String" name="Description" length="100" />
+		<property column="EXPIRED_DATE" type="DateTime" name="ExpiredDate" />
+		<property column="COMMISSION" type="Decimal" name="Commission" />
+		<property column="COST_PRICE" type="Decimal" name="CostPrice" />
+		<property column="ITEM_NAME" type="String" name="ItemName" length="50" />
+		<property column="GROUP_NAME" type="String" name="GroupName" length="50" />
+		<property column="IS_PACKET" type="Boolean" name="IsPacket" />
+		
+	</class>
+</hibernate-mapping>

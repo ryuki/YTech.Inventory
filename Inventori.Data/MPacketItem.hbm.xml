@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="MPacketItem" table="M_PACKET_ITEM">
+
+		<id name="PacketItemId" column="PACKET_ITEM_ID" type="Decimal" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+		<property column="PACKET_ID" type="String" name="PacketId" length="50" />
+		<property column="ITEM_ID" type="String" name="ItemId" length="50" />
+		<property column="PACKET_ITEM_QUANTITY" type="Decimal" name="PacketItemQuantity" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

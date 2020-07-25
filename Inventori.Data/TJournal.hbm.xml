@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="TJournal" table="T_JOURNAL">
+
+		<id name="JournalId" column="JOURNAL_ID" type="Decimal" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+		<property column="ACCOUNT_ID" type="String" name="AccountId" length="50" />
+		<property column="SUB_ACCOUNT_ID" type="String" name="SubAccountId" length="50" />
+		<property column="TRANSACTION_ID" type="Decimal" name="TransactionId" />
+		<property column="VOUCHER_NO" type="String" name="VoucherNo" length="50" />
+		<property column="JOURNAL_PIC" type="String" name="JournalPic" length="50" />
+		<property column="JOURNAL_DATE" type="DateTime" name="JournalDate" />
+		<property column="JOURNAL_JUMLAH" type="Decimal" name="JournalJumlah" />
+		<property column="JOURNAL_STATUS" type="String" name="JournalStatus" length="50" />
+		<property column="JOURNAL_DESC" type="String" name="JournalDesc" length="200" />
+		<property column="ACCOUNT_SALDO" type="Decimal" name="AccountSaldo" />
+		<property column="SUB_ACCONT_SALDO" type="Decimal" name="SubAccontSaldo" />
+		<property column="MODIFIED_BY" type="String" name="ModifiedBy" length="50" />
+		<property column="MODIFIED_DATE" type="DateTime" name="ModifiedDate" />
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Inventori.Data" namespace="Inventori.Data">
+	<class name="MCommissionShare" table="M_COMMISSION_SHARE">
+
+		<id name="ShareId" column="SHARE_ID" type="Decimal" unsaved-value="0">
+			<generator class="native"/>
+		</id>
+		<property column="COMMISSION_ID" type="Decimal" name="CommissionId" />
+		<property column="SHARE_TO" type="String" name="ShareTo" length="50" />
+		<property column="SHARE_VALUE" type="Decimal" name="ShareValue" />
+		<property column="SHARE_DESC" type="String" name="ShareDesc" length="50" />
+		
+	</class>
+</hibernate-mapping>
